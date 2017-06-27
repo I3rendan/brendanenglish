@@ -1,0 +1,101 @@
+*,*:before,*:after
+  box-sizing: padding
+
+html
+  height: 100%
+
+body
+  padding: 0
+  margin: 0
+  background: $color-light
+  font-size: calc(14px + 0.15vh)
+  font-family: 'Source Sans Pro'
+  font-weight: 400
+
+  @media (max-width: $lgscreen)
+    font-size: calc(13px + 0.15vh)
+
+  @media (max-width: $mdscreen)
+    font-size: 14px
+
+  @media (max-width: $smscreen)
+    font-size: 12px
+
+  @media (max-width: $xsscreen)
+    font-size: 11px
+
+a
+  color: $color-primary
+  text-decoration: none
+  transition: color ease $speed-trans
+
+  &:hover
+    color: $color-quaternary
+
+h1, h2, h3
+  font-family: 'Source Code Pro'
+  font-weight: 300
+  letter-spacing: -1.26px
+
+  &.sans
+    font-family: 'Source Sans Pro'
+    letter-spacing: 0
+
+h1
+  font-size: 3.33em
+
+h2
+  font-size: 3em
+
+h3
+  font-size: 2.5em
+
+header
+  padding: 3em 6.67vw 6em
+  height: $height-header
+  width: calc(100% - 13.33vw)
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+  background: linear-gradient(rgba(black, 0.5), transparent)
+
+  @media (max-width: $mdscreen)
+    padding: 2.5em 5.5vw
+    width: calc(100% - 11vw)
+
+  @media (max-width: $smscreen)
+    padding: 2em 5vw
+    width: calc(100% - 10vw)
+
+nav
+  float: right
+  font-size: 1.15em
+  margin: 0.67em -1.5em
+
+  @media (max-width: $smscreen)
+    font-size: 1em
+    margin: 1em -0.75em
+
+  a
+    padding: 1.25em 1.5em
+    color: $color-light
+    text-transform: uppercase
+
+    @media (max-width: $smscreen)
+      padding: 1.25em 1em
+
+.wrap-logo
+  float: left
+  color: $color-light
+
+  h1
+    margin: 0
+    font-size: 2.15em
+
+  span:first-child
+    margin-right: 0.25em
+    color: $color-light
+
+  span:last-child
+    color: $color-quaternary

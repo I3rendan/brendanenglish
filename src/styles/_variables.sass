@@ -1,0 +1,40 @@
+// Colors
+$color-primary: #0e417b !default
+$color-primary-light: lighten($color-primary, 10%) !default
+$color-primary-dark: darken($color-primary, 18%) !default
+$color-light: #DCDCDD !default
+$color-dark: #181b1e !default
+$color-body-text: #444444 !default
+$color-accent: #1985A1 !default
+$color-secondary: #84A98C !default
+$color-tertiary: #c55c3b !default
+$color-quaternary: #FE5F55 !default
+$color-quinary: #49b360 !default
+
+// Sizing
+$height-header: 2.75em !default
+$radius-border: 1.25em !default
+$radius-btn: 0.25em !default
+
+// Timing
+$speed-trans: 0.33s
+
+// Resolution
+$xxsscreen: 15em !default
+$xsscreen: 20em !default
+$smscreen: 35.5em !default
+$mdscreen: 48em !default
+$lgscreen: 64em !default
+$hugescreen: 80em !default
+$epicscreen: 94em !default
+
+// Keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
