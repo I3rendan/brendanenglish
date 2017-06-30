@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "parallax-js": "https://github.com/wagerfield/parallax",
+    "classnames": "^2.2.5",
+    "parallax-js": "git+https://github.com/wagerfield/parallax.git",
     "react": "^15.6.1",
+    "react-body-classname": "^1.2.0",
     "react-dom": "^15.6.1",
+    "react-fullpage": "^0.1.18",
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {

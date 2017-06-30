@@ -1,0 +1,112 @@
+.btn
+  border: 0.15em solid $color-primary
+  background: transparent
+  border-radius: $radius-btn
+  padding: 0.85em 2.26em
+  color: $color-primary
+  box-shadow: 0 5px 10px rgba($color-primary, 0.15)
+  font-size: 1em
+  font-family: 'Source Code Pro'
+  letter-spacing: -0.026em
+  transition: background ease $speed-trans, box-shadow ease $speed-trans, color ease $speed-trans
+  cursor: pointer
+  text-shadow: 0 1px 1px rgba(black, 0.15)
+  font-weight: 400
+
+  @media (max-width: $smscreen)
+    min-width: 67%
+
+  &:hover
+    background: transparent
+    box-shadow: 0 10px 0 -6px rgba($color-primary, 0.175)
+
+  &:active
+    box-shadow: none
+
+  &.btn-primary
+    background: $color-primary
+    border-color: $color-primary
+    color: white
+    box-shadow: 0 5px 10px rgba($color-primary, 0.25)
+
+    &:hover
+      color: $color-primary
+      background: transparent
+      box-shadow: 0 10px 0 -6px rgba($color-primary, 0.175)
+
+  &.btn-primary-light
+    background: $color-primary-light
+    border-color: $color-primary-light
+    color: white
+    box-shadow: 0 5px 10px rgba($color-primary-light, 0.25)
+
+    &:hover
+      color: $color-primary-light
+      background: transparent
+      box-shadow: 0 10px 0 -6px rgba($color-primary-light, 0.175)
+
+  &.btn-primary-dark
+    background: $color-primary-dark
+    border-color: $color-primary-dark
+    color: white
+    box-shadow: 0 5px 10px rgba($color-primary-dark, 0.25)
+
+    &:hover
+      color: $color-primary-dark
+      background: transparent
+      box-shadow: 0 10px 0 -6px rgba($color-primary-dark, 0.175)
+
+  &.btn-secondary
+    background: $color-secondary
+    border-color: $color-secondary
+    color: white
+    box-shadow: 0 5px 10px rgba($color-secondary, 0.25)
+
+    &:hover
+      color: $color-secondary
+      background: transparent
+      box-shadow: 0 10px 0 -6px rgba($color-secondary, 0.175)
+      
+  &.btn-accent
+    background: $color-accent
+    border-color: $color-accent
+    color: white
+    box-shadow: 0 5px 10px rgba($color-accent, 0.25)
+
+    &:hover
+      color: $color-accent
+      background: transparent
+      box-shadow: 0 6px 0 -3px rgba($color-accent, 0.25)
+
+  &.btn-tertiary
+    background: $color-tertiary
+    border-color: $color-tertiary
+    color: white
+    box-shadow: 0 5px 10px rgba($color-tertiary, 0.25)
+
+    &:hover
+      color: $color-tertiary
+      background: transparent
+      box-shadow: 0 10px 0 -6px rgba($color-tertiary, 0.175)
+
+  &.btn-quaternary
+    background: $color-quaternary
+    border-color: $color-quaternary
+    color: white
+    box-shadow: 0 5px 10px rgba($color-quaternary, 0.25)
+
+    &:hover
+      color: $color-quaternary
+      background: transparent
+      box-shadow: 0 10px 0 -6px rgba($color-quaternary, 0.175)
+      
+  &.btn-quinary
+    background: $color-quinary
+    border-color: $color-quinary
+    color: white
+    box-shadow: 0 5px 10px rgba($color-quinary, 0.25)
+
+    &:hover
+      color: $color-quinary
+      background: transparent
+      box-shadow: 0 10px 0 -6px rgba($color-quinary, 0.175)
