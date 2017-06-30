@@ -1,117 +1,232 @@
-#wrap-home
+.app
+  position: fixed
+  overflow: auto
   height: 100%
   width: 100%
-  overflow: hidden
+
+  &.work
+    position: relative
+    
+    #wrap-home-bottom
+      display: none
+
+    #wrap-home-top .home-intro
+      opacity: 0
+      margin: 20vh auto
+      transition-duration: $speed-trans
+      transition-delay: 0s
+
+    #work
+      opacity: 1
+      visibility: visible
+      transition-delay: $speed-trans
+      transition-speed: $speed-trans
+      padding: 0
+      overflow: hidden
+
+#wrap-home
+  overflow: auto
 
 #wrap-home-top
   background: $color-dark
-  position: relative
   padding: 6em 3em
-  z-index: 1
-  min-height: 100%
+  height: 100vh
+  width: 100%
+  overflow: hidden
+  box-shadow: 0 1em 3em rgba(black, 0.25)
 
   .bg-home-wrap
-    min-height: 100%
+    height: 100%
     width: 100%
-    position: absolute !important
+    z-index: 0
 
   .bg-home
     content: ""
     position: absolute
-    top: -6em
-    left: -12em
+    top: -3em
+    left: -6em
     height: 100%
     min-height: calc(100% + 6em)
     width: calc(100vw + 12em)
-    background-image: url('../images/bg-leaf.jpg')
+    background-image: url('../images/bg-space2.jpg')
     background-size: cover
     background-position: center center
-    filter: grayscale(0.25) brightness(0.5) hue-rotate(107deg)
-    //filter: brightness(0.5) hue-rotate(180deg) saturate(2.6)
-    opacity: 0.33
-    box-shadow: 0 1.5em 3em rgba(black, 0.85)
+    filter: brightness(0.25)
+    opacity: 0.64
 
-  h2
+  .home-intro
     text-align: center
-    color: white
-    margin: 0 auto
-    padding: 4em 0
-    font-size: 3em
+    color: $color-light
+    margin: 26vh auto 0
+    width: 100%
+    max-width: 64rem
     position: relative
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-wrap: wrap
-    flex-flow: column
-    z-index: 1
+    left: 0
+    right: 0
+    opacity: 1
+    transition-property: opacity, margin, font-size
+    transition-timing-function: ease
+    transition-duration: $speed-trans
+    transition-delay: $speed-trans
 
-    @media (max-width: $lgscreen)
-      font-size: 2.75em
-
-    @media (max-width: $mdscreen)
-      font-size: 2.5em
-
-    @media (max-width: $smscreen)
-      font-size: 2em
-
-    > .layer
-      line-height: 1.15
+    h1
+      font-size: 5em
       margin: 0.5em
-      position: relative !important
-      min-width: 33vw
-      padding: 1.25em 2.5em
 
-      &:before
-        content: ''
-        position: absolute
-        top: -0.67em
-        left: -1em
-        padding: 0 1em
-        height: 100%
-        width: 100%
-        transform: skewX(-4deg)
-        z-index: -1
-        opacity: 0.75
-        box-shadow: 0 0.33em 0.075em -0.15em rgba(black, 0.33), 0 0.05em 0 0 rgba(white, 0.25) inset
+      @media (max-width: $lgscreen)
+        font-size: 4.5em
 
-      &:nth-child(1)
-        font-size: 1.15em
+      @media (max-width: $mdscreen)
+        font-size: 4em
 
-        &:before
-          background: linear-gradient(126deg, $color-accent, $color-primary)
+      > span
+        color: $color-accent
+        cursor: pointer
+        border-bottom: 2px dotted fade-out($color-accent, 0.67)
 
-      &:nth-child(2)
-        font-size: 1.075em
+  .btn
+    margin: 3.33em auto
+    font-size: 1.5em
+    display: inline-block
 
-        &:before
-          background: linear-gradient(126deg, $color-tertiary, $color-quaternary)
+#work
+  text-align: center
+  z-index: 1
+  color: $color-light
+  position: absolute !important
+  height: 100%
+  width: 100%
+  opacity: 0
+  padding: 2em 0 0
+  visibility: hidden
+  transition-property: opacity, visibility, padding
+  transition-timing-function: ease
+  transition-duration: $speed-trans
+  transition-delay: 0s
 
-      &:nth-child(3)
-        font-size: 1em
+  .work-item-wrap
+    min-height: 100vh
+    min-width: 100vw
+    padding: 0 7.5vw
 
-        &:before
-          background: linear-gradient(126deg, $color-secondary, $color-quinary)
+  .work-item
+    display: flex
+    padding: 0
+    margin: 0 auto
+    max-width: 80em
+    background: linear-gradient(160deg, transparent 33%, fade-out($color-quaternary, 0.75))
+    box-shadow: 0 0.5em 0.75em rgba(black, 0.33)
 
-      > div
-        width: 100%
-        text-shadow: 0.05em 0.05em 0.05em rgba(black, 0.33)
+  .work-name, .work-img
+    width: 50%
+    flex: 1
+    margin: 2em 3em
+
+  .work-name
+    text-align: left
+
+    p
+      margin: 0
+      line-height: 1
+      color: $color-accent
+      font-size: 1.5em
+
+    h3
+      margin: 0
+      padding: 0 0 0.25em
+      font-size: 2.75em
+      font-weight: 400
+      line-height: 1.5
+      border-bottom: 1px dashed rgba(white, 0.25)
+
+    h4
+      font-weight: 400
+      margin: 2.5em 0.25em
+      padding: 0.33em 0 0.33em 2em
+      font-size: 1.15em
+      line-height: 1.67
+      border-left: 2px solid $color-accent
+
+    .btn
+      margin: 0 0 1em 2.5em
+      display: inline-block
+      font-size: 1.15em
+
+  .work-img
+    height: 30em
+    width: 100%
+    position: relative
+    box-shadow: 0 0.25em 0.5em rgba(black, 0.33)
+    border-right: 1px solid rgba(white, 0.25)
+    border-bottom: 1px solid rgba(white, 0.25)
+    background-size: cover
+    background-position: top left
+
+    &.brendans-world
+      background-image: url('../images/work/brendans-world.png')
+      
+    &.nebula-1
+      background-image: url('../images/work/nebula-1.png')
+
+    &.milk
+      background-image: url('../images/work/milk.png')
+
+    &.kourthouse
+      background-image: url('../images/work/kourthouse.png')
+
+    &.greene-street
+      background-image: url('../images/work/greene-street.png')
+
+    &.nebula-5
+      background-image: url('../images/work/nebula-5.png')
 
 #wrap-home-bottom
-  padding: 6em 8em
-  background: $color-dark
+  padding: 4em
+  background: linear-gradient(95deg, white 15%, $color-light)
+  position: relative
+  font-size: 2.15em
+  text-align: center
+  z-index: 2
+  display: block
 
   @media (max-width: $mdscreen)
-    padding: 4em 6em
+    padding: 3em
 
   @media (max-width: $smscreen)
-    padding: 2em 4em
+    padding: 1.5em 1.33em 4em
 
   h2
-    color: $color-quaternary
-    font-size: 3.5em
+    color: $color-accent
+    font-size: 4em
+    margin: 0.25em 0
+    text-shadow: 0 2px 0 white
 
     @media (max-width: $mdscreen)
       font-size: 3em
 
     @media (max-width: $smscreen)
       font-size: 2.5em
+
+  h3
+    font-size: 2em
+    font-weight: 100
+    margin: 0.75em 0 1em
+    text-shadow: 0 1px 0 white
+
+    @media (max-width: $mdscreen)
+      font-size: 1.5em
+
+    @media (max-width: $smscreen)
+      font-size: 1.33em
+
+  .btn
+    font-size: 0.75em
+    margin: 1em 2em 4em 0
+    display: inline-block
+
+    @media (max-width: $mdscreen)
+      font-size: 0.67em
+
+    @media (max-width: $smscreen)
+      font-size: 0.5em
+      margin: 1em auto 0.5em
