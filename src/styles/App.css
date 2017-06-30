@@ -333,7 +333,7 @@ nav {
     display: flex;
     padding: 0;
     margin: 0 auto;
-    max-width: 75em;
+    max-width: 72em;
     background: linear-gradient(160deg, transparent 33%, rgba(25, 133, 161, 0.25));
     box-shadow: 0 0.5em 0.75em rgba(0, 0, 0, 0.33); }
   #work .work-name, #work .work-img {
