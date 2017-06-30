@@ -314,11 +314,9 @@ nav {
   text-align: center;
   z-index: 1;
   color: #DCDCDD;
-  position: absolute !important;
   height: 100%;
   width: 100%;
   opacity: 0;
-  padding: 2em 0 0;
   visibility: hidden;
   transition-property: opacity, visibility, padding;
   transition-timing-function: ease;
