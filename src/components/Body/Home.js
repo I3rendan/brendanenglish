@@ -121,7 +121,7 @@ export default class Home extends Component {
           </div>
 
           <div id="work" className="layer" data-depth="0.25">
-
+          
             <SectionsContainer {...options} activeSection={current}>
               {projectList}
             </SectionsContainer>

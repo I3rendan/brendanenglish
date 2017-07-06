@@ -5339,9 +5339,9 @@ react-error-overlay@^1.0.7:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
-react-fullpage@0.1.18:
+react-fullpage@^0.1.18:
   version "0.1.18"
-  resolved "https://registry.yarnpkg.com/react-fullpage/-/react-fullpage-0.1.18.tgz#8833126b5951650bca5880d9ddc665a040df9ef8"
+  resolved "https://learningobjects.jfrog.io/learningobjects/api/npm/npm-virtual/react-fullpage/-/react-fullpage-0.1.18.tgz#8833126b5951650bca5880d9ddc665a040df9ef8"
   dependencies:
     react "15.3.2"
     react-dom "15.3.2"

@@ -247,8 +247,8 @@ nav {
   background: #FE5F55 !important; }
 
 .app {
-  position: fixed;
   overflow: auto;
+  position: fixed;
   height: 100%;
   width: 100%; }
   .app.work {
@@ -276,14 +276,14 @@ nav {
   #wrap-home-top .bg-home {
     background-image: url("../images/bg-space2.jpg");
     filter: brightness(0.25);
-    opacity: 0.85; }
+    opacity: 0.75; }
   #wrap-home-top .home-intro {
     text-align: center;
     color: #DCDCDD;
-    margin: 26vh auto 0;
+    margin: 18vh auto 0;
     width: 100%;
     max-width: 64rem;
-    position: relative;
+    position: relative !important;
     left: 0;
     right: 0;
     opacity: 1;
