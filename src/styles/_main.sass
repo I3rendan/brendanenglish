@@ -139,6 +139,9 @@ nav
   z-index: 0
   position: absolute
 
+  &.layer
+    position: absolute !important
+
   .bg
     content: ""
     position: absolute
@@ -155,9 +158,6 @@ nav
 
 #wrap-home-top
   pointer-events: visible !important
-
-  .bg-home-wrap
-    position: fixed !important
 
 .Navigation-Anchor.active
   transform: scale(1.5) !important
