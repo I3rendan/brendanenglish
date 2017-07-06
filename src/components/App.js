@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from './Body/Home';
+import About from './Body/About';
+import Contact from './Body/Contact';
 import NotFound from './Body/NotFound';
 
 class App extends Component {
@@ -33,6 +35,8 @@ class App extends Component {
         <Header addClass={this.addClass} removeClass={this.removeClass} />
         <Switch>
           <Route exact path='/' render={props => (<Home addClass={this.addClass} />)} />
+          <Route path='/about' render={props => (<About addClass={this.addClass} />)} />
+          <Route path='/contact' render={props => (<Contact addClass={this.addClass} />)} />
           <Route path='*' component={NotFound} />
         </Switch>
         <Footer />

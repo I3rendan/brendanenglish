@@ -7,25 +7,20 @@
   &.work
     position: relative
 
-    #wrap-home-bottom
-      display: none
-
     #wrap-home-top .home-intro
       opacity: 0
       margin: 20vh auto
       transition-duration: $speed-trans
       transition-delay: 0s
 
+    #wrap-home-bottom
+      display: none
+
     #work
       opacity: 1
       visibility: visible
       transition-delay: $speed-trans
-      transition-speed: $speed-trans
       padding: 0
-      overflow: hidden
-
-#wrap-home
-  overflow: auto
 
 #wrap-home-top
   background: $color-dark
@@ -35,24 +30,10 @@
   overflow: hidden
   box-shadow: 0 1em 3em rgba(black, 0.25)
 
-  .bg-home-wrap
-    height: 100%
-    width: 100%
-    z-index: 0
-
   .bg-home
-    content: ""
-    position: absolute
-    top: -3em
-    left: -6em
-    height: 100%
-    min-height: calc(100% + 6em)
-    width: calc(100vw + 12em)
     background-image: url('../images/bg-space2.jpg')
-    background-size: cover
-    background-position: center center
     filter: brightness(0.25)
-    opacity: 0.64
+    opacity: 0.85
 
   .home-intro
     text-align: center
@@ -93,7 +74,6 @@
   text-align: center
   z-index: 1
   color: $color-light
-  //position: absolute !important
   height: 100%
   width: 100%
   opacity: 0
@@ -102,19 +82,33 @@
   transition-timing-function: ease
   transition-duration: $speed-trans
   transition-delay: 0s
+  padding: 1.5em 0 0
 
   .work-item-wrap
     padding: 0 5em
+    transform: translate3d(22vw,100vh,0) scale(0.5)
+    opacity: 0.25
+    transition-property: transform, opacity
+    transition-timing-function: ease
+    transition-duration: $speed-anim
+    transform-origin: top center
+    z-index: 0
 
     @media (max-width: $lgscreen)
       padding: 0 5em 0 1.25em
+
+    &.active
+      transform: none
+      opacity: 1
+      z-index: 1
+      pointer-events: visible
 
   .work-item
     display: flex
     padding: 0
     margin: 0 auto
     max-width: 72em
-    background: linear-gradient(160deg, transparent 33%, fade-out($color-quaternary, 0.75))
+    background: linear-gradient(160deg, transparent 33%, fade-out($color-quaternary, 0.5))
     box-shadow: 0 0.5em 0.75em rgba(black, 0.33)
 
   .work-name, .work-img
@@ -177,6 +171,210 @@
 
     &.nebula-v5
       background-image: url('../images/work/nebula-5.png')
+
+.star-field
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  pointer-events: none
+
+  &.field-1, &.field-2
+    z-index: 0
+    opacity: 0.85
+
+  &.field-3, &.field-4
+    z-index: 2
+    opacity: 0.85
+
+  &.field-1
+    .star:nth-child(1)
+      left: 46vw
+      top: 58vh
+      transform: scale(0.67)
+      filter: blur(0.37em)
+      opacity: 0.85
+
+      &:after
+        transform: scale(0.75)
+
+    .star:nth-child(2)
+      right: 25vw
+      top: 25vh
+      transform: scale(0.75)
+      filter: blur(0.5em)
+      opacity: 0.75
+
+      &:after
+        transform: scale(0.75)
+
+    .star:nth-child(3)
+      left: 33vw
+      top: 15vh
+      transform: scale(0.87)
+      filter: blur(0.38em)
+      opacity: 0.5
+
+      &:after
+        transform: scale(0.925)
+
+    .star:nth-child(4)
+      left: 10vw
+      bottom: 15vh
+      transform: scale(0.75)
+      filter: blur(0.25em)
+      opacity: 0.85
+
+      &:after
+        transform: scale(0.85)
+
+  &.field-2
+    .star:nth-child(1)
+      right: 4vw
+      top: 33vh
+      transform: scale(0.87)
+      filter: blur(0.275em)
+      opacity: 0.85
+
+      &:after
+        transform: scale(0.925)
+
+    .star:nth-child(2)
+      left: 10vh
+      top: 25vh
+      transform: scale(0.87)
+      filter: blur(0.3em)
+      opacity: 0.5
+
+      &:after
+        transform: scale(0.925)
+
+    .star:nth-child(3)
+      right: 16vh
+      bottom: 10vh
+      transform: scale(0.87)
+      filter: blur(0.37em)
+
+      &:after
+        transform: scale(0.925)
+
+    .star:nth-child(4)
+      left: 50vw
+      bottom: 25vh
+      transform: scale(0.87)
+      filter: blur(0.45em)
+      opacity: 0.5
+
+      &:after
+        transform: scale(0.925)
+
+  &.field-3
+    .star:nth-child(1)
+      right: 43vw
+      top: 23vh
+      transform: scale(0.67)
+      filter: blur(0.105em)
+      opacity: 0.75
+
+      &:after
+        transform: scale(1)
+
+    .star:nth-child(2)
+      right: 5vw
+      top: 55vh
+      transform: scale(0.75)
+      filter: blur(0.15em)
+      opacity: 0.85
+
+      &:after
+        transform: scale(0.925)
+        opacity: 0.1
+
+    .star:nth-child(3)
+      left: 12vw
+      top: 54vh
+      transform: scale(0.95)
+      filter: blur(0.125em)
+      opacity: 0.95
+
+      &:after
+        transform: scale(0.925)
+        opacity: 0.25
+
+    .star:nth-child(4)
+      left: 76vw
+      bottom: 48vh
+      transform: scale(0.5)
+      filter: blur(0.15em)
+      opacity: 0.5
+
+      &:after
+        transform: scale(0.925)
+        opacity: 0.85
+
+  &.field-4
+    .star:nth-child(1)
+      right: 12vw
+      top: 65vh
+      transform: scale(0.8)
+      filter: blur(0.12em)
+      opacity: 0.25
+
+      &:after
+        transform: scale(0.85)
+
+    .star:nth-child(2)
+      right: 29vw
+      top: 19vh
+      transform: scale(0.97)
+      filter: blur(0.075em)
+      opacity: 0.33
+
+      &:after
+        transform: scale(0.925)
+
+    .star:nth-child(3)
+      right: 26vw
+      bottom: 9vh
+      transform: scale(0.77)
+      filter: blur(0.15em)
+      opacity: 0.5
+
+      &:after
+        transform: scale(1.25)
+        opacity: 0.15
+
+    .star:nth-child(4)
+      left: 11vw
+      bottom: 23vh
+      transform: scale(0.57)
+      filter: blur(0.25em)
+      opacity: 0.75
+
+      &:after
+        transform: scale(0.925)
+
+  .star
+    content: ""
+    height: 0.575em
+    width: 0.575em
+    background: white
+    border-radius: 50%
+    position: absolute
+    z-index: 1
+
+    &.ring:after
+      content: ""
+      position: absolute
+      height: calc(100% + 2em - 1px)
+      width: calc(100% + 2em - 1px)
+      top: -1em
+      left: -1em
+      border: 1px solid white
+      border-radius: 50%
+      opacity: 0.75
+      filter: blur(0.25em)
 
 #wrap-home-bottom
   padding: 4em
