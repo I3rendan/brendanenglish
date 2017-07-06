@@ -8,15 +8,15 @@ export default class Header extends Component {
     return (
       <header>
         <div className="wrap-logo">
-          <Link onClick={this.props.removeClass} to="/"><h1>
+          <Link to="/"><h1>
             <span>Brendan</span>
             <span>English</span>
           </h1></Link>
         </div>
         <nav className="wrap-nav">
-        <Link to="/" onClick={this.props.addClass}>Work</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+          <Link to="/work">Work</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
       </header>
     );

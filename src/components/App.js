@@ -1,42 +1,23 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import classNames from 'classnames';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from './Body/Home';
+import Work from './Body/Work';
 import About from './Body/About';
 import Contact from './Body/Contact';
 import NotFound from './Body/NotFound';
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {workOn: false};
-    this.addClass = this.addClass.bind(this);
-    this.removeClass = this.removeClass.bind(this);
-  }
-
-  addClass() {
-    this.setState({
-      workOn: true
-    });
-  }
-
-  removeClass() {
-    this.setState({
-      workOn: false
-    });
-  }
-
   render() {
     return (
-      <div className={classNames('app', {'work': this.state.workOn})}>
-        <Header addClass={this.addClass} removeClass={this.removeClass} />
-        <Switch>
-          <Route exact path='/' render={props => (<Home addClass={this.addClass} />)} />
-          <Route path='/about' render={props => (<About addClass={this.addClass} />)} />
-          <Route path='/contact' render={props => (<Contact addClass={this.addClass} />)} />
+      <div className="app">
+        <Header />
+        <Switch onUpdate={ window.scrollTo(0,0) }>
+          <Route exact path='/' component={Home} />
+          <Route path='/work' component={Work} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
           <Route path='*' component={NotFound} />
         </Switch>
         <Footer />
