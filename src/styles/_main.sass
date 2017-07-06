@@ -57,7 +57,7 @@ h3
   font-size: 2.5em
 
 header
-  padding: 2.5em 0 6em
+  padding: 2.5em 0 4.5em
   margin: 0
   width: 100%
   position: absolute
@@ -132,6 +132,24 @@ nav
   max-width: 64rem
   margin: 0 auto
 
+.bg-wrap
+  height: 100%
+  min-height: 100vh
+  width: 100%
+  z-index: 0
+  position: absolute
+
+  .bg
+    content: ""
+    position: absolute
+    top: -3em
+    left: -6em
+    height: 100%
+    min-height: calc(100% + 6em)
+    width: calc(100vw + 12em)
+    background-size: cover
+    background-position: center center
+
 
 // Sucky 3rd party overrides
 
@@ -139,7 +157,7 @@ nav
   pointer-events: visible !important
 
   .bg-home-wrap
-    position: absolute !important
+    position: fixed !important
 
 .Navigation-Anchor.active
   transform: scale(1.5) !important

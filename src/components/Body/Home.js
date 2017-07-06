@@ -16,12 +16,12 @@ export default class Home extends Component {
           id: "brendans-world",
           year: "1999",
           name: "Brendan's World",
-          description: "This is where it all began... my very first site. Yes, there's a space background. Yes, it has tables and iframes. Yes, it has a spinning earth gif (the pinnacle of web technology at the time). And yes, it's riddled with embarrassing content and grammatical errors. I was only 14 when I created this so go easy..."
+          description: "This is where it all began... my very first site. There's a space background. It has iframes. It has a spinning earth gif (the pinnacle of web technology at the time). It's riddled with embarrassing content and grammatical errors. It's truly special. I was 14 when I created this so go easy..."
         },{
           id: "nebula-v1",
           year: "2001",
           name: "Nebula Web Designs - v1",
-          description: "Welcome to the wonderful age of Flash! Oh how I loved Flash... superfulious animations, bad graphics, and loads of awesomeness. This was the company name I designed under for almost 10 years. Lots of good times..."
+          description: "Welcome to the wonderful age of Flash! Oh how I loved Flash... superfulious animations, bad graphics, and great compatibility. This was the company name I designed under for almost 10 years. Lots of good times..."
         },{
           id: "milk",
           year: "2004",
@@ -41,7 +41,7 @@ export default class Home extends Component {
           id: "nebula-v5",
           year: "2007",
           name: "Nebula Web Designs - v5",
-          description: "By the 5th iteration of Nebula, I was really starting to round-out my portfolio and making a decent living (for a college student). I was getting regular design work, mastering object-oriented programming, honing-in on user interactions, and realizing I could turn my passion into a career. <a href=''>Full archive here</a>"
+          description: "By the 5th iteration of Nebula, I was making a decent living (for a college student) and rounding-out. I was getting regular design work, mastering object-oriented programming, honing-in on user interactions, and realizing I could turn my passion into a career. <a href=''>Full archive here</a>"
         }
       ]
     };
@@ -65,10 +65,11 @@ export default class Home extends Component {
 
     const options = {
       verticalAlign: true,
-      delay: 750,
+      delay: 500,
       anchors: anchorList,
-      arrowNavigation: true,
-      scrollCallback: (states) => this.setState({current: states.activeSection})
+      scrollCallback: (states) => {
+        this.setState({current: states.activeSection});
+      }
     };
 
     const {current} = this.state;
@@ -82,7 +83,7 @@ export default class Home extends Component {
               <h3 className="sans">{project.name}</h3>
               <h4 className="sans" dangerouslySetInnerHTML={{ __html: project.description }}></h4>
               <Link className="btn btn-accent" to="/">
-                Check it out
+                Take a look
               </Link>
             </div>
             <div className={classNames("work-img", project.id)}></div>
@@ -92,12 +93,26 @@ export default class Home extends Component {
     });
 
     return (
-      <section id="wrap-home">
+      <section id="home">
 
         <div id="wrap-home-top" ref={el => this.scene = el}>
 
-          <div className="bg-home-wrap layer" data-depth="0.125">
-            <div className="bg-home"></div>
+          <div className="bg-home-wrap bg-wrap layer" data-depth="0.075">
+            <div className="bg-home bg"></div>
+          </div>
+
+          <div className="star-field field-1 layer" data-depth="0.125">
+            <span className="star ring"></span>
+            <span className="star"></span>
+            <span className="star ring"></span>
+            <span className="star"></span>
+          </div>
+
+          <div className="star-field field-2 layer" data-depth="0.15">
+            <span className="star ring"></span>
+            <span className="star"></span>
+            <span className="star"></span>
+            <span className="star"></span>
           </div>
 
           <div className="home-intro layer" data-depth="0.33">
@@ -113,6 +128,20 @@ export default class Home extends Component {
 
           </div>
 
+          <div className="star-field field-3 layer" data-depth="0.33">
+            <span className="star"></span>
+            <span className="star"></span>
+            <span className="star ring"></span>
+            <span className="star ring"></span>
+          </div>
+
+          <div className="star-field field-4 layer" data-depth="0.75">
+            <span className="star"></span>
+            <span className="star ring"></span>
+            <span className="star ring"></span>
+            <span className="star"></span>
+          </div>
+
         </div>
 
         <div id="wrap-home-bottom">
@@ -121,10 +150,10 @@ export default class Home extends Component {
             <h2>Hello!</h2>
             <h3 className="sans">I'm a creative director, product designer, and developer.</h3> 
 
-            <button onClick={this.props.addClass} className="btn btn-accent">
+            <Link to="#" onClick={this.props.addClass} className="btn btn-accent">
               View my work
-            </button>
-            <Link to="/contact" className="btn btn-accent">
+            </Link>
+            <Link to="/about" className="btn btn-accent">
               More about me
             </Link>
 

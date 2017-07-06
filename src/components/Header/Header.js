@@ -14,7 +14,7 @@ export default class Header extends Component {
           </h1></Link>
         </div>
         <nav className="wrap-nav">
-        <Link onClick={this.props.addClass} to="/">Work</Link>
+        <Link to="/" onClick={this.props.addClass}>Work</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
         </nav>
