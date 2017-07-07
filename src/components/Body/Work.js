@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Parallax from 'parallax-js';
 import classNames from 'classnames';
+import BodyClassName from 'react-body-classname';
 import { Link } from 'react-router-dom';
 import {SectionsContainer, Section} from 'react-fullpage';
 export default class Work extends Component {
@@ -89,51 +90,17 @@ export default class Work extends Component {
       );
     });
     return (
-      <section id="work">
-
-        <div id="wrap-work-top" ref={el => this.scene = el}>
-
-          <div className="bg-stars-wrap bg-wrap layer" data-depth="0.075">
-            <div className="bg-stars bg"></div>
+      <BodyClassName className="work">
+        <section id="work">
+          <div id="wrap-work-top" ref={el => this.scene = el}>
+            <div className="work-wrap layer" data-depth="0.25">
+              <SectionsContainer {...options} activeSection={current}>
+                {projectList}
+              </SectionsContainer>
+            </div>
           </div>
-
-          <div className="star-field field-1 layer" data-depth="0.125">
-            <span className="star ring"></span>
-            <span className="star"></span>
-            <span className="star ring"></span>
-            <span className="star"></span>
-          </div>
-
-          <div className="star-field field-2 layer" data-depth="0.15">
-            <span className="star ring"></span>
-            <span className="star"></span>
-            <span className="star"></span>
-            <span className="star"></span>
-          </div>
-
-          <div className="work-wrap layer" data-depth="0.25">
-            <SectionsContainer {...options} activeSection={current}>
-              {projectList}
-            </SectionsContainer>
-          </div>
-
-          <div className="star-field field-3 layer" data-depth="0.33">
-            <span className="star"></span>
-            <span className="star"></span>
-            <span className="star ring"></span>
-            <span className="star ring"></span>
-          </div>
-
-          <div className="star-field field-4 layer" data-depth="0.75">
-            <span className="star"></span>
-            <span className="star ring"></span>
-            <span className="star ring"></span>
-            <span className="star"></span>
-          </div>
-
-        </div>
-
-      </section>
+        </section>
+      </BodyClassName>
     );
   }
 }
