@@ -72,6 +72,12 @@ header
   @media (max-width: $smscreen)
     padding: 2em 0
 
+#app-wrap
+  position: absolute !important
+  overflow: hidden
+  width: 100%
+  min-height: 100%
+
 .wrap-logo
   float: left
   color: $color-light
@@ -133,30 +139,77 @@ nav
   margin: 0 auto
 
 .bg-wrap
-  height: 100%
-  min-height: 100vh
-  width: 100%
+  height: 100vh
+  width: 100vw
   z-index: 0
   position: absolute
-
-  &.layer
-    position: absolute !important
 
   .bg
     content: ""
     position: absolute
     top: -3em
     left: -6em
-    height: 100%
-    min-height: calc(100% + 6em)
+    min-height: calc(100vh + 6em)
     width: calc(100vw + 12em)
     background-size: cover
     background-position: center center
+    background-color: $color-dark
+    background-image: url('../images/bg-space2.jpg')
+    filter: brightness(0.25)
 
+.home, .work, .about, .contact
+  #wrap-home-top, #wrap-work-top, #wrap-about-top, #wrap-contact-top
+    animation: showContent $speed-anim forwards ease
+
+.home
+  .bg-stars
+    animation: starsBgHome $speed-anim forwards ease
+
+  .star-field.field-1, .star-field.field-2
+    animation: starMotionHome1 $speed-anim forwards ease
+
+  .star-field.field-3, .star-field.field-4
+    animation: starMotionHome2 $speed-anim forwards ease
+
+.work
+  .bg-stars
+    animation: starsBgWork $speed-anim forwards ease
+
+  .star-field.field-1, .star-field.field-2
+    animation: starMotionWork1 $speed-anim forwards ease
+
+  .star-field.field-3, .star-field.field-4
+    animation: starMotionWork2 $speed-anim forwards ease
+
+.about
+  .bg-stars
+    animation: starsBgAbout $speed-anim forwards ease
+
+  .star-field.field-1, .star-field.field-2
+    animation: starMotionAbout1 $speed-anim forwards ease
+
+  .star-field.field-3, .star-field.field-4
+    animation: starMotionAbout2 $speed-anim forwards ease
+
+.contact
+  .bg-stars
+    animation: starsBgContact $speed-anim forwards ease
+
+  .star-field.field-1, .star-field.field-2
+    animation: starMotionContact1 $speed-anim forwards ease
+
+  .star-field.field-3, .star-field.field-4
+    animation: starMotionContact2 $speed-anim forwards ease
 
 // Sucky 3rd party overrides
 
-#wrap-home-top
+.bg-wrap.layer
+  position: absolute !important
+
+#wrap-home-top, 
+#wrap-home-bottom,
+#wrap-about-top, 
+#wrap-contact-top
   pointer-events: visible !important
 
 .Navigation-Anchor.active
