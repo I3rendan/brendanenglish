@@ -1,44 +1,72 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import classNames from 'classnames';
+import Parallax from 'parallax-js';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from './Body/Home';
+import Work from './Body/Work';
 import About from './Body/About';
 import Contact from './Body/Contact';
 import NotFound from './Body/NotFound';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {workOn: false};
-    this.addClass = this.addClass.bind(this);
-    this.removeClass = this.removeClass.bind(this);
+  componentDidMount() {
+    this.parallax = new Parallax(this.scene);
   }
 
-  addClass() {
-    this.setState({
-      workOn: true
-    });
-  }
-
-  removeClass() {
-    this.setState({
-      workOn: false
-    });
+  componentWillUnmount() {
+    this.parallax.disable();
   }
 
   render() {
     return (
-      <div className={classNames('app', {'work': this.state.workOn})}>
-        <Header addClass={this.addClass} removeClass={this.removeClass} />
-        <Switch>
-          <Route exact path='/' render={props => (<Home addClass={this.addClass} />)} />
-          <Route path='/about' render={props => (<About addClass={this.addClass} />)} />
-          <Route path='/contact' render={props => (<Contact addClass={this.addClass} />)} />
-          <Route path='*' component={NotFound} />
-        </Switch>
+      <div className="app">
+        <Header />
+        <div id="app-wrap" ref={el => this.scene = el}>
+
+          <div className="bg-stars-wrap bg-wrap layer" data-depth="0.075">
+            <div className="bg-stars bg"></div>
+          </div>
+
+          <div className="star-field field-1 layer" data-depth="0.125">
+            <span className="star ring"></span>
+            <span className="star"></span>
+            <span className="star ring"></span>
+            <span className="star"></span>
+          </div>
+
+          <div className="star-field field-2 layer" data-depth="0.15">
+            <span className="star ring"></span>
+            <span className="star"></span>
+            <span className="star"></span>
+            <span className="star"></span>
+          </div>
+
+          <Switch onUpdate={ window.scrollTo(0,0) }>
+            <Route exact path='/' component={Home} />
+            <Route path='/work' component={Work} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
+            <Route path='*' component={NotFound} />
+          </Switch>
+
+          <div className="star-field field-3 layer" data-depth="0.33">
+            <span className="star"></span>
+            <span className="star"></span>
+            <span className="star ring"></span>
+            <span className="star ring"></span>
+          </div>
+
+          <div className="star-field field-4 layer" data-depth="0.75">
+            <span className="star"></span>
+            <span className="star ring"></span>
+            <span className="star ring"></span>
+            <span className="star"></span>
+            <span className="star ring"></span>
+          </div>
+
+        </div>
         <Footer />
       </div>
     );
