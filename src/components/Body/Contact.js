@@ -29,6 +29,9 @@ export default class Contact extends Component {
               </div>
             </div>
           </div>
+          <div id="wrap-contact-bottom">
+            <h2>Get at me...</h2>
+          </div>
         </section>
       </BodyClassName>
     );

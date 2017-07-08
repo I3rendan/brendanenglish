@@ -58,25 +58,12 @@ h3
 
 header
   padding: 2.5em 0 4.5em
-  margin: 0
   width: 100%
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   z-index: 2
   background: linear-gradient(rgba(black, 0.5), transparent)
-
-  @media (max-width: $mdscreen)
-    padding: 2.5em 0
-
-  @media (max-width: $smscreen)
-    padding: 2em 0
-
-#app-wrap
-  position: absolute !important
-  overflow: hidden
-  width: 100%
-  min-height: 100%
 
 .wrap-logo
   float: left
@@ -134,6 +121,16 @@ nav
     @media (max-width: $smscreen)
       padding: 1.5em 2em
 
+.app-inner
+  position: absolute
+  min-height: 100vh
+  width: 100vw
+  overflow-x: hidden
+  overflow-y: scroll
+
+.work .app-inner
+  overflow-y: hidden
+
 .wrap-inner
   max-width: 64rem
   margin: 0 auto
@@ -142,20 +139,36 @@ nav
   height: 100vh
   width: 100vw
   z-index: 0
-  position: absolute
 
   .bg
     content: ""
     position: absolute
-    top: -3em
-    left: -6em
-    min-height: calc(100vh + 6em)
-    width: calc(100vw + 12em)
-    background-size: cover
-    background-position: center center
-    background-color: $color-dark
-    background-image: url('../images/bg-space2.jpg')
-    filter: brightness(0.25)
+    height: 100vh
+    width: 100vw
+
+    &:after
+      content: ""
+      position: absolute
+      top: -3em
+      left: -6em
+      min-height: calc(100vh + 6em)
+      width: calc(100vw + 12em)
+      background-size: cover
+      background-position: center center
+      background-color: $color-dark
+      background-image: url('../images/bg-space2.jpg')
+      filter: brightness(0.25)
+
+#space-waypoint
+  content: ""
+  position: fixed
+  top: 0
+  left: 0
+  height: calc(100vh - 5em)
+  width: 100vw
+
+#home, #work, #about, #contact
+  width: 100%
 
 .home, .work, .about, .contact
   #wrap-home-top, #wrap-work-top, #wrap-about-top, #wrap-contact-top
@@ -206,6 +219,8 @@ nav
 .bg-wrap.layer
   position: absolute !important
 
+header,
+.app-inner,
 #wrap-home-top, 
 #wrap-home-bottom,
 #wrap-about-top, 

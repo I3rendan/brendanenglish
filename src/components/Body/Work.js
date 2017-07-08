@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import config from 'react-global-configuration';
 import Parallax from 'parallax-js';
 import classNames from 'classnames';
 import BodyClassName from 'react-body-classname';
@@ -10,8 +11,11 @@ export default class Work extends Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
-      current: 0,
+      previous: 0,
+      current: config.get('workNum'),
+      direction: '',
       projects: [
         {
           id: "brendans-world",
@@ -57,21 +61,44 @@ export default class Work extends Component {
   }
 
   render() {
+
     const anchorList = [];
 
     for (var i = 0; i < this.state.projects.length; i++){
       anchorList.push(this.state.projects[i].id);
     }
 
+    const {previous} = this.state;
     const {current} = this.state;
+    const {direction} = this.state;
 
     const options = {
       verticalAlign: true,
       delay: 500,
       anchors: anchorList,
-      scrollCallback: (states) => this.setState({current: states.activeSection})
-    };
+      scrollCallback: (states) => {
+        
+        this.setState({ previous: current });
+        this.setState({ current: states.activeSection });
 
+        if (previous !== current){
+          this.setState({ direction: '' });
+          config.set({ workNum: states.activeSection });
+
+          if (previous > current){
+            setTimeout(function(){
+              this.setState({ direction: 'up' });
+            }.bind(this), 10);
+            
+          } else if (previous < current) {
+            setTimeout(function(){
+              this.setState({ direction: 'down' });
+            }.bind(this), 10);
+          }
+
+        }        
+      }
+    };
     const projectList = this.state.projects.map(function(project, index) {
       return (
         <Section className={classNames('work-item-wrap', {'active': current === index})} key={project.id}>
@@ -90,7 +117,7 @@ export default class Work extends Component {
       );
     });
     return (
-      <BodyClassName className="work">
+      <BodyClassName className={"work " + direction + " work" + current}>
         <section id="work">
           <div id="wrap-work-top" ref={el => this.scene = el}>
             <div className="work-wrap layer" data-depth="0.25">

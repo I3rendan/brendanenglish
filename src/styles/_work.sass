@@ -1,6 +1,7 @@
 #wrap-work-top
-  height: 100vh
   overflow: hidden
+  width: 100vw
+  height: 100vh
 
   .SectionContainer
     text-align: center
@@ -103,3 +104,23 @@
 
   &.nebula-v5
     background-image: url('../images/work/nebula-5.png')
+
+.work.up
+  #star-bg
+    animation: workStarsBgUp $speed-anim forwards ease
+
+  .field-1 .star, .field-2 .star
+    animation: workUp1 $speed-anim forwards ease
+
+  .field-3 .star, .field-4 .star
+    animation: workUp2 $speed-anim forwards ease
+
+.work.down
+  #star-bg
+    animation: workStarsBgDown $speed-anim forwards ease
+
+  .field-1 .star, .field-2 .star
+    animation: workDown1 $speed-anim forwards ease
+
+  .field-3 .star, .field-4 .star
+    animation: workDown2 $speed-anim forwards ease
