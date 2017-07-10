@@ -1038,10 +1038,6 @@ header,
 #wrap-contact-top {
   pointer-events: visible !important; }
 
-.Navigation-Anchor.active {
-  transform: scale(1.5) !important;
-  background: #FE5F55 !important; }
-
 .star-field {
   position: absolute !important;
   height: 100vh;

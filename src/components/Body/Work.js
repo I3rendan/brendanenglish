@@ -11,7 +11,6 @@ export default class Work extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
       previous: 0,
       current: config.get('workNum'),
@@ -77,28 +76,30 @@ export default class Work extends Component {
       delay: 500,
       anchors: anchorList,
       scrollCallback: (states) => {
-        
+
         this.setState({ previous: current });
         this.setState({ current: states.activeSection });
 
         if (previous !== current){
+
           this.setState({ direction: '' });
           config.set({ workNum: states.activeSection });
 
           if (previous > current){
             setTimeout(function(){
               this.setState({ direction: 'up' });
-            }.bind(this), 10);
+            }.bind(this), 50);
             
           } else if (previous < current) {
             setTimeout(function(){
               this.setState({ direction: 'down' });
-            }.bind(this), 10);
+            }.bind(this), 50);
           }
 
         }        
       }
     };
+
     const projectList = this.state.projects.map(function(project, index) {
       return (
         <Section className={classNames('work-item-wrap', {'active': current === index})} key={project.id}>
@@ -116,8 +117,9 @@ export default class Work extends Component {
         </Section>
       );
     });
+
     return (
-      <BodyClassName className={"work " + direction + " work" + current}>
+      <BodyClassName className={"work " + direction}>
         <section id="work">
           <div id="wrap-work-top" ref={el => this.scene = el}>
             <div className="work-wrap layer" data-depth="0.25">
