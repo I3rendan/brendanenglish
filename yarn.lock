@@ -5187,15 +5187,9 @@ progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
 
-promise@7.1.1:
+promise@7.1.1, promise@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.1.1.tgz#489654c692616b8aa55b0724fa809bb7db49c5bf"
-  dependencies:
-    asap "~2.0.3"
-
-promise@^7.1.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   dependencies:
     asap "~2.0.3"
 
@@ -5364,7 +5358,7 @@ react-error-overlay@^1.0.7:
 
 "react-fullpage@git+https://github.com/I3rendan/react-fullpage.git":
   version "0.1.17"
-  resolved "git+https://github.com/I3rendan/react-fullpage.git#bbce788428125cbd7e63e27909363e3efb682ebf"
+  resolved "git+https://github.com/I3rendan/react-fullpage.git#d4c15e4b51dc431eba73c848ba7ac095208ff0b0"
   dependencies:
     react "15.3.2"
     react-dom "15.3.2"
