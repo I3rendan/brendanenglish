@@ -1,23 +1,57 @@
 #wrap-about-top
   overflow: hidden
   width: 100vw
-  height: 100vh
+  min-height: 100vh
 
 .wrap-about-content
-  position: relative
+  position: absolute
   z-index: 2
-  padding: 15em 5em 5em 5em
+  padding: 2.5em 5em
+  top: 50vh
+  transform: translateY(-50%)
   text-align: center
+
+  h1, h2
+    color: white
+
+  h2
+    font-size: 2em
+    margin: 2.5em 0 3.33em
+    line-height: 1.33
 
   .btn
     margin: 1em
     font-size: 1.25em
 
-#wrap-about-bottom
-  padding: 4em
-  background: linear-gradient(100deg, white 25%, $color-light)
+#resume
+  padding: 2em
+  background: $color-lighter
   position: relative
-  font-size: 1.5em
+  font-size: 1.33em
   text-align: center
   z-index: 2
   display: block
+
+  h2
+    color: $color-primary
+
+.wrap-resume
+  background: $color-light
+  box-shadow: 0 1.25em 1em -0.5em rgba(black, 0.15)
+  margin: 3.33em 0
+
+.resume-head
+  position: relative
+  z-index: 1
+
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-image: url(../images/bg-plant.jpg)
+    background-size: cover
+    filter: brightness(0.25)
+    z-index: -1

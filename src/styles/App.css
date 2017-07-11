@@ -858,7 +858,7 @@ a {
   text-decoration: none;
   transition: color ease 0.33s; }
   a:hover {
-    color: #49b360; }
+    color: white; }
 
 ul, li {
   margin: 0;
@@ -872,6 +872,10 @@ h1, h2, h3, h4, h5 {
   h1.sans, h2.sans, h3.sans, h4.sans, h5.sans {
     font-family: 'Source Sans Pro';
     letter-spacing: 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a {
+    border-bottom: 2px dotted rgba(254, 95, 85, 0.33); }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
+      border: none; }
 
 h1 {
   font-size: 3.33em; }
@@ -883,13 +887,13 @@ h3 {
   font-size: 2.5em; }
 
 header {
-  padding: 2.5em 0 4.5em;
+  padding: 2.5em 0 3.33em;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent); }
+  background: linear-gradient(rgba(0, 0, 0, 0.67), transparent); }
 
 .wrap-logo {
   float: left;
@@ -1000,6 +1004,10 @@ nav {
 .home .star-field.field-3, .home .star-field.field-4 {
   animation: starMotionHome2 0.5s forwards ease; }
 
+.work .wrap-nav a:nth-child(1) {
+  color: #FE5F55;
+  cursor: default; }
+
 .work .bg-stars {
   animation: starsBgWork 0.5s forwards ease; }
 
@@ -1009,6 +1017,10 @@ nav {
 .work .star-field.field-3, .work .star-field.field-4 {
   animation: starMotionWork2 0.5s forwards ease; }
 
+.about .wrap-nav a:nth-child(2) {
+  color: #FE5F55;
+  cursor: default; }
+
 .about .bg-stars {
   animation: starsBgAbout 0.5s forwards ease; }
 
@@ -1017,6 +1029,10 @@ nav {
 
 .about .star-field.field-3, .about .star-field.field-4 {
   animation: starMotionAbout2 0.5s forwards ease; }
+
+.contact .wrap-nav a:nth-child(3) {
+  color: #FE5F55;
+  cursor: default; }
 
 .contact .bg-stars {
   animation: starsBgContact 0.5s forwards ease; }
@@ -1232,10 +1248,6 @@ header,
       @media (max-width: 48em) {
         #wrap-home-top .home-intro h1 {
           font-size: 4em; } }
-      #wrap-home-top .home-intro h1 > span {
-        color: #FE5F55;
-        cursor: pointer;
-        border-bottom: 2px dotted rgba(254, 95, 85, 0.33); }
   #wrap-home-top .btn {
     margin: 3.33em auto;
     font-size: 1.5em;
@@ -1405,25 +1417,55 @@ header,
 #wrap-about-top {
   overflow: hidden;
   width: 100vw;
-  height: 100vh; }
+  min-height: 100vh; }
 
 .wrap-about-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  padding: 15em 5em 5em 5em;
+  padding: 2.5em 5em;
+  top: 50vh;
+  transform: translateY(-50%);
   text-align: center; }
+  .wrap-about-content h1, .wrap-about-content h2 {
+    color: white; }
+  .wrap-about-content h2 {
+    font-size: 2em;
+    margin: 2.5em 0 3.33em;
+    line-height: 1.33; }
   .wrap-about-content .btn {
     margin: 1em;
     font-size: 1.25em; }
 
-#wrap-about-bottom {
-  padding: 4em;
-  background: linear-gradient(100deg, white 25%, #DCDCDD);
+#resume {
+  padding: 2em;
+  background: #efefef;
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.33em;
   text-align: center;
   z-index: 2;
   display: block; }
+  #resume h2 {
+    color: #0e417b; }
+
+.wrap-resume {
+  background: #DCDCDD;
+  box-shadow: 0 1.25em 1em -0.5em rgba(0, 0, 0, 0.15);
+  margin: 3.33em 0; }
+
+.resume-head {
+  position: relative;
+  z-index: 1; }
+  .resume-head:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/bg-plant.jpg);
+    background-size: cover;
+    filter: brightness(0.25);
+    z-index: -1; }
 
 #wrap-contact-top {
   height: 100vh;
