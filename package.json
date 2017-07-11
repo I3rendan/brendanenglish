@@ -10,6 +10,7 @@
     "react-dom": "^15.6.1",
     "react-fullpage": "git+https://github.com/I3rendan/react-fullpage.git",
     "react-global-configuration": "^1.2.0",
+    "react-google-charts": "^1.5.5",
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {

@@ -893,7 +893,8 @@ header {
   top: 0;
   left: 0;
   z-index: 2;
-  background: linear-gradient(rgba(0, 0, 0, 0.67), transparent); }
+  background: linear-gradient(rgba(0, 0, 0, 0.67), transparent);
+  display: none; }
 
 .wrap-logo {
   float: left;
@@ -1441,20 +1442,24 @@ header,
   background: #efefef;
   position: relative;
   font-size: 1.33em;
-  text-align: center;
+  text-align: left;
   z-index: 2;
   display: block; }
   #resume h2 {
-    color: #0e417b; }
+    text-align: center; }
 
 .wrap-resume {
   background: #DCDCDD;
   box-shadow: 0 1.25em 1em -0.5em rgba(0, 0, 0, 0.15);
-  margin: 3.33em 0; }
+  margin: 3.33em 0;
+  border-radius: 0.175em;
+  overflow: hidden; }
 
 .resume-head {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  display: flex;
+  padding: 2.75em; }
   .resume-head:before {
     content: "";
     position: absolute;
@@ -1466,6 +1471,101 @@ header,
     background-size: cover;
     filter: brightness(0.25);
     z-index: -1; }
+  .resume-head .resume-img {
+    height: 8.5em;
+    width: 8.5em;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 0.15em solid white;
+    box-shadow: 0 0.15em 0.15em rgba(0, 0, 0, 0.25), 0 0 0 1px white inset; }
+    .resume-head .resume-img img {
+      width: 115%;
+      height: auto;
+      position: relative;
+      top: -0.15em; }
+  .resume-head .resume-info {
+    padding: 0 0 0 2.25em;
+    color: white; }
+    .resume-head .resume-info h4 {
+      font-size: 2em;
+      margin: 0.25em 0 0.5em; }
+    .resume-head .resume-info p {
+      margin: 0.425em 0;
+      font-weight: 300;
+      font-size: 1.15em; }
+    .resume-head .resume-info .resume-role {
+      font-size: 1.25em; }
+
+.resume-inner {
+  padding: 3em; }
+  .resume-inner h3 {
+    font-size: 1.75em;
+    margin: 0.25em 0; }
+
+.exp {
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  background: #DCDCDD;
+  display: inline-block; }
+  .exp.exp1 {
+    background: #38CDD8; }
+  .exp.exp2 {
+    background: #8B60B4; }
+  .exp.exp3 {
+    background: #F39B1E; }
+  .exp.exp4 {
+    background: #85C226; }
+  .exp.exp5 {
+    background: #CE3B19; }
+  .exp.exp6 {
+    background: #5173E3; }
+
+.resume-content {
+  background: white;
+  border-radius: 0.175em;
+  margin: 1.5em 0 3.33em;
+  overflow: hidden;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15); }
+
+.resume-exp li {
+  padding: 1.25em;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 1; }
+  .resume-exp li:nth-child(even) {
+    background: #efefef; }
+
+.resume-exp p {
+  float: left;
+  margin: 0.25em 1.5em; }
+
+.resume-exp .exp {
+  margin: 0.05em 0.15em;
+  float: left;
+  display: block; }
+
+.resume-exp .duration {
+  float: right;
+  margin: 0.3em;
+  font-size: 0.925em; }
+
+.resume-timeline {
+  padding: 1.75em 1.5em 0.5em;
+  background: #181b1e; }
+  .resume-timeline h3 {
+    font-size: 1.25em;
+    color: #DCDCDD; }
+
+.experience-graph {
+  margin-top: 1.5em; }
+  .experience-graph text {
+    fill: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); }
+  .experience-graph path {
+    stroke: rgba(255, 255, 255, 0.25);
+    stroke-width: 0.5; }
 
 #wrap-contact-top {
   height: 100vh;

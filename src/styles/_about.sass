@@ -28,21 +28,25 @@
   background: $color-lighter
   position: relative
   font-size: 1.33em
-  text-align: center
+  text-align: left
   z-index: 2
   display: block
 
   h2
-    color: $color-primary
+    text-align: center
 
 .wrap-resume
   background: $color-light
   box-shadow: 0 1.25em 1em -0.5em rgba(black, 0.15)
   margin: 3.33em 0
+  border-radius: $radius-border
+  overflow: hidden
 
 .resume-head
   position: relative
   z-index: 1
+  display: flex
+  padding: 2.75em
 
   &:before
     content: ""
@@ -55,3 +59,116 @@
     background-size: cover
     filter: brightness(0.25)
     z-index: -1
+
+  .resume-img
+    height: 8.5em
+    width: 8.5em
+    overflow: hidden
+    border-radius: 50%
+    border: 0.15em solid white
+    box-shadow: 0 0.15em 0.15em rgba(black, 0.25), 0 0 0 1px white inset
+
+    img
+      width: 115%
+      height: auto
+      position: relative
+      top: -0.15em
+
+  .resume-info
+    padding: 0 0 0 2.25em
+    color: white
+
+    h4
+      font-size: 2em
+      margin: 0.25em 0 0.5em
+
+    p
+      margin: 0.425em 0
+      font-weight: 300
+      font-size: 1.15em
+
+    .resume-role
+      font-size: 1.25em
+
+.resume-inner
+  padding: 3em
+
+  h3
+    font-size: 1.75em
+    margin: 0.25em 0
+
+.exp
+  height: 1.5em
+  width: 1.5em
+  border-radius: 50%
+  background: $color-light
+  display: inline-block
+
+  &.exp1
+    background: $color-exp1
+
+  &.exp2
+    background: $color-exp2
+
+  &.exp3
+    background: $color-exp3
+
+  &.exp4
+    background: $color-exp4
+
+  &.exp5
+    background: $color-exp5
+
+  &.exp6
+    background: $color-exp6
+
+.resume-content
+  background: white
+  border-radius: $radius-border
+  margin: 1.5em 0 3.33em
+  overflow: hidden
+  box-shadow: 0 2px 1px rgba(black, 0.15)
+
+.resume-exp
+  li
+    padding: 1.25em
+    display: inline-block
+    width: 100%
+    vertical-align: middle
+    line-height: 1
+
+    &:nth-child(even)
+      background: $color-lighter
+
+  p
+    float: left
+    margin: 0.25em 1.5em
+
+  .exp
+    margin: 0.05em 0.15em
+    float: left
+    display: block
+
+  .duration
+    float: right
+    margin: 0.3em
+    font-size: 0.925em
+
+.resume-timeline
+  padding: 1.75em 1.5em 0.5em
+  background: $color-dark
+
+  h3
+    font-size: 1.25em
+    color: $color-light
+
+.experience-graph
+  margin-top: 1.5em
+
+  text
+    fill: white
+    text-shadow: 1px 1px 1px rgba(black, 0.33)
+
+  path
+    stroke: rgba(white, 0.25)
+    stroke-width: 0.5
