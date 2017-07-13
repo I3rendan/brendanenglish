@@ -8,10 +8,11 @@
     "react": "^15.6.1",
     "react-body-classname": "^1.2.0",
     "react-dom": "^15.6.1",
-    "react-fullpage": "git+https://github.com/I3rendan/react-fullpage.git",
+    "react-fullpage": "I3rendan/react-fullpage",
     "react-global-configuration": "^1.2.0",
     "react-google-charts": "^1.5.5",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "timeago-react": "^1.2.2"
   },
   "devDependencies": {
     "node-sass-chokidar": "0.0.3",

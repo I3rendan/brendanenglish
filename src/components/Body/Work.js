@@ -4,7 +4,7 @@ import Parallax from 'parallax-js';
 import classNames from 'classnames';
 import BodyClassName from 'react-body-classname';
 import { Link } from 'react-router-dom';
-import {SectionsContainer, Section} from 'react-fullpage';
+import { SectionsContainer, Section } from 'react-fullpage';
 export default class Work extends Component {
 
   displayName: 'Work';

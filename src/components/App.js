@@ -12,7 +12,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    config.set({ workNum: 0 },{ freeze: false });
+    config.set({ workNum: 0 });
   }
 
   componentDidMount() {

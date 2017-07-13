@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Parallax from 'parallax-js';
 import BodyClassName from 'react-body-classname';
-import TimeAgo from 'timeago-react';
 import { Link } from 'react-router-dom';
 import { Chart } from 'react-google-charts';
 import imgProfile from '../../images/me.png';
@@ -74,44 +73,32 @@ export default class About extends Component {
                       <li>
                         <span className="exp exp1"></span>
                         <p>Product Design, UX, and Strategy</p>
-                        <span className="duration">
-                          <TimeAgo datetime={new Date('June 12, 2008')} />
-                        </span>
+                        <span className="duration">9 years</span>
                       </li>
                       <li>
                         <span className="exp exp2"></span>
                         <p>Frontend UI Design</p>
-                        <span className="duration">
-                          <TimeAgo datetime={new Date('June 1, 1999')} />
-                        </span>
+                        <span className="duration">18 years</span>
                       </li>
                       <li>
                         <span className="exp exp3"></span>
                         <p>Frontend Development</p>
-                        <span className="duration">
-                          <TimeAgo datetime={new Date('June 1, 1999')} />
-                        </span>
+                        <span className="duration">18 years</span>
                       </li>
                       <li>
                         <span className="exp exp4"></span>
                         <p>Angular and React JS</p>
-                        <span className="duration">
-                          <TimeAgo datetime={new Date('May 12, 2013')} />
-                        </span>
+                        <span className="duration">4 years</span>
                       </li>
                       <li>
                         <span className="exp exp5"></span>
                         <p>Graphic Design and Branding</p>
-                        <span className="duration">
-                          <TimeAgo datetime={new Date('February 20, 2002')} />
-                        </span>
+                        <span className="duration">15 years</span>
                       </li>
                       <li>
                         <span className="exp exp6"></span>
                         <p>Wireframing, Prototyping, and Creative Visioning</p>
-                        <span className="duration">
-                          <TimeAgo datetime={new Date('August 8, 2010')} />
-                        </span>
+                        <span className="duration">7 years</span>
                       </li>
                     </ul>
 
@@ -141,7 +128,7 @@ export default class About extends Component {
                           }}
                           graph_id="ExpTimeline"
                           width="100%"
-                          height="18em"
+                          height="15em"
                         />
                       </div>
                     </div>
@@ -157,7 +144,7 @@ export default class About extends Component {
                   <div className="resume-content">
                     <h4 className="sans">
                       Learning Objects <Link to="http://www.learningobjects.com" target="_blank">www.learningobjects.com</Link>
-                      <span>Washington, DC</span>
+                      <span>Wasgington, DC</span>
                     </h4>
                     <div className="resume-work-date">
                       <p className="date today">Today</p>
@@ -209,10 +196,10 @@ export default class About extends Component {
                       </ul>
                       <div className="resume-work-exp">
                         <ul>
-                          <li><span className="exp exp1"></span>Product Design, UX, and Strategy</li>
-                          <li><span className="exp exp2"></span>Frontend UI Design</li>
-                          <li><span className="exp exp3"></span>Frontend Development</li>
-                          <li><span className="exp exp5"></span>Graphic Design and Branding</li>
+                          <li><span className="exp1"></span>Product Design, UX, and Strategy</li>
+                          <li><span className="exp2"></span>Frontend UI Design</li>
+                          <li><span className="exp3"></span>Frontend Development</li>
+                          <li><span className="exp5"></span>Graphic Design and Branding</li>
                         </ul>
                       </div>
                     </div>
