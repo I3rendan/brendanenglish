@@ -71,8 +71,6 @@ header
   z-index: 2
   background: linear-gradient(rgba(black, 0.67), transparent)
 
-  display: none
-
 .wrap-logo
   float: left
   color: $color-light
@@ -167,13 +165,39 @@ nav
       background-image: url('../images/bg-space2.jpg')
       filter: brightness(0.25)
 
-#space-waypoint
-  content: ""
-  position: fixed
-  top: 0
-  left: 0
-  height: calc(100vh - 5em)
-  width: 100vw
+.anim-scroll
+  display: block
+  text-align: center
+  width: 100%
+
+  > span
+    content: ""
+    width: 2px
+    margin: 0 auto
+    height: 0.75em
+    display: block
+    background: $color-accent
+    text-align: center
+    opacity: 0.25
+    position: relative
+
+    &:nth-child(1)
+      animation: animScroll1 $speed-animScroll infinite
+
+    &:nth-child(2)
+      animation: animScroll2 $speed-animScroll infinite
+
+    &:nth-child(3)
+      animation: animScroll3 $speed-animScroll infinite
+
+      &:after
+        content: ""
+        position: absolute
+        top: 100%
+        border-style: solid
+        border-width: 8px
+        left: -7px
+        border-color: $color-accent transparent transparent
 
 #home, #work, #about, #contact
   width: 100%

@@ -25,36 +25,49 @@ export default class About extends Component {
             <div className="layer" data-depth="0.33">
               <div className="wrap-about-content">
 
-              <h1>I design and build websites, applications, and products.</h1>
-              <h2>I'm <Link to="#resume">currently</Link> the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
+                <h1>I design and build websites, applications, and products.</h1>
+                <h2>I'm <Link to="#resume">currently</Link> the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
 
                 <Link to="/work" className="btn btn-accent">
                   View my work
                 </Link>
 
               </div>
+
+              <Link to="#resume" className="resume-link">
+              My résumé
+              <span className="anim-scroll">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </Link>
+            
             </div>
           </div>
+
+
           <div id="resume">
-            <h2>Here's my résumé...</h2>
 
             <div className="wrap-resume">
 
               <div className="resume-head">
-                <div className="resume-img">
-                  <img src={imgProfile} alt="Brendan English" />
-                </div>
-                <div className="resume-info">
-                  <h4>Brendan English</h4>
-                  <p className="resume-role">Creative Director at <Link to="http://www.learningobjects.com" target="_blank">Learning Objects</Link>, Washington DC</p>
-                  <p className="resume-contact"><Link to="mailto:brendan@brendanenglish.com">brendan@brendanenglish.com</Link> &ndash; <Link to="">LinkedIn</Link></p>
+                <div className="wrap-inner">
+                  <div className="resume-img">
+                    <img src={imgProfile} alt="Brendan English" />
+                  </div>
+                  <div className="resume-info">
+                    <h3 className="sans">Brendan English</h3>
+                    <p className="resume-role">Creative Director at <Link to="http://www.learningobjects.com" target="_blank">Learning Objects</Link>, Washington DC</p>
+                    <p className="resume-contact"><Link to="mailto:brendan@brendanenglish.com">brendan@brendanenglish.com</Link> &ndash; <Link to="">LinkedIn</Link></p>
+                  </div>
                 </div>
               </div>
 
-              <div className="resume-inner">
+              <div className="resume-inner wrap-inner">
 
                 <div className="resume-exp">
-                  <h3>Relevant Experience</h3>
+                  <h3 className="sans">Relevant Experience</h3>
                   <div className="resume-content">
                     <ul>
                       <li>
@@ -90,7 +103,7 @@ export default class About extends Component {
                     </ul>
 
                     <div className="resume-timeline">
-                      <h3>Experience Timeline</h3>
+                      <h3 className="sans">Experience Timeline</h3>
                       <div className="experience-graph">
                         <Chart
                           chartType="Timeline"
@@ -126,10 +139,10 @@ export default class About extends Component {
                 
 
                 <div className="resume-work">
-                  <h3>Work History</h3>
+                  <h3 className="sans">Work History</h3>
 
                   <div className="resume-content">
-                    <h4>
+                    <h4 className="sans">
                       Learning Objects <Link to="http://www.learningobjects.com" target="_blank">www.learningobjects.com</Link>
                       <span>Wasgington, DC</span>
                     </h4>
@@ -138,7 +151,7 @@ export default class About extends Component {
                       <p className="date"><span>May</span>2013</p>
                     </div>
                     <div className="resume-work-role">
-                      <h5>Creative Director</h5>
+                      <h5 className="sans">Creative Director</h5>
                       <ul>
                         <li>Define and maintain brand with a consistent methodology, aesthetic, and user experience.</li>
                         <li>Sell vision and concepts to users, internal teams, and clients.</li>
@@ -161,7 +174,7 @@ export default class About extends Component {
                   </div>
 
                   <div className="resume-content">
-                    <h4>
+                    <h4 className="sans">
                       Blackbaud <Link to="http://www.blackbaud.com" target="_blank">www.blackbaud.com</Link>
                       <span>Charleston, SC</span>
                     </h4>
@@ -170,7 +183,7 @@ export default class About extends Component {
                       <p className="date"><span>Jun</span>2008</p>
                     </div>
                     <div className="resume-work-role">
-                      <h5>Senior Interactive Developer</h5>
+                      <h5 className="sans">Senior Interactive Developer</h5>
                       <ul>
                         <li>Led the frontend design strategy and development for the corporate website.</li>
                         <li>Responsible for the development and maintenance of multiple corporate web presences which receive a combined average of 357,116 visits per month.</li>
@@ -195,14 +208,14 @@ export default class About extends Component {
                 </div>
 
                 <div className="resume-education">
-                  <h3>Education</h3>
+                  <h3 className="sans">Education</h3>
                   <div className="resume-content">
                     <div className="education-logo">
                       <img src={imgUNCG} alt="UNCG" />
                     </div>
                     <div className="education-info">
-                      <h4>B.S., Information Systems and Operations Management</h4>
-                      <h5>University of North Carolina at Greensboro, May 2008</h5>
+                      <h4 className="sans">B.S., Information Systems and Operations Management</h4>
+                      <h5 className="sans">University of North Carolina at Greensboro, May 2008</h5>
                     </div>
                   </div>
                 </div>

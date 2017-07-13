@@ -731,6 +731,118 @@
     transform: translateY(100vh);
     opacity: 0; } }
 
+@-webkit-keyframes animScroll1 {
+  0% {
+    opacity: 0.25; }
+  10% {
+    opacity: 1; }
+  55% {
+    opacity: 0.25; } }
+
+@-moz-keyframes animScroll1 {
+  0% {
+    opacity: 0.25; }
+  10% {
+    opacity: 1; }
+  55% {
+    opacity: 0.25; } }
+
+@-ms-keyframes animScroll1 {
+  0% {
+    opacity: 0.25; }
+  10% {
+    opacity: 1; }
+  55% {
+    opacity: 0.25; } }
+
+@keyframes animScroll1 {
+  0% {
+    opacity: 0.25; }
+  10% {
+    opacity: 1; }
+  55% {
+    opacity: 0.25; } }
+
+@-webkit-keyframes animScroll2 {
+  0% {
+    opacity: 0.25; }
+  20% {
+    opacity: 0.25; }
+  30% {
+    opacity: 1; }
+  75% {
+    opacity: 0.25; } }
+
+@-moz-keyframes animScroll2 {
+  0% {
+    opacity: 0.25; }
+  20% {
+    opacity: 0.25; }
+  30% {
+    opacity: 1; }
+  75% {
+    opacity: 0.25; } }
+
+@-ms-keyframes animScroll2 {
+  0% {
+    opacity: 0.25; }
+  20% {
+    opacity: 0.25; }
+  30% {
+    opacity: 1; }
+  75% {
+    opacity: 0.25; } }
+
+@keyframes animScroll2 {
+  0% {
+    opacity: 0.25; }
+  20% {
+    opacity: 0.25; }
+  30% {
+    opacity: 1; }
+  75% {
+    opacity: 0.25; } }
+
+@-webkit-keyframes animScroll3 {
+  0% {
+    opacity: 0.25; }
+  40% {
+    opacity: 0.25; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.25; } }
+
+@-moz-keyframes animScroll3 {
+  0% {
+    opacity: 0.25; }
+  40% {
+    opacity: 0.25; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.25; } }
+
+@-ms-keyframes animScroll3 {
+  0% {
+    opacity: 0.25; }
+  40% {
+    opacity: 0.25; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.25; } }
+
+@keyframes animScroll3 {
+  0% {
+    opacity: 0.25; }
+  40% {
+    opacity: 0.25; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.25; } }
+
 .btn {
   border: 0.15em solid #0e417b;
   background: transparent;
@@ -893,8 +1005,7 @@ header {
   top: 0;
   left: 0;
   z-index: 2;
-  background: linear-gradient(rgba(0, 0, 0, 0.67), transparent);
-  display: none; }
+  background: linear-gradient(rgba(0, 0, 0, 0.67), transparent); }
 
 .wrap-logo {
   float: left;
@@ -982,13 +1093,34 @@ nav {
       background-image: url("../images/bg-space2.jpg");
       filter: brightness(0.25); }
 
-#space-waypoint {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: calc(100vh - 5em);
-  width: 100vw; }
+.anim-scroll {
+  display: block;
+  text-align: center;
+  width: 100%; }
+  .anim-scroll > span {
+    content: "";
+    width: 2px;
+    margin: 0 auto;
+    height: 0.75em;
+    display: block;
+    background: #FE5F55;
+    text-align: center;
+    opacity: 0.25;
+    position: relative; }
+    .anim-scroll > span:nth-child(1) {
+      animation: animScroll1 2s infinite; }
+    .anim-scroll > span:nth-child(2) {
+      animation: animScroll2 2s infinite; }
+    .anim-scroll > span:nth-child(3) {
+      animation: animScroll3 2s infinite; }
+      .anim-scroll > span:nth-child(3):after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        border-style: solid;
+        border-width: 8px;
+        left: -7px;
+        border-color: #FE5F55 transparent transparent; }
 
 #home, #work, #about, #contact {
   width: 100%; }
@@ -1419,47 +1551,61 @@ header,
   overflow: hidden;
   width: 100vw;
   min-height: 100vh; }
+  #wrap-about-top .layer {
+    min-height: 100vh; }
 
 .wrap-about-content {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  padding: 2.5em 5em;
-  top: 50vh;
+  padding: 2.5em 6.67em;
+  top: 45vh;
+  margin: 0 auto;
   transform: translateY(-50%);
-  text-align: center; }
+  text-align: center;
+  max-width: 80rem; }
   .wrap-about-content h1, .wrap-about-content h2 {
     color: white; }
   .wrap-about-content h2 {
-    font-size: 2em;
-    margin: 2.5em 0 3.33em;
-    line-height: 1.33; }
+    font-size: 1.75em;
+    margin: 2.5em auto 3.33em;
+    line-height: 1.33;
+    text-align: justify;
+    max-width: 33em; }
   .wrap-about-content .btn {
     margin: 1em;
     font-size: 1.25em; }
 
+.resume-link {
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  font-size: 1.25em;
+  width: 100%;
+  text-align: center; }
+  .resume-link .anim-scroll {
+    margin-top: 0.5em; }
+
 #resume {
   padding: 2em;
-  background: #efefef;
   position: relative;
   font-size: 1.33em;
   text-align: left;
   z-index: 2;
-  display: block; }
-  #resume h2 {
-    text-align: center; }
+  display: block;
+  padding: 0; }
 
 .wrap-resume {
-  background: #DCDCDD;
-  box-shadow: 0 1.25em 1em -0.5em rgba(0, 0, 0, 0.15);
-  margin: 3.33em 0;
-  border-radius: 0.175em;
-  overflow: hidden; }
+  background: #efefef;
+  box-shadow: 0 1.25em 1em -0.5em rgba(0, 0, 0, 0.15); }
 
 .resume-head {
   position: relative;
   z-index: 1;
-  display: flex;
-  padding: 2.75em; }
+  padding: 3.33em 5em;
+  background-color: #1985A1;
+  box-shadow: 0 0.75em 1.5em rgba(0, 0, 0, 0.33) inset, 0 0em 3em rgba(0, 0, 0, 0.25) inset;
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25); }
   .resume-head:before {
     content: "";
     position: absolute;
@@ -1467,16 +1613,23 @@ header,
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../images/bg-plant.jpg);
+    background-image: url(../images/bg-leaf.jpg);
     background-size: cover;
-    filter: brightness(0.25);
-    z-index: -1; }
+    filter: brightness(0.5) hue-rotate(85deg) saturate(1.5);
+    z-index: -1;
+    opacity: 0.5; }
+  .resume-head a {
+    color: white;
+    margin: 0 0.15em;
+    border-bottom: 1px dotted #FE5F55; }
   .resume-head .resume-img {
     height: 8.5em;
     width: 8.5em;
     overflow: hidden;
     border-radius: 50%;
     border: 0.15em solid white;
+    display: inline-block;
+    vertical-align: top;
     box-shadow: 0 0.15em 0.15em rgba(0, 0, 0, 0.25), 0 0 0 1px white inset; }
     .resume-head .resume-img img {
       width: 115%;
@@ -1484,20 +1637,24 @@ header,
       position: relative;
       top: -0.15em; }
   .resume-head .resume-info {
-    padding: 0 0 0 2.25em;
-    color: white; }
-    .resume-head .resume-info h4 {
-      font-size: 2em;
-      margin: 0.25em 0 0.5em; }
+    padding: 0 0 0 2.5em;
+    color: white;
+    display: inline-block;
+    vertical-align: top; }
+    .resume-head .resume-info h3 {
+      font-size: 2.5em;
+      margin: 0.15em 0 0.33em; }
     .resume-head .resume-info p {
-      margin: 0.425em 0;
+      margin: 0.33em 0;
       font-weight: 300;
-      font-size: 1.15em; }
+      font-size: 1em;
+      color: #DCDCDD; }
     .resume-head .resume-info .resume-role {
-      font-size: 1.25em; }
+      font-size: 1.25em;
+      font-weight: 400; }
 
 .resume-inner {
-  padding: 3em; }
+  padding: 3em 1.5em; }
   .resume-inner h3 {
     font-size: 1.75em;
     margin: 0.25em 0; }
@@ -1526,16 +1683,18 @@ header,
   border-radius: 0.175em;
   margin: 1.5em 0 3.33em;
   overflow: hidden;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.125); }
 
 .resume-exp li {
-  padding: 1.25em;
+  padding: 1.33em;
   display: inline-block;
   width: 100%;
   vertical-align: middle;
-  line-height: 1; }
+  line-height: 1;
+  font-size: 0.925em;
+  background: white; }
   .resume-exp li:nth-child(even) {
-    background: #efefef; }
+    background: #f6f6f6; }
 
 .resume-exp p {
   float: left;
@@ -1552,7 +1711,7 @@ header,
   font-size: 0.925em; }
 
 .resume-timeline {
-  padding: 1.75em 1.5em 0.5em;
+  padding: 2em 2.5em 0.5em;
   background: #181b1e; }
   .resume-timeline h3 {
     font-size: 1.25em;
@@ -1564,8 +1723,7 @@ header,
     fill: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); }
   .experience-graph path {
-    stroke: rgba(255, 255, 255, 0.25);
-    stroke-width: 0.5; }
+    stroke: rgba(255, 255, 255, 0.25); }
 
 #wrap-contact-top {
   height: 100vh;
