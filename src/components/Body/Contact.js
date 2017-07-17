@@ -19,18 +19,24 @@ export default class Contact extends Component {
       <BodyClassName className="contact">
         <section id="contact">
           <div id="wrap-contact-top" ref={el => this.scene = el}>
-            <div className="layer" data-depth="0.33">
+            <div className="layer" data-depth="0.25">
               <div className="wrap-contact-content">
 
-                <Link to="/" onClick={this.props.addClass} className="btn btn-accent">
-                  View my work
-                </Link>
+                <div className="contact-social">
+                  <Link to="https://www.linkedin.com/in/brendan-english-a7230631" target="_blank"><i className="icon icon-linkedin" /></Link>
+                  <Link to="https://github.com/I3rendan" target="_blank"><i className="icon icon-github" /></Link>
+                  <Link to="https://www.facebook.com/I3rendan" target="_blank"><i className="icon icon-facebook" /></Link>
+                </div>
+
+                <form id="contact-form">
+                  <input type="text" id="name" placeholder="Your name..." />
+                  <input type="text" id="email" placeholder="Your email..." />
+                  <textarea id="message" cols="4" placeholder="Your message..." />
+                  <input type="submit" id="submit" value="Send message" />
+                </form>
 
               </div>
             </div>
-          </div>
-          <div id="wrap-contact-bottom">
-            <h2>Get at me...</h2>
           </div>
         </section>
       </BodyClassName>

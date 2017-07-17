@@ -12,15 +12,19 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    config.set({ workNum: 0 });
+    config.set({ workNum: 0 },{ freeze: false });
   }
 
   componentDidMount() {
-    this.parallax = new Parallax(this.scene);
+    if (window.innerWidth > 920){
+      this.parallax = new Parallax(this.scene);
+    }
   }
 
   componentWillUnmount() {
-    this.parallax.disable();
+    if (window.innerWidth > 920){
+      this.parallax.disable();
+    }
   }
 
   render() {
@@ -33,9 +37,14 @@ class App extends Component {
 
           <div className="app-inner" ref={el => this.scene = el}>
 
-            <div id="star-bg" className="bg-stars-wrap bg-wrap layer" data-depth="0.05">
-              <div className="bg-stars bg"></div>
-            </div>
+            {window.innerWidth > 920 ? 
+              <div id="star-bg" className="bg-stars-wrap bg-wrap layer" data-depth="0.05">
+                <div className="bg-stars bg"></div>
+              </div> :
+              <div id="star-bg" className="bg-stars-wrap bg-wrap">
+                <div className="bg-stars bg"></div>
+              </div>
+            }
 
             <div className="star-field field-1 layer" data-depth="0.125">
               <span className="star ring"></span>

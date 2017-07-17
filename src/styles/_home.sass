@@ -3,6 +3,11 @@
   width: 100vw
   height: 100vh
 
+  @media (max-width: $mdscreen)
+    height: 100%
+    overflow: auto
+    min-height: 56.5em
+
   .home-intro
     text-align: center
     color: $color-light
@@ -26,6 +31,9 @@
     margin: 3.33em auto
     font-size: 1.5em
     display: inline-block
+
+    @media (max-width: $smscreen)
+      font-size: 1.25em
 
 #wrap-home-bottom
   padding: 4em

@@ -5,18 +5,97 @@
 .wrap-contact-content
   position: relative
   z-index: 2
-  padding: 15em 5em 5em 5em
+  top: 48vh
+  margin: 0 auto
+  transform: translateY(-50%)
   text-align: center
 
-  .btn
-    margin: 1em
+  @media (max-width: $mdscreen)
+    font-size: 0.925em
+
+  .contact-social
+    font-size: 3.33em
+    padding: 0.5em
+    margin-bottom: 0.75em
+
+    @media (max-width: $smscreen)
+      margin-top: -0.75em
+      margin-bottom: 0.5em
+
+    .icon
+      margin: 0.75em
+      color: $color-accent
+      transition: color ease $speed-trans
+
+      &:hover
+        color: $color-light
+
+  #contact-form
+    background: rgba($color-lightest, 0.925)
+    display: inline-block
+    margin: 0 auto
     font-size: 1.25em
+    padding: 1.85em 3em
+    position: relative
+    box-shadow: 0 0.25em 0.75em rgba(black, 0.33)
 
-#wrap-contact-bottom
-  padding: 4em
-  background: linear-gradient(100deg, white 25%, $color-light)
-  position: relative
-  font-size: 1.5em
-  text-align: center
-  z-index: 2
-  display: block
+    @media (max-width: $smscreen)
+      padding: 1em 2em
+      font-size: 1.33em
+
+    &:before
+      content: ""
+      position: absolute
+      height: calc(100% + 0.5em)
+      border-radius: $radius-border $radius-border 0 0
+      width: calc(100% - 1.5em)
+      top: -0.5em
+      left: 0.75em
+      background: $color-accent
+      z-index: -1
+
+    input, textarea
+      display: block
+      width: 100%
+      font-size: 1em
+      padding: 0.75em
+      width: 21em
+      margin: 1em 0
+      background: rgba(white, 0.75)
+      border-style: solid
+      border-color: rgba($color-accent, 0.75)
+      border-width: 0 0 0.115em
+      box-shadow: 0 2px 1px rgba(black, 0.1)
+      font-family: 'Source Sans Pro'
+
+      @media (max-width: $mdscreen)
+        width: 20em
+
+      @media (max-width: $smscreen)
+        width: 18em
+
+      &:focus
+        border-color: $color-accent
+        background: white
+
+    textarea
+      height: 7.5em
+
+    #submit
+      position: absolute
+      background: $color-accent
+      border-radius: 0 0 $radius-border $radius-border
+      border: none
+      width: calc(100% - 1.5em)
+      left: 0.75em
+      top: 100%
+      margin: 0
+      padding: 1.15em
+      z-index: -1
+      color: white
+      transition: background ease $speed-trans
+      text-shadow: 0 1px 1px rgba(black, 0.25)
+
+      &:hover
+        background: darken($color-accent, 10%)
+        cursor: pointer

@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { Chart } from 'react-google-charts';
 import imgProfile from '../../images/me.png';
 import imgUNCG from '../../images/uncg.png';
+import imgLO from '../../images/logo-lo.png';
+import imgBlackbaud from '../../images/logo-blackbaud.png';
 export default class About extends Component {
 
   displayName: 'About';
@@ -29,13 +31,9 @@ export default class About extends Component {
                 <h1>I design and build websites, applications, and products.</h1>
                 <h2>I'm <Link to="#resume">currently</Link> the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
 
-                <Link to="/work" className="btn btn-accent">
-                  View my work
-                </Link>
-
-              </div>
-
-              <Link to="#resume" className="resume-link">
+              </div>            
+            </div>
+            <Link to="#resume" className="resume-link layer" data-depth="0.15">
               My résumé
               <span className="anim-scroll">
                 <span></span>
@@ -43,8 +41,6 @@ export default class About extends Component {
                 <span></span>
               </span>
             </Link>
-            
-            </div>
           </div>
 
 
@@ -108,7 +104,7 @@ export default class About extends Component {
                       </li>
                       <li>
                         <span className="exp exp6"></span>
-                        <p>Wireframing, Prototyping, and Creative Visioning</p>
+                        <p>Wireframing, Prototyping, and Visioning</p>
                         <span className="duration">
                           <TimeAgo datetime={new Date('August 8, 2010')} />
                         </span>
@@ -116,7 +112,7 @@ export default class About extends Component {
                     </ul>
 
                     <div className="resume-timeline">
-                      <h3 className="sans">Experience Timeline</h3>
+                      <h3 className="sans">Timeline</h3>
                       <div className="experience-graph">
                         <Chart
                           chartType="Timeline"
@@ -156,7 +152,7 @@ export default class About extends Component {
 
                   <div className="resume-content">
                     <h4 className="sans">
-                      Learning Objects <Link to="http://www.learningobjects.com" target="_blank">www.learningobjects.com</Link>
+                      <Link to="http://www.learningobjects.com" target="_blank"><img src={imgLO} alt="Learning Objects" /></Link>
                       <span>Washington, DC</span>
                     </h4>
                     <div className="resume-work-date">
@@ -173,22 +169,22 @@ export default class About extends Component {
                         <li>Oversee all creative output and design high quality, compelling user experiences.</li>
                         <li>Lead product vision through conception and testing and maintain market awareness.</li>
                       </ul>
-                      <div className="resume-work-exp">
-                        <ul>
-                          <li><span className="exp exp1"></span>Product Design, UX, and Strategy</li>
-                          <li><span className="exp exp2"></span>Frontend UI Design</li>
-                          <li><span className="exp exp3"></span>Frontend Development</li>
-                          <li><span className="exp exp4"></span>React and Angular JS</li>
-                          <li><span className="exp exp5"></span>Graphic Design and Branding</li>
-                          <li><span className="exp exp6"></span>Wireframing, Prototyping, and Creative Visioning</li>
-                        </ul>
-                      </div>
+                    </div>
+                    <div className="resume-work-exp">
+                      <ul>
+                        <li><span className="exp exp1"></span>Product Design, UX, and Strategy</li>
+                        <li><span className="exp exp2"></span>Frontend UI Design</li>
+                        <li><span className="exp exp3"></span>Frontend Development</li>
+                        <li><span className="exp exp4"></span>React and Angular JS</li>
+                        <li><span className="exp exp5"></span>Graphic Design and Branding</li>
+                        <li><span className="exp exp6"></span>Wireframing, Prototyping, &amp;  Visioning</li>
+                      </ul>
                     </div>
                   </div>
 
                   <div className="resume-content">
                     <h4 className="sans">
-                      Blackbaud <Link to="http://www.blackbaud.com" target="_blank">www.blackbaud.com</Link>
+                      <Link to="http://www.blackbaud.com" target="_blank"><img src={imgBlackbaud} alt="Blackbaud" /></Link>
                       <span>Charleston, SC</span>
                     </h4>
                     <div className="resume-work-date">
@@ -207,14 +203,14 @@ export default class About extends Component {
                         <li>Developed custom site designs and HTML/CSS/JS/Flash for a variety of nonprofit organizations.</li>
                         <li>Responsible for interfacing and developing client relationships.</li>
                       </ul>
-                      <div className="resume-work-exp">
-                        <ul>
-                          <li><span className="exp exp1"></span>Product Design, UX, and Strategy</li>
-                          <li><span className="exp exp2"></span>Frontend UI Design</li>
-                          <li><span className="exp exp3"></span>Frontend Development</li>
-                          <li><span className="exp exp5"></span>Graphic Design and Branding</li>
-                        </ul>
-                      </div>
+                    </div>
+                    <div className="resume-work-exp">
+                      <ul>
+                        <li><span className="exp exp1"></span>Product Design, UX, and Strategy</li>
+                        <li><span className="exp exp2"></span>Frontend UI Design</li>
+                        <li><span className="exp exp3"></span>Frontend Development</li>
+                        <li><span className="exp exp5"></span>Graphic Design and Branding</li>
+                      </ul>
                     </div>
                   </div>
 

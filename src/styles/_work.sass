@@ -3,6 +3,11 @@
   width: 100vw
   height: 100vh
 
+  @media (max-width: $workscreen)
+    height: 100%
+    width: 100%
+    overflow: auto
+
   .SectionContainer
     text-align: center
     z-index: 1
@@ -20,21 +25,24 @@
 .work-item-wrap
   padding: 0 5em
   transform: translate3d(22vw,100vh,0) scale(0.5)
+  filter: blur(0.33em)
   opacity: 0.25
   transition-property: transform, opacity
   transition-timing-function: ease
   transition-duration: $speed-anim
   transform-origin: top center
-  z-index: 0
 
   @media (max-width: $lgscreen)
     padding: 0 5em 0 1.25em
+    transform: none
+    opacity: 1
 
   &.active
     transform: none
     opacity: 1
     z-index: 1
     pointer-events: visible
+    filter: none
 
 .work-item
   display: flex
@@ -43,6 +51,54 @@
   max-width: 72em
   background: linear-gradient(160deg, transparent 33%, fade-out($color-quaternary, 0.5))
   box-shadow: 0 0.5em 0.75em rgba(black, 0.33)
+
+.work-mobile
+  position: relative
+  top: 0
+  left: 0
+  padding: 10em 0 0
+  height: 100%
+  width: 100%
+  overflow: auto
+  color: $color-light
+
+  .work-item-wrap
+    transform: none
+    filter: none
+    padding: 3.33em 0 0
+    position: relative
+    overflow: hidden
+
+  .work-name
+    width: 100%
+    position: relative
+    z-index: 1
+    margin: 1.5em 2.75em
+
+    h3
+      padding: 0
+      border: none
+      font-size: 2.25em
+
+    h4
+      margin: 2em 0.25em
+      font-size: 1.075em
+
+    .btn
+      display: none
+
+  .work-img
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 0
+    padding: 0
+    margin: 0
+    filter: grayscale(0.85)
+    opacity: 0.15
 
 .work-name, .work-img
   width: 50%

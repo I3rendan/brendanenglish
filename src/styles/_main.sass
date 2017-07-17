@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5
     letter-spacing: 0
 
   a
-    border-bottom: 2px dotted fade-out($color-accent, 0.67)
+    border-bottom: 2px dashed fade-out($color-accent, 0.67)
 
     &:hover
       border: none
@@ -63,15 +63,16 @@ h3
   font-size: 2.5em
 
 header
-  padding: 2.5em 0 3.33em
+  padding: 2.5em 0
   width: 100%
-  position: fixed
+  position: absolute
   top: 0
   left: 0
   z-index: 2
-  background: linear-gradient(rgba(black, 0.67), transparent)
+  background: linear-gradient(rgba(black, 0.5), transparent)
 
-  display: none
+  @media (max-width: $mdscreen)
+    z-index: 3
 
 .wrap-logo
   float: left
@@ -111,7 +112,7 @@ nav
     position: fixed
     font-size: 1.25em
     bottom: 0
-    width: 100%
+    width: 100vw
     text-align: center
     background: linear-gradient(transparent, rgba(black, 0.5))
 
@@ -134,11 +135,17 @@ nav
   min-height: 100vh
   width: 100vw
   overflow-x: hidden
-  overflow-y: scroll
+  overflow-y: auto
+
+  @media (max-width: $mdscreen)
+    min-height: 100%
 
 .work .app-inner
   overflow-y: hidden
 
+  @media (max-width: $workscreen)
+    overflow-y: auto
+    
 .wrap-inner
   max-width: 64rem
   margin: 0 auto
@@ -148,11 +155,18 @@ nav
   width: 100vw
   z-index: 0
 
+  @media (max-width: $mdscreen)
+    height: 100%
+
   .bg
     content: ""
     position: absolute
     height: 100vh
     width: 100vw
+
+    @media (max-width: $mdscreen)
+      height: 100%
+      position: fixed
 
     &:after
       content: ""
@@ -167,6 +181,9 @@ nav
       background-image: url('../images/bg-space2.jpg')
       filter: brightness(0.25)
 
+      @media (max-width: $mdscreen)
+        min-height: 64em
+
 .anim-scroll
   display: block
   text-align: center
@@ -180,7 +197,7 @@ nav
     display: block
     background: $color-accent
     text-align: center
-    opacity: 0.25
+    opacity: 0.15
     position: relative
 
     &:nth-child(1)
@@ -192,17 +209,26 @@ nav
     &:nth-child(3)
       animation: animScroll3 $speed-animScroll infinite
 
-      &:after
+      &:before, &:after
         content: ""
         position: absolute
         top: 100%
         border-style: solid
-        border-width: 8px
-        left: -7px
+
+      &:before
+        border-width: 6px
+        left: -5px
+        border-color: $color-dark transparent transparent
+        z-index: 1
+
+      &:after
+        border-width: 9px
+        left: -8px
         border-color: $color-accent transparent transparent
 
 #home, #work, #about, #contact
   width: 100%
+  position: relative !important
 
 .home, .work, .about, .contact
   #wrap-home-top, #wrap-work-top, #wrap-about-top, #wrap-contact-top

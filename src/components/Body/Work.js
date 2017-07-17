@@ -45,18 +45,22 @@ export default class Work extends Component {
           id: "nebula-v5",
           year: "2007",
           name: "Nebula Web Designs - v5",
-          description: "By the 5th iteration of Nebula, I was making a decent living (for a college student) and rounding-out. I was getting regular design work, mastering object-oriented programming, honing-in on user interactions, and realizing I could turn my passion into a career. <a href=''>Full archive here</a>"
+          description: "By the 5th iteration of Nebula, I was getting regular design work, learning object-oriented programming, honing-in on user interactions, and using less rotating gifs in my designs. <a href=''>Full archive here</a>"
         }
       ]
     };
   }
 
   componentDidMount() {
-    this.parallax = new Parallax(this.scene);
+    if (window.innerWidth > 920){
+      this.parallax = new Parallax(this.scene);
+    }
   }
 
   componentWillUnmount() {
-    this.parallax.disable();
+    if (window.innerWidth > 920){
+      this.parallax.disable();
+    }
   }
 
   render() {
@@ -88,12 +92,12 @@ export default class Work extends Component {
           if (previous > current){
             setTimeout(function(){
               this.setState({ direction: 'up' });
-            }.bind(this), 50);
+            }.bind(this), 15);
             
           } else if (previous < current) {
             setTimeout(function(){
               this.setState({ direction: 'down' });
-            }.bind(this), 50);
+            }.bind(this), 15);
           }
 
         }        
@@ -118,16 +122,43 @@ export default class Work extends Component {
       );
     });
 
+    const projectListSlim = this.state.projects.map(function(project, index) {
+      return (
+        <div className="work-item-wrap" key={project.id}>
+          <div className="work-item">
+            <div className="work-name">
+              <p className="work-year">{project.year}</p>
+              <h3 className="sans">{project.name}</h3>
+              <h4 className="sans" dangerouslySetInnerHTML={{ __html: project.description }}></h4>
+              <Link className="btn btn-accent" to="/">
+                Take a look
+              </Link>
+            </div>
+            <div className={classNames("work-img", project.id)}></div>
+          </div>
+        </div>
+      );
+    });
+
     return (
       <BodyClassName className={"work " + direction}>
         <section id="work">
-          <div id="wrap-work-top" ref={el => this.scene = el}>
-            <div className="work-wrap layer" data-depth="0.25">
-              <SectionsContainer {...options} activeSection={current}>
-                {projectList}
-              </SectionsContainer>
-            </div>
-          </div>
+            
+            {window.innerWidth > 920 ? 
+              <div id="wrap-work-top" ref={el => this.scene = el}>
+                <div className="work-wrap layer" data-depth="0.25">
+                  <SectionsContainer {...options} activeSection={current}>
+                    {projectList}
+                  </SectionsContainer>
+                </div>
+              </div> :
+              <div id="wrap-work-top">
+                <div className="work-mobile">
+                  {projectListSlim}
+                </div>
+              </div>
+            }
+
         </section>
       </BodyClassName>
     );
