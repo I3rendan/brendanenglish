@@ -12,7 +12,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    config.set({ workNum: 0 },{ freeze: false });
+    config.set({ workNum: 27 },{ freeze: false });
   }
 
   componentDidMount() {
@@ -46,19 +46,35 @@ class App extends Component {
               </div>
             }
 
-            <div className="star-field field-1 layer" data-depth="0.125">
-              <span className="star ring"></span>
-              <span className="star"></span>
-              <span className="star ring"></span>
-              <span className="star"></span>
-            </div>
+            {window.innerWidth > 920 ? 
+              <div className="star-field field-1 layer" data-depth="0.125">
+                <span className="star ring"></span>
+                <span className="star"></span>
+                <span className="star ring"></span>
+                <span className="star"></span>
+              </div> :
+              <div className="star-field field-1">
+                <span className="star ring"></span>
+                <span className="star"></span>
+                <span className="star ring"></span>
+                <span className="star"></span>
+              </div>
+            }
 
-            <div className="star-field field-2 layer" data-depth="0.15">
-              <span className="star ring"></span>
-              <span className="star"></span>
-              <span className="star"></span>
-              <span className="star"></span>
-            </div>
+            {window.innerWidth > 920 ? 
+              <div className="star-field field-2 layer" data-depth="0.15">
+                <span className="star ring"></span>
+                <span className="star"></span>
+                <span className="star"></span>
+                <span className="star"></span>
+              </div> :
+              <div className="star-field field-2">
+                <span className="star ring"></span>
+                <span className="star"></span>
+                <span className="star"></span>
+                <span className="star"></span>
+              </div>
+            }
 
             <Switch onUpdate={ window.scrollTo(0,0) }>
               <Route exact path='/' component={Home} />
@@ -68,20 +84,37 @@ class App extends Component {
               <Route path='*' component={NotFound} />
             </Switch>
 
-            <div className="star-field field-3 layer" data-depth="0.33">
-              <span className="star"></span>
-              <span className="star"></span>
-              <span className="star ring"></span>
-              <span className="star ring"></span>
-            </div>
+            {window.innerWidth > 920 ? 
+              <div className="star-field field-3 layer" data-depth="0.33">
+                <span className="star"></span>
+                <span className="star"></span>
+                <span className="star ring"></span>
+                <span className="star ring"></span>
+              </div> :
+              <div className="star-field field-3">
+                <span className="star"></span>
+                <span className="star"></span>
+                <span className="star ring"></span>
+                <span className="star ring"></span>
+              </div>
+            }
 
-            <div className="star-field field-4 layer" data-depth="0.75">
-              <span className="star"></span>
-              <span className="star ring"></span>
-              <span className="star ring"></span>
-              <span className="star"></span>
-              <span className="star ring"></span>
-            </div>
+            {window.innerWidth > 920 ? 
+              <div className="star-field field-4 layer" data-depth="0.75">
+                <span className="star"></span>
+                <span className="star ring"></span>
+                <span className="star ring"></span>
+                <span className="star"></span>
+                <span className="star ring"></span>
+              </div> :
+              <div className="star-field field-4">
+                <span className="star"></span>
+                <span className="star ring"></span>
+                <span className="star ring"></span>
+                <span className="star"></span>
+                <span className="star ring"></span>
+              </div>
+            }
 
           </div>
 

@@ -32,7 +32,9 @@ export default class Contact extends Component {
                   <input type="text" id="name" placeholder="Your name..." />
                   <input type="text" id="email" placeholder="Your email..." />
                   <textarea id="message" cols="4" placeholder="Your message..." />
-                  <input type="submit" id="submit" value="Send message" />
+                  <button type="submit" id="submit" className="btn btn-accent">
+                    Send message
+                  </button>
                 </form>
 
               </div>

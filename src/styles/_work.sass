@@ -8,6 +8,9 @@
     width: 100%
     overflow: auto
 
+  &.true .SectionContainer
+    transition-duration: $speed-anim !important
+
   .SectionContainer
     text-align: center
     z-index: 1
@@ -15,6 +18,10 @@
     height: 100%
     width: 100%
     padding: 1.5em 0 0
+    transition-duration: 0s !important
+
+  .Navigation
+    pointer-events: auto
 
 .work-wrap
   position: relative
@@ -25,7 +32,7 @@
 .work-item-wrap
   padding: 0 5em
   transform: translate3d(22vw,100vh,0) scale(0.5)
-  filter: blur(0.33em)
+  // filter: blur(0.33em)
   opacity: 0.25
   transition-property: transform, opacity
   transition-timing-function: ease
@@ -56,49 +63,70 @@
   position: relative
   top: 0
   left: 0
-  padding: 10em 0 0
+  margin: 8.5em 0 10em
   height: 100%
   width: 100%
   overflow: auto
   color: $color-light
+  box-shadow: 0 -0.25em 1.5em rgba($color-accent, 0.5)
 
   .work-item-wrap
     transform: none
     filter: none
-    padding: 3.33em 0 0
+    padding: 0
     position: relative
     overflow: hidden
+
+  .work-item
+    overflow: hidden
+
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      box-shadow: 0 -0.1em 0 rgba($color-quaternary, 0.25) inset
+      background: linear-gradient(160deg, rgba(black, 0.25) 50%, fade-out($color-quaternary, 0.5))
 
   .work-name
     width: 100%
     position: relative
     z-index: 1
-    margin: 1.5em 2.75em
+    margin: 8.5em 2.5em 4.25em
+
+    p
+      @media (max-width: $mdscreen)
+        margin-bottom: 0.5em 
 
     h3
       padding: 0
       border: none
       font-size: 2.25em
-
-    h4
-      margin: 2em 0.25em
-      font-size: 1.075em
-
-    .btn
-      display: none
+      text-shadow: 0 0.25em 0.5em rgba(black, 0.25)
 
   .work-img
     position: absolute
     z-index: 0
     top: 0
     left: 0
-    height: 100%
-    width: 100%
+    height: 150%
+    width: 150%
     z-index: 0
     padding: 0
     margin: 0
-    filter: grayscale(0.85)
-    opacity: 0.15
+    filter: grayscale(0.85) brightness(0.5)
+    opacity: 0.85
+
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 75%
+      width: 75%
+      background: linear-gradient(195deg, transparent, black 80%)
 
 .work-name, .work-img
   width: 50%
@@ -146,11 +174,11 @@
   &.brendans-world
     background-image: url('../images/work/brendans-world.png')
     
-  &.nebula-v1
+  &.nebula
     background-image: url('../images/work/nebula-1.png')
 
   &.milk
-    background-image: url('../images/work/milk.png')
+    background-image: url('../images/work/milk-1.png')
 
   &.kourthouse
     background-image: url('../images/work/kourthouse.png')
@@ -160,6 +188,72 @@
 
   &.nebula-v5
     background-image: url('../images/work/nebula-5.png')
+
+  &.ave-maria
+    background-image: url('../images/work/ave-maria.jpg')
+
+  &.kidney
+    background-image: url('../images/work/kidney.jpg')
+
+  &.spca
+    background-image: url('../images/work/spca.jpg')
+
+  &.aha
+    background-image: url('../images/work/aha.jpg')
+
+  &.wwo
+    background-image: url('../images/work/wwo.jpg')
+
+  &.citadel
+    background-image: url('../images/work/citadel.jpg')
+
+  &.eig
+    background-image: url('../images/work/eig-1.jpg')
+
+  &.blackbaud
+    background-image: url('../images/work/blackbaud-1.jpg')
+
+  &.bbcon
+    background-image: url('../images/work/bbcon.jpg')
+
+  &.tom-carter
+    background-image: url('../images/work/tom-carter.jpg')
+
+  &.mink
+    background-image: url('../images/work/mink-1.jpg')
+
+  &.brendan-english
+    background-image: url('../images/work/brendan-english.png')
+
+  &.carnegie
+    background-image: url('../images/work/carnegie-1.jpg')
+
+  &.saylor
+    background-image: url('../images/work/saylor-1.jpg')
+
+  &.campuspack
+    background-image: url('../images/work/campuspack.jpg')
+
+  &.difference-engine
+    background-image: url('../images/work/de-1.jpg')
+
+  &.delivery
+    background-image: url('../images/work/delivery-1.png')
+
+  &.learning-objects
+    background-image: url('../images/work/lo-1.jpg')
+
+  &.lo-styleguide
+    background-image: url('../images/work/lo-style-1.jpg')
+
+  &.resume
+    background-image: url('../images/work/resume-1.png')
+
+  &.byu
+    background-image: url('../images/work/byu-1.jpg')
+
+  &.ftpC
+    background-image: url('../images/work/ftpC-1.png')
 
 .work.up
   #star-bg

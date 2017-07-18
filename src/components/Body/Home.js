@@ -30,7 +30,6 @@ export default class Home extends Component {
                 <Link to="/work" className="btn btn-accent">View my work</Link>
               </div>
             </div> :
-
             <div id="wrap-home-top">
               <div className="home-intro">
                 <h1>Creating things since <Link to="/work#brendans-world">1999</Link></h1>

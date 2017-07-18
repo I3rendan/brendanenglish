@@ -137,7 +137,7 @@ export default class About extends Component {
                           }}
                           graph_id="ExpTimeline"
                           width="100%"
-                          height="18em"
+                          height="20em"
                         />
                       </div>
                     </div>

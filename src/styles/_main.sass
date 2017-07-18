@@ -108,13 +108,15 @@ nav
     padding-right: 1.67em
 
   @media (max-width: $smscreen)
-    padding: 2.5em 0
+    padding: 2em 0 2.5em
     position: fixed
     font-size: 1.25em
     bottom: 0
     width: 100vw
     text-align: center
-    background: linear-gradient(transparent, rgba(black, 0.5))
+    background: rgba($color-dark, 0.925)
+    box-shadow: 0 -0.15em 0.75em rgba($color-accent, 0.5)
+    z-index: 5
 
   a
     padding: 1.25em 1.5em
@@ -166,15 +168,14 @@ nav
 
     @media (max-width: $mdscreen)
       height: 100%
-      position: fixed
 
     &:after
       content: ""
       position: absolute
-      top: -3em
-      left: -6em
-      min-height: calc(100vh + 6em)
-      width: calc(100vw + 12em)
+      top: -5em
+      left: -5em
+      min-height: calc(100vh + 10em)
+      width: calc(100vw + 10em)
       background-size: cover
       background-position: center center
       background-color: $color-dark
@@ -235,7 +236,7 @@ nav
     animation: showContent $speed-anim forwards ease
 
 .home
-  .bg-stars
+  .bg-stars:after
     animation: starsBgHome $speed-anim forwards ease
 
   .star-field.field-1, .star-field.field-2
@@ -249,7 +250,8 @@ nav
     color: $color-accent
     cursor: default
 
-  .bg-stars
+  .bg-stars:after
+    position: fixed
     animation: starsBgWork $speed-anim forwards ease
 
   .star-field.field-1, .star-field.field-2
@@ -263,7 +265,7 @@ nav
     color: $color-accent
     cursor: default
 
-  .bg-stars
+  .bg-stars:after
     animation: starsBgAbout $speed-anim forwards ease
 
   .star-field.field-1, .star-field.field-2
@@ -277,7 +279,7 @@ nav
     color: $color-accent
     cursor: default
 
-  .bg-stars
+  .bg-stars:after
     animation: starsBgContact $speed-anim forwards ease
 
   .star-field.field-1, .star-field.field-2
