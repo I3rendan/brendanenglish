@@ -1586,7 +1586,7 @@ header,
       left: 0;
       height: 100%;
       width: 100%;
-      box-shadow: 0 -0.1em 0 rgba(25, 133, 161, 0.25) inset;
+      box-shadow: 0 -0.1em 0 rgba(25, 133, 161, 0.33) inset;
       background: linear-gradient(160deg, rgba(0, 0, 0, 0.25) 50%, rgba(25, 133, 161, 0.5)); }
   .work-mobile .work-name {
     width: 100%;
