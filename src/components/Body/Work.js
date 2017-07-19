@@ -12,11 +12,11 @@ export default class Work extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      previous: 0,
       current: config.get('workNum'),
       active: 'false',
-      direction: '',
-      photoIndex: false,
+      photoIndex: 0,
+      isOpen: false,
+      images: [],
       projects: [
         {
           id: "brendans-world",
@@ -24,7 +24,7 @@ export default class Work extends Component {
           name: "Brendan's World",
           description: "This is where it all began... my very first site. There's a space background. It has iframes. It has a spinning earth gif (the pinnacle of web technology at the time). It's riddled with embarrassing content and grammatical errors. It's truly special. I was 14 when I created this so go easy...",
           images: [
-            'images/brendans-world.png'
+            require('../../images/work/brendans-world.png')
           ]
         },{
           id: "nebula",
@@ -32,7 +32,7 @@ export default class Work extends Component {
           name: "Nebula Web Designs",
           description: "Welcome to the wonderful age of Flash! I loved Flash... superfulious animations, bad graphics, and universal compatibility. This was the company name I designed under for almost 10 years. Lots of good times...",
           images: [
-            'images/nebula-1.png'
+            require('../../images/work/nebula-1.jpg')
           ]
         },{
           id: "milk",
@@ -40,8 +40,8 @@ export default class Work extends Component {
           name: "Milk Productions",
           description: "I loved this one... really minimal, interesting animations, and a new design approach for me (look, a <em>white</em> background!). This was for a small production company who were willing to take a chance on a young web designer.",
           images: [
-            'images/milk-1.png',
-            'images/mink-2.jpg'
+            require('../../images/work/milk-1.png'),
+            require('../../images/work/mink-2.jpg')
           ]
         },{
           id: "kourthouse",
@@ -49,7 +49,7 @@ export default class Work extends Component {
           name: "Kourthouse Media",
           description: "A Flash site I built for an aspiring film agency. I remember being proud of the avant garde design for this one (even though the proportions are not super helpful).",
           images: [
-            'images/kourthouse.png'
+            require('../../images/work/kourthouse.png')
           ]
         },{
           id: "greene-street",
@@ -57,7 +57,7 @@ export default class Work extends Component {
           name: "Greene Street Club",
           description: "I worked here for a few years while in college. I designed their logo, built and maintained their site (featuring AJAX content and advanced Flash scripting). I also designed all their posters, flyers, and general marketing. This was a huge opportunity for me and I learned a great deal here.",
           images: [
-            'images/greene-street.png'
+            require('../../images/work/greene-street.jpg')
           ]
         },{
           id: "nebula-v5",
@@ -65,7 +65,7 @@ export default class Work extends Component {
           name: "Nebula Web Designs - v5",
           description: "By the 5th iteration of Nebula, I was getting regular design work, learning object-oriented programming, and honing-in on user experience. &nbsp;<a href=''>Full archive here</a>",
           images: [
-            'images/nebula-5.png'
+            require('../../images/work/nebula-5.jpg')
           ]
         },{
           id: "ave-maria",
@@ -73,7 +73,7 @@ export default class Work extends Component {
           name: "Ave Maria University",
           description: "This was one of my first projects for <a href='/about#resume'>Blackbaud</a>. It was a really cool brick memorial locator. The user found their donation and the application zoomed-into a blue print of the church, then overlaid the memorial text on a brick texture. I won the Innovator of the Year award for this guy.",
           images: [
-            'images/ave-maria.jpg'
+            require('../../images/work/ave-maria.jpg')
           ]
         },{
           id: "kidney",
@@ -81,7 +81,7 @@ export default class Work extends Component {
           name: "Kidney Foundation of Canada",
           description: "Another Blackbaud project &mdash; this was a full site redesign for the foundation. It featured some dynamic Flash content player, slideshows, and interesting 3D design.",
           images: [
-            'images/kidney.jpg'
+            require('../../images/work/kidney.jpg')
           ]
         },{
           id: "spca",
@@ -89,7 +89,7 @@ export default class Work extends Component {
           name: "Louisiana SPCA",
           description: "Another Blackbaud project &mdash; this was another full site redesign for the Louisiana SPCA. More dynaimc Flash content and slideshows.",
           images: [
-            'images/spca.jpg'
+            require('../../images/work/spca.jpg')
           ]
         },{
           id: "aha",
@@ -97,8 +97,8 @@ export default class Work extends Component {
           name: "American Heart Association",
           description: "This one was cool &mdash; another Blackbaud project that showed realtime donation amounts on an interactive Flash map of the country. Users could click on the map to see donations for the Heart Walk by state and contribute themselves.",
           images: [
-            'images/aha-1.jpg',
-            'images/aha-2.jpg'
+            require('../../images/work/aha-1.jpg'),
+            require('../../images/work/aha-2.jpg')
           ]
         },{
           id: "wwo",
@@ -106,7 +106,7 @@ export default class Work extends Component {
           name: "Worldwide Orphans Foundation",
           description: "Another Blackbaud project &mdash; a full site redesign for the organization. It featured some dynamic Flash content player, slideshows, and one of my favorite designs of the Blackbaud days.",
           images: [
-            'images/wwo.jpg'
+            require('../../images/work/wwo.jpg')
           ]
         },{
           id: "citadel",
@@ -114,7 +114,7 @@ export default class Work extends Component {
           name: "Citadel Foundation",
           description: "I had a great time working with the people here &mdash; I spent time on the campus and with their leadership to understand the aesthetic and users of the site I redesigned. There's also some dynamic Flash news content (pulled from a CMS).",
           images: [
-            'images/citadel.jpg'
+            require('../../images/work/citadel.jpg')
           ]
         },{
           id: "eig",
@@ -122,8 +122,8 @@ export default class Work extends Component {
           name: "Michael J Eig & Assoc.",
           description: "This was a freelance project for a lawfirm in Maryland specializing in education law for children. They have a great mission and I loved working with them. I built an admin area for this site in ExpressionEngine to help manage forms.",
           images: [
-            'images/eig-1.png',
-            'images/eig-2.png'
+            require('../../images/work/eig-1.jpg'),
+            require('../../images/work/eig-2.jpg')
           ]
         },{
           id: "blackbaud",
@@ -131,7 +131,11 @@ export default class Work extends Component {
           name: "Blackbaud",
           description: "By 2011, I had moved to the marketing divison of Blackbaud and was working directly with the Creative Director. I lead designer responsible for the redesign of the corporate site. This was built in the Blackbaud CMS and had a hundred pages or so to consider. I also created a custom lead generation system using Eloqua.",
           images: [
-            'images/xxx.png'
+            require('../../images/work/blackbaud-1.jpg'),
+            require('../../images/work/blackbaud-2.jpg'),
+            require('../../images/work/blackbaud-3.jpg'),
+            require('../../images/work/blackbaud-4.jpg'),
+            require('../../images/work/blackbaud-5.jpg')
           ]
         },{
           id: "bbcon",
@@ -139,11 +143,7 @@ export default class Work extends Component {
           name: "BBCON",
           description: "This custom Wordpress site was built for the Blackbaud Conference that year. By this point, I was working with a few other Wordpress sites as freelance projects.",
           images: [
-            'images/blackbaud-1.jpg',
-            'images/blackbaud-2.jpg',
-            'images/blackbaud-3.jpg',
-            'images/blackbaud-4.jpg',
-            'images/blackbaud-5.jpg'
+            require('../../images/work/bbcon.jpg')
           ]
         },{
           id: "tom-carter",
@@ -151,7 +151,7 @@ export default class Work extends Component {
           name: "Tom Carter Photography",
           description: "A freelance project for a local photographer friend &mdash; this site featured a custom Flash gallery built with SlideshowPro. We didn't know it yet, but Flash was about to die :( &nbsp; I was pretty bummed about that.",
           images: [
-            'images/tom-carter.jpg'
+            require('../../images/work/tom-carter.jpg')
           ]
         },{
           id: "mink",
@@ -159,10 +159,10 @@ export default class Work extends Component {
           name: "Mink Letterpress",
           description: "Another freelance project I did for a friend with a letterpress design business in Asheville. She does amazing work and I really liked this site &mdash; it's built in Wordpress, had a Gallery, and I used a single page design.",
           images: [
-            'images/mink-1.jpg',
-            'images/mink-2.jpg',
-            'images/mink-3.jpg',
-            'images/mink-4.jpg'
+            require('../../images/work/mink-1.jpg'),
+            require('../../images/work/mink-2.jpg'),
+            require('../../images/work/mink-3.jpg'),
+            require('../../images/work/mink-4.jpg')
           ]
         },{
           id: "brendan-english",
@@ -170,7 +170,7 @@ export default class Work extends Component {
           name: "BrendanEnglish.com",
           description: "This is my old portfolio site. I had moved away from the Nebula name and was looking for a new challenge for work. I built this using responsive styles, parallax scrolling, and all the new stuff I was learning at the time.",
           images: [
-            'images/brendan-english.png'
+            require('../../images/work/brendan-english.jpg')
           ]
         },{
           id: "carnegie",
@@ -178,12 +178,12 @@ export default class Work extends Component {
           name: "Carnegie Learning",
           description: "One of my first projects for Learning Objects. I worked on a variety of projects including instructional and learning applications, an eBook, and an Admin product.",
           images: [
-            'images/carnegie-1.jpg',
-            'images/carnegie-2.jpg',
-            'images/carnegie-3.jpg',
-            'images/carnegie-4.jpg',
-            'images/carnegie-5.jpg',
-            'images/carnegie-6.jpg'
+            require('../../images/work/carnegie-1.jpg'),
+            require('../../images/work/carnegie-2.jpg'),
+            require('../../images/work/carnegie-3.jpg'),
+            require('../../images/work/carnegie-4.jpg'),
+            require('../../images/work/carnegie-5.jpg'),
+            require('../../images/work/carnegie-6.jpg')
           ]
         },{
           id: "saylor",
@@ -191,8 +191,8 @@ export default class Work extends Component {
           name: "Saylor Academy",
           description: "This was a really cool organization I worked with at Learning Objects. They're dedicated to providing free competency-based education. I led the design initiative to build a learning platform and marketing site to capture student goals.",
           images: [
-            'images/saylor-1.jpg',
-            'images/saylor-2.jpg'
+            require('../../images/work/saylor-1.jpg'),
+            require('../../images/work/saylor-2.jpg')
           ]
         },{
           id: "campuspack",
@@ -200,7 +200,7 @@ export default class Work extends Component {
           name: "Campus Pack",
           description: "This is the original Learning Objects product &mdash; a blog, wiki, and journal tool marketed to institutions. I redesigned the system to bring it up-to-date and helped with the development effort.",
           images: [
-            'images/campuspack.jpg'
+            require('../../images/work/campuspack.jpg')
           ]
         },{
           id: "difference-engine",
@@ -208,8 +208,8 @@ export default class Work extends Component {
           name: "Difference Engine",
           description: "The Learning Objects development platform &mdash; I redesigned the marketing site for the new product marketed towards higher education institutions. DE was the backbone to building learning and teaching products.",
           images: [
-            'images/de-1.jpg',
-            'images/de-2.jpg'
+            require('../../images/work/de-1.jpg'),
+            require('../../images/work/de-2.jpg')
           ]
         },{
           id: "delivery",
@@ -217,12 +217,12 @@ export default class Work extends Component {
           name: "LO Delivery",
           description: "The Learning Objects student content delivery product. I designed, prototyped, tested, and help build the core delivery platform for students. The product has evolved over the course of my time at LO to include instructor and admin tools, along with various other learning features.",
           images: [
-            'images/delivery-1.png',
-            'images/delivery-2.jpg',
-            'images/delivery-3.jpg',
-            'images/delivery-4.jpg',
-            'images/delivery-5.jpg',
-            'images/delivery-6.jpg'
+            require('../../images/work/delivery-1.jpg'),
+            require('../../images/work/delivery-2.jpg'),
+            require('../../images/work/delivery-3.jpg'),
+            require('../../images/work/delivery-4.jpg'),
+            require('../../images/work/delivery-5.jpg'),
+            require('../../images/work/delivery-6.jpg')
           ]
         },{
           id: "learning-objects",
@@ -230,13 +230,13 @@ export default class Work extends Component {
           name: "Learning Objects",
           description: "I started here in 2013 and have worked as a Product Designer and Creative Director. Along with working on the designs of all of LO's products, I also redesigned the marketing site for LO. The site was responsive and included updated branding that would live-on in the <a href='/work#lo-styleguide'>styleguide</a>. I also built some cool CSS effects + parallax.",
           images: [
-            'images/lo-1.jpg',
-            'images/lo-2.jpg',
-            'images/lo-3.jpg',
-            'images/lo-4.jpg',
-            'images/lo-5.jpg',
-            'images/lo-6.jpg',
-            'images/lo-7.jpg'
+            require('../../images/work/lo-1.jpg'),
+            require('../../images/work/lo-2.jpg'),
+            require('../../images/work/lo-3.jpg'),
+            require('../../images/work/lo-4.jpg'),
+            require('../../images/work/lo-5.jpg'),
+            require('../../images/work/lo-6.jpg'),
+            require('../../images/work/lo-7.jpg')
           ]
         },{
           id: "lo-styleguide",
@@ -244,7 +244,10 @@ export default class Work extends Component {
           name: "LO StyleGuide",
           description: "I developed the company StyleGuide and Application Design Guide to help standardize and inform the creative direction of the company and products. The StyleGuide featured brand and design guidelines and the Application Design Guide included the design methodoligies for products.",
           images: [
-            'images/xxx.png'
+            require('../../images/work/lo-style-1.jpg'),
+            require('../../images/work/lo-style-2.jpg'),
+            require('../../images/work/lo-style-3.jpg'),
+            require('../../images/work/lo-style-4.jpg')
           ]
         },{
           id: "resume",
@@ -252,10 +255,9 @@ export default class Work extends Component {
           name: "Pathbrite Résumé",
           description: "Pathbrite is a well known portfolio system we acquired. To best help students find careers, I designed and prototyped a résumé product to tie-in to competencies, portfolios, and a new way to imagine the résumé. You can find mine <a href='/about#resume'>here</a>.",
           images: [
-            'images/lo-style-1.jpg',
-            'images/lo-style-2.jpg',
-            'images/lo-style-3.jpg',
-            'images/lo-style-4.jpg'
+            require('../../images/work/resume-1.jpg'),
+            require('../../images/work/resume-2.png'),
+            require('../../images/work/resume-3.png')
           ]
         },{
           id: "byu",
@@ -263,9 +265,9 @@ export default class Work extends Component {
           name: "BYU",
           description: "I designed a prototype for a goal capture product for BYU and The Church of LDS. This project was pitched to help understand student goals and how that ties-in to the competency-based learning products.",
           images: [
-            'images/byu-1.jpg',
-            'images/byu-2.jpg',
-            'images/byu-3.jpg'
+            require('../../images/work/byu-1.jpg'),
+            require('../../images/work/byu-2.jpg'),
+            require('../../images/work/byu-3.jpg')
           ]
         },{
           id: "ftpC",
@@ -273,15 +275,14 @@ export default class Work extends Component {
           name: "For the People Creative",
           description: "I created this site for a newly formed LLC that I own with my friend Joe. It's aimed at serving nonprofits and small businesses in the DC area. We partner to build applications, products, websites, and marketing materials. My most up-to-date work can be found here...",
           images: [
-            'images/ftpC-1.png',
-            'images/ftpC-2.png',
-            'images/ftpC-3.png',
-            'images/ftpC-4.png',
-            'images/ftpC-5.jpg',
-            'images/ftpC-6.png',
-            'images/ftpC-7.png',
-            'images/ftpC-8.png',
-            'images/ftpC-9.jpg'
+            require('../../images/work/ftpC-1.jpg'),
+            require('../../images/work/ftpC-2.png'),
+            require('../../images/work/ftpC-3.png'),
+            require('../../images/work/ftpC-4.png'),
+            require('../../images/work/ftpC-5.jpg'),
+            require('../../images/work/ftpC-6.png'),
+            require('../../images/work/ftpC-7.png'),
+            require('../../images/work/ftpC-8.jpg')
           ]
         }
       ]
@@ -307,19 +308,17 @@ export default class Work extends Component {
   render() {
 
     const anchorList = [];
-    const images = [];
 
     for (var i = 0; i < this.state.projects.length; i++){
       anchorList.push(this.state.projects[i].id);
     }
 
-    const {previous} = this.state;
     const {current} = this.state;
-    const {direction} = this.state;
 
     const {
       photoIndex,
       isOpen,
+      images
     } = this.state;
 
     const options = {
@@ -327,27 +326,8 @@ export default class Work extends Component {
       delay: 500,
       anchors: anchorList,
       scrollCallback: (states) => {
-
-        this.setState({ previous: current });
         this.setState({ current: states.activeSection });
-
-        if (previous !== current){
-
-          this.setState({ direction: '' });
-          config.set({ workNum: states.activeSection });
-
-          if (previous > current){
-            setTimeout(function(){
-              this.setState({ direction: 'up' });
-            }.bind(this), 10);
-            
-          } else if (previous < current) {
-            setTimeout(function(){
-              this.setState({ direction: 'down' });
-            }.bind(this), 10);
-          }
-
-        }        
+        config.set({ workNum: states.activeSection });      
       }
     };
 
@@ -384,7 +364,7 @@ export default class Work extends Component {
     });
 
     return (
-      <BodyClassName className={"work " + direction}>
+      <BodyClassName className="work">
         <section id="work">
             
             {window.innerWidth > 920 ? 
@@ -392,18 +372,12 @@ export default class Work extends Component {
                 <div className="work-wrap layer" data-depth="0.25">
                   <SectionsContainer {...options} activeSection={current}>
                   <div onClick={() => {
- 
 
-
-
-                    // ADD IMAGES HERE
-
-
-
-                    this.setState({ isOpen: true });
-
-                    
-
+                    this.setState({
+                      photoIndex: 0,
+                      isOpen: true,
+                      images: this.state.projects[current].images
+                    });
 
                   }}>{projectList}</div>
                   </SectionsContainer>
