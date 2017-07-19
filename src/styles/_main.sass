@@ -157,6 +157,9 @@ nav
   width: 100vw
   z-index: 0
 
+  @media (max-width: $lgscreen)
+    height: 100%
+
   @media (max-width: $mdscreen)
     height: 100%
 
@@ -183,6 +186,9 @@ nav
       filter: brightness(0.25)
 
       @media (max-width: $mdscreen)
+        min-height: 80em
+
+      @media (max-width: $smscreen)
         min-height: 64em
 
 .anim-scroll

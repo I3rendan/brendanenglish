@@ -13,6 +13,9 @@
     @media (max-width: $mdscreen)
       min-height: 50em
 
+    &.resume-link
+      min-height: auto
+
 .wrap-about-content
   position: relative
   z-index: 2
@@ -28,12 +31,11 @@
 
   @media (max-width: $mdscreen)
     padding: 2.5em 5em
-    top: 36em
+    top: 28em
 
   @media (max-width: $smscreen)
     font-size: 0.75em
-    padding: 4em 3.33em
-    top: 28em
+    padding: 4em
 
   h1, h2
     color: white
@@ -67,7 +69,7 @@
   text-align: center
 
   @media (max-width: $mdscreen)
-    margin-top: 30em
+    margin-top: 32em
 
   .anim-scroll
     margin-top: 0.5em
@@ -99,10 +101,16 @@
   box-shadow: 0 0.75em 1.5em rgba(black, 0.33) inset, 0 0em 3em rgba(black, 0.25) inset
   text-shadow: 0 0.25em 0.5em rgba(black, 0.25)
 
+  @media (max-width: $lgscreen)
+    padding: 7em 4em 4.5em
+    font-size: 0.925em
+
   @media (max-width: $mdscreen)
     padding: 5em 3.33em 3.33em
-    font-size: 0.925em
     text-align: center
+
+  @media (max-width: $mdscreen)
+    font-size: 0.85em
 
   &:before
     content: ""
@@ -135,6 +143,8 @@
 
     @media (max-width: $mdscreen)
       font-size: 0.925em
+      display: block
+      margin: 0 auto
 
     img
       width: 115%
@@ -147,9 +157,11 @@
     color: white
     display: inline-block
     vertical-align: top
+    width: calc(100% - 10em)
 
     @media (max-width: $mdscreen)
       padding: 0.5em 0 0
+      width: 100%
 
     h3
       font-size: 2.5em
@@ -342,7 +354,7 @@
       top: 0
       left: 1.85em
       width: 0.25em
-      background: linear-gradient($color-secondary, rgba($color-secondary, 0.25))
+      background: linear-gradient($color-secondary, rgba($color-secondary, 0.5))
       transform: 
       height: 100%
       z-index: 0
@@ -451,16 +463,17 @@
   .resume-content
     padding: 2em
     display: flex
-    flex-flow: row wrap
+    flex-flow: row nowrap
 
-    @media (max-width: $mdscreen)
+    @media (max-width: $smscreen)
       padding: 1.5em
       text-align: center
+      flex-flow: row wrap
 
   .education-logo
     margin-right: 2em
 
-    @media (max-width: $mdscreen)
+    @media (max-width: $smscreen)
       margin: 0 auto
 
     img
@@ -469,7 +482,7 @@
       display: block
       max-height: 5.5em
 
-      @media (max-width: $mdscreen)
+      @media (max-width: $smscreen)
         margin: auto
         font-size: 0.925em
         max-height: 6.67em
@@ -477,6 +490,9 @@
   .education-info
     font-size: 1.25em
     margin-top: 0.25em
+
+    @media (max-width: $smscreen)
+      width: 100%
 
     h4
       margin: 0.5em 0
