@@ -60,25 +60,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-moz-keyframes starsBgHome {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-ms-keyframes starsBgHome {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @keyframes starsBgHome {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-webkit-keyframes starMotionHome1 {
   0% {
@@ -188,25 +188,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-moz-keyframes starsBgWork {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-ms-keyframes starsBgWork {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @keyframes starsBgWork {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-webkit-keyframes starMotionWork1 {
   0% {
@@ -316,25 +316,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-moz-keyframes starsBgAbout {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-ms-keyframes starsBgAbout {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @keyframes starsBgAbout {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-webkit-keyframes starMotionAbout1 {
   0% {
@@ -444,25 +444,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-moz-keyframes starsBgContact {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-ms-keyframes starsBgContact {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @keyframes starsBgContact {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.95); } }
+    transform: scale(0.925); } }
 
 @-webkit-keyframes starMotionContact1 {
   0% {
@@ -1041,7 +1041,7 @@ nav {
   animation: showContent 0.5s forwards ease; }
 
 .home .bg-stars:after {
-  animation: starsBgHome 0.5s forwards ease; }
+  animation: starsBgHome 0.75s forwards ease; }
 
 .home .star-field.field-1, .home .star-field.field-2 {
   animation: starMotionHome1 0.5s forwards ease; }
@@ -1055,7 +1055,7 @@ nav {
 
 .work .bg-stars:after {
   position: fixed;
-  animation: starsBgWork 0.5s forwards ease; }
+  animation: starsBgWork 0.75s forwards ease; }
 
 .work .star-field.field-1, .work .star-field.field-2 {
   animation: starMotionWork1 0.5s forwards ease; }
@@ -1068,7 +1068,7 @@ nav {
   cursor: default; }
 
 .about .bg-stars:after {
-  animation: starsBgAbout 0.5s forwards ease; }
+  animation: starsBgAbout 0.75s forwards ease; }
 
 .about .star-field.field-1, .about .star-field.field-2 {
   animation: starMotionAbout1 0.5s forwards ease; }
@@ -1081,7 +1081,7 @@ nav {
   cursor: default; }
 
 .contact .bg-stars:after {
-  animation: starsBgContact 0.5s forwards ease; }
+  animation: starsBgContact 0.75s forwards ease; }
 
 .contact .star-field.field-1, .contact .star-field.field-2 {
   animation: starMotionContact1 0.5s forwards ease; }
