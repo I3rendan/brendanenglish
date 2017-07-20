@@ -32,8 +32,7 @@
 .work-item-wrap
   padding: 0 5em
   transform: translate3d(22vw,100vh,0) scale(0.5)
-  // filter: blur(0.33em)
-  opacity: 0.25
+  opacity: 0.33
   transition-property: transform, opacity
   transition-timing-function: ease
   transition-duration: $speed-anim
@@ -51,6 +50,23 @@
     pointer-events: visible
     filter: none
 
+    .work-name
+      left: 0
+      transition: left ease $speed-trans $speed-anim
+
+      h3 > span
+        top: 0
+        transition: top ease $speed-trans $speed-anim * 1.33
+
+      h4 > span
+        right: 0
+        transition: right ease $speed-trans $speed-anim * 1.5
+
+    .work-img:before
+      left: 0
+      width: 100%
+      transition: left ease $speed-anim $speed-trans, width ease $speed-anim $speed-trans
+
 .work-item
   display: flex
   padding: 0
@@ -58,78 +74,9 @@
   max-width: 72em
   background: linear-gradient(160deg, transparent 33%, fade-out($color-quaternary, 0.5))
   box-shadow: 0 0.5em 0.75em rgba(black, 0.33)
-
-.work-mobile
+  cursor: pointer
+  overflow: hidden
   position: relative
-  top: 0
-  left: 0
-  margin: 8.5em 0 10em
-  height: 100%
-  width: 100%
-  overflow: auto
-  color: $color-light
-  box-shadow: 0 -0.25em 1.5em rgba($color-accent, 0.5)
-
-  .work-item-wrap
-    transform: none
-    filter: none
-    padding: 0
-    position: relative
-    overflow: hidden
-
-  .work-item
-    overflow: hidden
-
-    &:after
-      content: ""
-      position: absolute
-      top: 0
-      left: 0
-      height: 100%
-      width: 100%
-      box-shadow: 0 -0.1em 0 rgba($color-quaternary, 0.33) inset
-      background: linear-gradient(160deg, rgba(black, 0.5) 50%, fade-out($color-quaternary, 0.5))
-
-  .work-name
-    width: 100%
-    position: relative
-    z-index: 1
-    margin: 7.5em 3.33em 4.5em
-
-    @media (max-width: $smscreen)
-      margin: 7.25em 2.5em 4.25em
-
-    p
-      @media (max-width: $mdscreen)
-        margin-bottom: 0.5em 
-
-    h3
-      padding: 0
-      border: none
-      font-size: 2.25em
-      text-shadow: 0 0.25em 0.5em rgba(black, 0.25)
-
-  .work-img
-    position: absolute
-    z-index: 0
-    top: 0
-    left: 0
-    height: 150%
-    width: 150%
-    z-index: 0
-    padding: 0
-    margin: 0
-    filter: grayscale(0.85) brightness(0.67)
-    opacity: 0.75
-
-    &:before
-      content: ""
-      position: absolute
-      top: 0
-      left: 0
-      height: 75%
-      width: 75%
-      background: linear-gradient(195deg, transparent, rgba(black,0.9) 75%)
 
 .work-name, .work-img
   width: 50%
@@ -138,6 +85,9 @@
 
 .work-name
   text-align: left
+  position: relative
+  left: -50%
+  transition: none
 
   p
     margin: 0
@@ -152,6 +102,12 @@
     font-weight: 400
     line-height: 1.15
     border-bottom: 1px dashed rgba(white, 0.25)
+    overflow: hidden
+
+    > span
+      top: 5em
+      position: relative
+      transition: none
 
   h4
     font-weight: 400
@@ -160,6 +116,12 @@
     font-size: 1.15em
     line-height: 1.67
     border-left: 2px solid $color-accent
+    overflow: hidden
+
+    > span
+      right: calc(100% + 2.5em)
+      position: relative
+      transition: none
 
   .btn
     margin: 0 0 2em 2.5em
@@ -168,90 +130,187 @@
 
 .work-img
   position: relative
-  box-shadow: 0 0.25em 0.5em rgba(black, 0.33)
-  background-size: cover
-  background-position: 10% 0
 
-  &.brendans-world
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: -50%
+    height: 100%
+    width: 150%
+    box-shadow: 0 0.25em 0.5em rgba(black, 0.33)
+    background-size: cover
+    background-position: 10% 0
+    transition: left ease $speed-trans $speed-trans, width ease $speed-trans $speed-trans
+
+  &.brendans-world:before
     background-image: url('../images/work/brendans-world.png')
     
-  &.nebula
+  &.nebula:before
     background-image: url('../images/work/nebula-1.jpg')
 
-  &.milk
+  &.milk:before
     background-image: url('../images/work/milk-1.png')
 
-  &.kourthouse
+  &.kourthouse:before
     background-image: url('../images/work/kourthouse.png')
 
-  &.greene-street
+  &.greene-street:before
     background-image: url('../images/work/greene-street.jpg')
 
-  &.nebula-v5
+  &.nebula-v5:before
     background-image: url('../images/work/nebula-5.jpg')
 
-  &.ave-maria
+  &.ave-maria:before
     background-image: url('../images/work/ave-maria.jpg')
 
-  &.kidney
+  &.kidney:before
     background-image: url('../images/work/kidney.jpg')
 
-  &.spca
+  &.spca:before
     background-image: url('../images/work/spca.jpg')
 
-  &.aha
+  &.aha:before
     background-image: url('../images/work/aha-1.jpg')
 
-  &.wwo
+  &.wwo:before
     background-image: url('../images/work/wwo.jpg')
 
-  &.citadel
+  &.citadel:before
     background-image: url('../images/work/citadel.jpg')
 
-  &.eig
+  &.eig:before
     background-image: url('../images/work/eig-1.jpg')
 
-  &.blackbaud
+  &.blackbaud:before
     background-image: url('../images/work/blackbaud-1.jpg')
 
-  &.bbcon
+  &.bbcon:before
     background-image: url('../images/work/bbcon.jpg')
 
-  &.tom-carter
+  &.tom-carter:before
     background-image: url('../images/work/tom-carter.jpg')
 
-  &.mink
+  &.mink:before
     background-image: url('../images/work/mink-1.jpg')
 
-  &.brendan-english
+  &.brendan-english:before
     background-image: url('../images/work/brendan-english.jpg')
 
-  &.carnegie
+  &.carnegie:before
     background-image: url('../images/work/carnegie-1.jpg')
 
-  &.saylor
+  &.saylor:before
     background-image: url('../images/work/saylor-1.jpg')
 
-  &.campuspack
+  &.campuspack:before
     background-image: url('../images/work/campuspack.jpg')
 
-  &.difference-engine
+  &.difference-engine:before
     background-image: url('../images/work/de-1.jpg')
 
-  &.delivery
+  &.delivery:before
     background-image: url('../images/work/delivery-1.jpg')
 
-  &.learning-objects
+  &.learning-objects:before
     background-image: url('../images/work/lo-1.jpg')
 
-  &.lo-styleguide
+  &.lo-styleguide:before
     background-image: url('../images/work/lo-style-1.jpg')
 
-  &.resume
+  &.resume:before
     background-image: url('../images/work/resume-1.jpg')
 
-  &.byu
+  &.byu:before
     background-image: url('../images/work/byu-1.jpg')
 
-  &.ftpC
+  &.ftpC:before
     background-image: url('../images/work/ftpC-1.jpg')
+
+.work-mobile
+  position: relative
+  top: 0
+  left: 0
+  margin: 8.5em 0 10em
+  height: 100%
+  width: 100%
+  overflow: auto
+  color: $color-light
+  box-shadow: 0 -0.25em 1.5em rgba($color-accent, 0.75)
+
+  .work-item-wrap
+    transform: none
+    filter: none
+    padding: 0
+    position: relative
+    overflow: hidden
+
+  .work-item
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      box-shadow: 0 -0.1em 0 rgba($color-quaternary, 0.33) inset
+      background: linear-gradient(160deg, rgba(black, 0.33) 50%, fade-out($color-quaternary, 0.33))
+
+  .work-name
+    width: 100%
+    position: relative
+    z-index: 1
+    margin: 7.5em 3.33em 4.5em
+    left: 0
+
+    @media (max-width: $smscreen)
+      margin: 7.25em 2.5em 4.25em
+
+    p
+      @media (max-width: $mdscreen)
+        margin-bottom: 0.5em 
+
+    h3
+      padding: 0
+      border: none
+      font-size: 2.25em
+      text-shadow: 0 0.25em 0.5em rgba(black, 0.15)
+
+  .work-img
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    margin: 0
+
+    &:before
+      height: 150%
+      width: 150%
+      z-index: 0
+      filter: grayscale(0.5) brightness(0.85)
+      left: 0
+
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      background: linear-gradient(195deg, transparent, rgba(black,0.85) 75%)
+
+.work
+  .ril-caption
+    max-height: auto
+    display: none
+    background: rgba(black, 0.75)
+
+    @media (max-width: $mdscreen)
+      display: block
+
+  .ril-caption-content
+    padding: 1.5em 1.5em
+    font-size: 1.15em
+    line-height: 1.5

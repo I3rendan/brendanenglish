@@ -8,6 +8,7 @@ import imgProfile from '../../images/me.png';
 import imgUNCG from '../../images/uncg.png';
 import imgLO from '../../images/logo-lo.png';
 import imgBlackbaud from '../../images/logo-blackbaud.png';
+import imgNebula from '../../images/logo-nebula.png';
 export default class About extends Component {
 
   displayName: 'About';
@@ -27,22 +28,19 @@ export default class About extends Component {
           <div id="wrap-about-top" ref={el => this.scene = el}>
             <div className="layer" data-depth="0.33">
               <div className="wrap-about-content">
-
                 <h1>I design and build websites, applications, and products.</h1>
-                <h2>I'm <Link to="#resume">currently</Link> the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
-
+                <h2>I'm currently the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
               </div>            
             </div>
-            <Link to="#resume" className="resume-link layer" data-depth="0.15">
+            <div className="resume-link layer" data-depth="0.15">
               My résumé
               <span className="anim-scroll">
                 <span></span>
                 <span></span>
                 <span></span>
               </span>
-            </Link>
+            </div>
           </div>
-
 
           <div id="resume">
 
@@ -163,6 +161,8 @@ export default class About extends Component {
                       <h5 className="sans">Creative Director</h5>
                       <ul>
                         <li>Define and maintain brand with a consistent methodology, aesthetic, and user experience.</li>
+                        <li>Created the company StyleGuide and Application Design guide to define creative direction and design methology.</li>
+                        <li>Designed and built the company website (www.learningobjects.com) and marketing materials</li>
                         <li>Sell vision and concepts to users, internal teams, and clients.</li>
                         <li>Establish creative direction for the entire line of products and services.</li>
                         <li>Enforce consistent design quality of products, custom solutions, and marketing materials.</li>
@@ -202,6 +202,38 @@ export default class About extends Component {
                         <li>Responsible for building custom Javascript / Flash applications with database & CMS integration.</li>
                         <li>Developed custom site designs and HTML/CSS/JS/Flash for a variety of nonprofit organizations.</li>
                         <li>Responsible for interfacing and developing client relationships.</li>
+                      </ul>
+                    </div>
+                    <div className="resume-work-exp">
+                      <ul>
+                        <li><span className="exp exp1"></span>Product Design, UX, and Strategy</li>
+                        <li><span className="exp exp2"></span>Frontend UI Design</li>
+                        <li><span className="exp exp3"></span>Frontend Development</li>
+                        <li><span className="exp exp5"></span>Graphic Design and Branding</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="resume-content">
+                    <h4 className="sans">
+                      <Link to="http://www.nebulawebdesigns.com" target="_blank"><img src={imgNebula} alt="Nebula Web Designs" /></Link>
+                      <span>Annapolis, MD</span>
+                    </h4>
+                    <div className="resume-work-date">
+                      <p className="date"><span>Apr</span>2012</p>
+                      <p className="date"><span>Jun</span>2002</p>
+                    </div>
+                    <div className="resume-work-role">
+                      <h5 className="sans">Freelance Web Designer</h5>
+                      <ul>
+                        <li>Led and managed all projects and client relationships.</li>
+                        <li>Designed, built, and maintained an extensive portfolio of websites.</li>
+                        <li>Created interactive websites and products utilizing the latest web technologies.</li>
+                        <li>Established brands, logos, prints, and marketing materials.</li>
+                        <li>Integrated custom designs with Wordpress and other content management systems.</li>
+                        <li>Built and maintained eCommerce sites and product catalogs.</li>
+                        <li>Designed and built interactive galleries, blogs, and AJAX-driven content.</li>
+                        <li>Produced maybe the most amazing <Link to="http://www.nebulawebdesigns.com/archive/v1" target="_blank">Flash site intro ever</Link> back in 1999.</li>
                       </ul>
                     </div>
                     <div className="resume-work-exp">

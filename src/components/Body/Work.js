@@ -79,7 +79,7 @@ export default class Work extends Component {
           id: "kidney",
           year: "2008",
           name: "Kidney Foundation of Canada",
-          description: "Another Blackbaud project &mdash; this was a full site redesign for the foundation. It featured some dynamic Flash content player, slideshows, and interesting 3D design.",
+          description: "Another Blackbaud project -- this was a full site redesign for the foundation. It featured some dynamic Flash content player, slideshows, and interesting 3D design.",
           images: [
             require('../../images/work/kidney.jpg')
           ]
@@ -87,7 +87,7 @@ export default class Work extends Component {
           id: "spca",
           year: "2009",
           name: "Louisiana SPCA",
-          description: "Another Blackbaud project &mdash; this was another full site redesign for the Louisiana SPCA. More dynaimc Flash content and slideshows.",
+          description: "Another Blackbaud project -- this was another full site redesign for the Louisiana SPCA. More dynaimc Flash content and slideshows.",
           images: [
             require('../../images/work/spca.jpg')
           ]
@@ -95,7 +95,7 @@ export default class Work extends Component {
           id: "aha",
           year: "2009",
           name: "American Heart Association",
-          description: "This one was cool &mdash; another Blackbaud project that showed realtime donation amounts on an interactive Flash map of the country. Users could click on the map to see donations for the Heart Walk by state and contribute themselves.",
+          description: "This one was cool -- another Blackbaud project that showed realtime donation amounts on an interactive Flash map of the country. Users could click on the map to see donations for the Heart Walk by state and contribute themselves.",
           images: [
             require('../../images/work/aha-1.jpg'),
             require('../../images/work/aha-2.jpg')
@@ -104,7 +104,7 @@ export default class Work extends Component {
           id: "wwo",
           year: "2010",
           name: "Worldwide Orphans Foundation",
-          description: "Another Blackbaud project &mdash; a full site redesign for the organization. It featured some dynamic Flash content player, slideshows, and one of my favorite designs of the Blackbaud days.",
+          description: "Another Blackbaud project -- a full site redesign for the organization. It featured some dynamic Flash content player, slideshows, and one of my favorite designs of the Blackbaud days.",
           images: [
             require('../../images/work/wwo.jpg')
           ]
@@ -112,7 +112,7 @@ export default class Work extends Component {
           id: "citadel",
           year: "2010",
           name: "Citadel Foundation",
-          description: "I had a great time working with the people here &mdash; I spent time on the campus and with their leadership to understand the aesthetic and users of the site I redesigned. There's also some dynamic Flash news content (pulled from a CMS).",
+          description: "I had a great time working with the people here -- I spent time on the campus and with their leadership to understand the aesthetic and users of the site I redesigned. There's also some dynamic Flash news content (pulled from a CMS).",
           images: [
             require('../../images/work/citadel.jpg')
           ]
@@ -149,7 +149,7 @@ export default class Work extends Component {
           id: "tom-carter",
           year: "2012",
           name: "Tom Carter Photography",
-          description: "A freelance project for a local photographer friend &mdash; this site featured a custom Flash gallery built with SlideshowPro. We didn't know it yet, but Flash was about to die :( &nbsp; I was pretty bummed about that.",
+          description: "A freelance project for a local photographer friend -- this site featured a custom Flash gallery built with SlideshowPro. We didn't know it yet, but Flash was about to die :( &nbsp; I was pretty bummed about that.",
           images: [
             require('../../images/work/tom-carter.jpg')
           ]
@@ -198,7 +198,7 @@ export default class Work extends Component {
           id: "campuspack",
           year: "2013",
           name: "Campus Pack",
-          description: "This is the original Learning Objects product &mdash; a blog, wiki, and journal tool marketed to institutions. I redesigned the system to bring it up-to-date and helped with the development effort.",
+          description: "This is the original Learning Objects product -- a blog, wiki, and journal tool marketed to institutions. I redesigned the system to bring it up-to-date and helped with the development effort.",
           images: [
             require('../../images/work/campuspack.jpg')
           ]
@@ -206,7 +206,7 @@ export default class Work extends Component {
           id: "difference-engine",
           year: "2014",
           name: "Difference Engine",
-          description: "The Learning Objects development platform &mdash; I redesigned the marketing site for the new product marketed towards higher education institutions. DE was the backbone to building learning and teaching products.",
+          description: "The Learning Objects development platform -- I redesigned the marketing site for the new product marketed towards higher education institutions. DE was the backbone to building learning and teaching products.",
           images: [
             require('../../images/work/de-1.jpg'),
             require('../../images/work/de-2.jpg')
@@ -331,14 +331,23 @@ export default class Work extends Component {
       }
     };
 
-    const projectList = this.state.projects.map(function(project, index) {
+    const projectList = this.state.projects.map((project, index) => {
       return (
         <Section className={classNames('work-item-wrap', {'active': current === index})} key={project.id}>
-          <div className="work-item">
+          <div className="work-item"
+            onClick={() => {
+              this.setState({
+                photoIndex: 0,
+                isOpen: true,
+                images: this.state.projects[index].images
+              });
+            }}>
             <div className="work-name">
               <p className="work-year">{project.year}</p>
-              <h3 className="sans">{project.name}</h3>
-              <h4 className="sans" dangerouslySetInnerHTML={{ __html: project.description }}></h4>
+              <h3 className="sans"><span>{project.name}</span></h3>
+              <h4 className="sans">
+                <span dangerouslySetInnerHTML={{ __html: project.description }}></span>
+              </h4>
               <button className="btn btn-accent">
                 Take a look
               </button>
@@ -349,10 +358,18 @@ export default class Work extends Component {
       );
     });
 
-    const projectListSlim = this.state.projects.map(function(project, index) {
+    const projectListSlim = this.state.projects.map((project, index) => {
       return (
         <div className="work-item-wrap" key={project.id}>
-          <div className="work-item">
+          <div className="work-item"
+            onClick={() => {
+              this.setState({
+                photoIndex: 0,
+                isOpen: true,
+                images: this.state.projects[index].images,
+                current: index
+              });
+            }}>
             <div className="work-name">
               <p className="work-year">{project.year}</p>
               <h3 className="sans">{project.name}</h3>
@@ -371,15 +388,7 @@ export default class Work extends Component {
               <div id="wrap-work-top" className={this.state.active} ref={el => this.scene = el}>
                 <div className="work-wrap layer" data-depth="0.25">
                   <SectionsContainer {...options} activeSection={current}>
-                  <div onClick={() => {
-
-                    this.setState({
-                      photoIndex: 0,
-                      isOpen: true,
-                      images: this.state.projects[current].images
-                    });
-
-                  }}>{projectList}</div>
+                    {projectList}
                   </SectionsContainer>
                 </div>
               </div> :
@@ -395,6 +404,7 @@ export default class Work extends Component {
                 mainSrc={images[photoIndex]}
                 nextSrc={images[(photoIndex + 1) % images.length]}
                 prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                imageCaption={this.state.projects[current].description}
 
                 onCloseRequest={() => this.setState({ isOpen: false })}
                 onMovePrevRequest={() => this.setState({

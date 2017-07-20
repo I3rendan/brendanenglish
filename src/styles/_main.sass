@@ -108,14 +108,14 @@ nav
     padding-right: 1.67em
 
   @media (max-width: $smscreen)
-    padding: 2em 0 2.5em
+    padding: 1.5em 0 2em
     position: fixed
     font-size: 1.25em
     bottom: 0
     width: 100vw
     text-align: center
     background: rgba($color-dark, 0.925)
-    box-shadow: 0 -0.15em 0.75em rgba($color-accent, 0.5)
+    box-shadow: 0 -0.15em 0.75em rgba($color-accent, 0.75)
     z-index: 5
 
   a
@@ -131,6 +131,16 @@ nav
 
     @media (max-width: $smscreen)
       padding: 1.5em 2em
+
+.loading
+  position: fixed
+  z-index: 10
+  color: $color-accent
+  text-align: center
+  font-size: 3em
+  width: 100%
+  top: 45%
+  transform: translateY(-50%)
 
 .app-inner
   position: absolute

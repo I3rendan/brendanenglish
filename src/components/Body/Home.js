@@ -7,15 +7,11 @@ export default class Home extends Component {
   displayName: 'Home';
 
   componentDidMount() {
-    if (window.innerWidth > 920){
-      this.parallax = new Parallax(this.scene);
-    }
+    this.parallax = new Parallax(this.scene);
   }
 
   componentWillUnmount() {
-    if (window.innerWidth > 920){
-      this.parallax.disable();
-    }
+    this.parallax.disable();
   }
 
   render() {
@@ -23,20 +19,12 @@ export default class Home extends Component {
       <BodyClassName className="home">
         <section id="home">
 
-          {window.innerWidth > 920 ? 
-            <div id="wrap-home-top" ref={el => this.scene = el}>
-              <div className="home-intro layer" data-depth="0.33">
-                <h1>Creating things since <Link to="/work#brendans-world">1999</Link></h1>
-                <Link to="/work" className="btn btn-accent">View my work</Link>
-              </div>
-            </div> :
-            <div id="wrap-home-top">
-              <div className="home-intro">
-                <h1>Creating things since <Link to="/work#brendans-world">1999</Link></h1>
-                <Link to="/work" className="btn btn-accent">View my work</Link>
-              </div>
+          <div id="wrap-home-top" ref={el => this.scene = el}>
+            <div className="home-intro layer" data-depth="0.33">
+              <h1>Creating things since <Link to="/work#brendans-world">1999</Link></h1>
+              <Link to="/work" className="btn btn-accent">View my work</Link>
             </div>
-          }
+          </div>
 
           <div id="wrap-home-bottom">
             <div className="wrap-inner">

@@ -8,6 +8,7 @@ import Work from './Body/Work';
 import About from './Body/About';
 import Contact from './Body/Contact';
 import NotFound from './Body/NotFound';
+import Preload from 'react-preload';
 class App extends Component {
 
   constructor(props) {
@@ -28,6 +29,38 @@ class App extends Component {
   }
 
   render() {
+
+    const loadingIndicator = (<div className="loading">Loading...</div>);
+
+    const images = [
+      '../images/work/brendans-world.png',
+      '../images/work/nebula-1.jpg',
+      '../images/work/milk-1.png',
+      '../images/work/kourthouse.png',
+      '../images/work/nebula-5.jpg',
+      '../images/work/ave-maria.jpg',
+      '../images/work/kidney.jpg',
+      '../images/work/spca.jpg',
+      '../images/work/aha-1.jpg',
+      '../images/work/wwo.jpg',
+      '../images/work/citadel.jpg',
+      '../images/work/eig-1.jpg',
+      '../images/work/blackbaud-1.jpg',
+      '../images/work/bbcon.jpg',
+      '../images/work/tom-carter.jpg',
+      '../images/work/mink-1.jpg',
+      '../images/work/brendan-english.jpg',
+      '../images/work/carnegie-1.jpg',
+      '../images/work/saylor-1.jpg',
+      '../images/work/campuspack.jpg',
+      '../images/work/de-1.jpg',
+      '../images/work/delivery-1.jpg',
+      '../images/work/lo-1.jpg',
+      '../images/work/lo-style-1.jpg',
+      '../images/work/resume-1.jpg',
+      '../images/work/byu-1.jpg',
+      '../images/work/ftpC-1.jpg'
+    ];
 
     return (
       
@@ -76,13 +109,25 @@ class App extends Component {
               </div>
             }
 
-            <Switch onUpdate={ window.scrollTo(0,0) }>
-              <Route exact path='/' component={Home} />
-              <Route path='/work' component={Work} />
-              <Route path='/about' component={About} />
-              <Route path='/contact' component={Contact} />
-              <Route path='*' component={NotFound} />
-            </Switch>
+            <Preload
+              loadingIndicator={loadingIndicator}
+              images={images}
+              autoResolveDelay={1000}
+              onError={this._handleImageLoadError}
+              onSuccess={this._handleImageLoadSuccess}
+              resolveOnError={true}
+              mountChildren={true}
+              >
+              {
+                <Switch onUpdate={ window.scrollTo(0,0) }>
+                  <Route exact path='/' component={Home} />
+                  <Route path='/work' component={Work} />
+                  <Route path='/about' component={About} />
+                  <Route path='/contact' component={Contact} />
+                  <Route path='*' component={NotFound} />
+                </Switch>
+              }
+            </Preload>
 
             {window.innerWidth > 920 ? 
               <div className="star-field field-3 layer" data-depth="0.33">
