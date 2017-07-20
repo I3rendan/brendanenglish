@@ -60,25 +60,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-moz-keyframes starsBgHome {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-ms-keyframes starsBgHome {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @keyframes starsBgHome {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-webkit-keyframes starMotionHome1 {
   0% {
@@ -188,25 +188,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-moz-keyframes starsBgWork {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-ms-keyframes starsBgWork {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @keyframes starsBgWork {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-webkit-keyframes starMotionWork1 {
   0% {
@@ -316,25 +316,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-moz-keyframes starsBgAbout {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-ms-keyframes starsBgAbout {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @keyframes starsBgAbout {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-webkit-keyframes starMotionAbout1 {
   0% {
@@ -444,25 +444,25 @@
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-moz-keyframes starsBgContact {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-ms-keyframes starsBgContact {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @keyframes starsBgContact {
   0% {
     transform: scale(1); }
   40% {
-    transform: scale(0.925); } }
+    transform: scale(0.95); } }
 
 @-webkit-keyframes starMotionContact1 {
   0% {
@@ -818,7 +818,7 @@ body {
   margin: 0;
   background: #DCDCDD;
   font-size: calc(14px + 0.15vh);
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   color: #181b1e;
   font-weight: 400; }
   @media (max-width: 64em) {
@@ -938,8 +938,8 @@ nav {
   text-align: center;
   font-size: 3em;
   width: 100%;
-  top: 45%;
-  transform: translateY(-50%); }
+  margin-top: 25%;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 .app-inner {
   position: absolute;
@@ -989,7 +989,7 @@ nav {
       background-size: cover;
       background-position: center center;
       background-color: #181b1e;
-      background-image: url("../images/bg-space2.jpg");
+      background-image: url("../images/bg-space.jpg");
       filter: brightness(0.25); }
       @media (max-width: 48em) {
         .bg-wrap .bg:after {

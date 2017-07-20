@@ -33,10 +33,17 @@ class App extends Component {
     const loadingIndicator = (<div className="loading">Loading...</div>);
 
     const images = [
+      '../images/work/ftpC-1.jpg',
+      '../images/work/byu-1.jpg',
+      '../images/work/resume-1.jpg',
       '../images/work/brendans-world.png',
       '../images/work/nebula-1.jpg',
       '../images/work/milk-1.png',
       '../images/work/kourthouse.png',
+      '../images/work/resume-1.jpg',
+      '../images/work/lo-style-1.jpg',
+      '../images/work/lo-1.jpg',
+      '../images/work/delivery-1.jpg',
       '../images/work/nebula-5.jpg',
       '../images/work/ave-maria.jpg',
       '../images/work/kidney.jpg',
@@ -53,13 +60,7 @@ class App extends Component {
       '../images/work/carnegie-1.jpg',
       '../images/work/saylor-1.jpg',
       '../images/work/campuspack.jpg',
-      '../images/work/de-1.jpg',
-      '../images/work/delivery-1.jpg',
-      '../images/work/lo-1.jpg',
-      '../images/work/lo-style-1.jpg',
-      '../images/work/resume-1.jpg',
-      '../images/work/byu-1.jpg',
-      '../images/work/ftpC-1.jpg'
+      '../images/work/de-1.jpg'    
     ];
 
     return (
