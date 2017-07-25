@@ -7,7 +7,7 @@ html
 body
   padding: 0
   margin: 0
-  background: $color-light
+  background: $color-dark
   font-size: calc(14px + 0.15vh)
   font-family: 'Source Sans Pro', sans-serif
   color: $color-dark
@@ -32,6 +32,9 @@ a
 
   &:hover
     color: white
+
+input, textarea
+  border-radius: 0
 
 ul, li
   margin: 0
@@ -108,14 +111,14 @@ nav
     padding-right: 1.67em
 
   @media (max-width: $smscreen)
-    padding: 1.5em 0 2em
+    padding: 0
     position: fixed
     font-size: 1.25em
     bottom: 0
     width: 100vw
     text-align: center
     background: rgba($color-dark, 0.925)
-    box-shadow: 0 -0.15em 0.75em rgba($color-accent, 0.75)
+    box-shadow: 0 -0.15em 0.33em rgba($color-accent, 0.75)
     z-index: 5
 
   a
@@ -130,7 +133,9 @@ nav
       margin-right: -1.5em
 
     @media (max-width: $smscreen)
-      padding: 1.5em 2em
+      padding: 1.75em 0 2em
+      width: 33.33vw
+      float: left
 
 .loading
   position: fixed
@@ -219,12 +224,15 @@ nav
 
     &:nth-child(1)
       animation: animScroll1 $speed-animScroll infinite
+      animation-delay: $speed-anim * 2
 
     &:nth-child(2)
       animation: animScroll2 $speed-animScroll infinite
+      animation-delay: $speed-anim * 2
 
     &:nth-child(3)
       animation: animScroll3 $speed-animScroll infinite
+      animation-delay: $speed-anim * 2
 
       &:before, &:after
         content: ""
@@ -249,14 +257,14 @@ nav
 
 .home, .work, .about, .contact
   #wrap-home-top, #wrap-work-top, #wrap-about-top, #wrap-contact-top
-    animation: showContent $speed-anim forwards ease
+    animation: showContent $speed-anim * 1.075 forwards ease
 
 .home
   .bg-stars:after
     animation: starsBgHome $speed-anim * 1.5 forwards ease
 
   .star-field.field-1, .star-field.field-2
-    animation: starMotionHome1 $speed-anim forwards ease
+    animation: starMotionHome1 $speed-anim * 1.25 forwards ease
 
   .star-field.field-3, .star-field.field-4
     animation: starMotionHome2 $speed-anim forwards ease
@@ -271,7 +279,7 @@ nav
     animation: starsBgWork $speed-anim * 1.5 forwards ease
 
   .star-field.field-1, .star-field.field-2
-    animation: starMotionWork1 $speed-anim forwards ease
+    animation: starMotionWork1 $speed-anim * 1.25 forwards ease
 
   .star-field.field-3, .star-field.field-4
     animation: starMotionWork2 $speed-anim forwards ease
@@ -285,7 +293,7 @@ nav
     animation: starsBgAbout $speed-anim * 1.5 forwards ease
 
   .star-field.field-1, .star-field.field-2
-    animation: starMotionAbout1 $speed-anim forwards ease
+    animation: starMotionAbout1 $speed-anim * 1.25 forwards ease
 
   .star-field.field-3, .star-field.field-4
     animation: starMotionAbout2 $speed-anim forwards ease
@@ -299,7 +307,7 @@ nav
     animation: starsBgContact $speed-anim * 1.5 forwards ease
 
   .star-field.field-1, .star-field.field-2
-    animation: starMotionContact1 $speed-anim forwards ease
+    animation: starMotionContact1 $speed-anim * 1.25 forwards ease
 
   .star-field.field-3, .star-field.field-4
     animation: starMotionContact2 $speed-anim forwards ease

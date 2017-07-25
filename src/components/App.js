@@ -8,6 +8,36 @@ import Work from './Body/Work';
 import About from './Body/About';
 import Contact from './Body/Contact';
 import NotFound from './Body/NotFound';
+
+import imgFTP from '../images/work/ftpC-1.jpg';
+import imgBYU from '../images/work/byu-1.jpg';
+import imgResume from '../images/work/resume-1.jpg';
+import imgBrendansWorld from '../images/work/brendans-world-1.png';
+import imgNebula1 from '../images/work/nebula-v1-1.jpg';
+import imgMilk from '../images/work/milk-1.png';
+import imgKourthouse from '../images/work/kourthouse-1.png';
+import imgStyle from '../images/work/lo-style-1.jpg';
+import imgLO from '../images/work/lo-1.jpg';
+import imgCrew from '../images/work/crew-1.jpg';
+import imgDelivery from '../images/work/delivery-1.jpg';
+import imgNebula5 from '../images/work/nebula-v5-1.jpg';
+import imgAveMaria from '../images/work/ave-maria-1.jpg';
+import imgKidney from '../images/work/kidney-1.jpg';
+import imgSPCA from '../images/work/spca-1.jpg';
+import imgAHA from '../images/work/aha-1.jpg';
+import imgWWO from '../images/work/wwo-1.jpg';
+import imgCitadel from '../images/work/citadel-1.jpg';
+import imgEIG from '../images/work/eig-1.jpg';
+import imgBlackbaud from '../images/work/blackbaud-1.jpg';
+import imgBBCON from '../images/work/bbcon-1.jpg';
+import imgTomCarter from '../images/work/tom-carter-1.jpg';
+import imgMink from '../images/work/mink-1.jpg';
+import imgBrendanEnglish from '../images/work/brendan-english-1.jpg';
+import imgCarnegie from '../images/work/carnegie-1.jpg';
+import imgSaylor from '../images/work/saylor-1.jpg';
+import imgCampusPack from '../images/work/campuspack-1.jpg';
+import imgDE from '../images/work/de-1.jpg';
+
 import Preload from 'react-preload';
 class App extends Component {
 
@@ -33,34 +63,34 @@ class App extends Component {
     const loadingIndicator = (<div className="loading">Loading...</div>);
 
     const images = [
-      '../images/work/ftpC-1.jpg',
-      '../images/work/byu-1.jpg',
-      '../images/work/resume-1.jpg',
-      '../images/work/brendans-world.png',
-      '../images/work/nebula-1.jpg',
-      '../images/work/milk-1.png',
-      '../images/work/kourthouse.png',
-      '../images/work/resume-1.jpg',
-      '../images/work/lo-style-1.jpg',
-      '../images/work/lo-1.jpg',
-      '../images/work/delivery-1.jpg',
-      '../images/work/nebula-5.jpg',
-      '../images/work/ave-maria.jpg',
-      '../images/work/kidney.jpg',
-      '../images/work/spca.jpg',
-      '../images/work/aha-1.jpg',
-      '../images/work/wwo.jpg',
-      '../images/work/citadel.jpg',
-      '../images/work/eig-1.jpg',
-      '../images/work/blackbaud-1.jpg',
-      '../images/work/bbcon.jpg',
-      '../images/work/tom-carter.jpg',
-      '../images/work/mink-1.jpg',
-      '../images/work/brendan-english.jpg',
-      '../images/work/carnegie-1.jpg',
-      '../images/work/saylor-1.jpg',
-      '../images/work/campuspack.jpg',
-      '../images/work/de-1.jpg'    
+      imgFTP,
+      imgBYU,
+      imgResume,
+      imgBrendansWorld,
+      imgNebula1,
+      imgMilk,
+      imgKourthouse,
+      imgStyle,
+      imgLO,
+      imgCrew,
+      imgDelivery,
+      imgNebula5,
+      imgAveMaria,
+      imgKidney,
+      imgSPCA,
+      imgAHA,
+      imgWWO,
+      imgCitadel,
+      imgEIG,
+      imgBlackbaud,
+      imgBBCON,
+      imgTomCarter,
+      imgMink,
+      imgBrendanEnglish,
+      imgCarnegie,
+      imgSaylor,
+      imgCampusPack,
+      imgDE    
     ];
 
     return (

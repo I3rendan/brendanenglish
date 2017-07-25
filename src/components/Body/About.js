@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Parallax from 'parallax-js';
 import BodyClassName from 'react-body-classname';
 import TimeAgo from 'timeago-react';
+import elementClass from 'element-class';
 import { Link } from 'react-router-dom';
 import { Chart } from 'react-google-charts';
 import imgProfile from '../../images/me.png';
@@ -29,7 +30,7 @@ export default class About extends Component {
             <div className="layer" data-depth="0.33">
               <div className="wrap-about-content">
                 <h1>I design and build websites, applications, and products.</h1>
-                <h2>I'm currently the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
+                <h2 className="sans">I'm currently the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
               </div>            
             </div>
             <div className="resume-link layer" data-depth="0.15">
@@ -43,9 +44,7 @@ export default class About extends Component {
           </div>
 
           <div id="resume">
-
             <div className="wrap-resume">
-
               <div className="resume-head">
                 <div className="wrap-inner">
                   <div className="resume-img">
@@ -54,58 +53,93 @@ export default class About extends Component {
                   <div className="resume-info">
                     <h3 className="sans">Brendan English</h3>
                     <p className="resume-role">Creative Director at <Link to="http://www.learningobjects.com" target="_blank">Learning Objects</Link>, Washington DC</p>
-                    <p className="resume-contact"><Link to="mailto:brendan@brendanenglish.com">brendan@brendanenglish.com</Link> &ndash; <Link to="">LinkedIn</Link></p>
+                    <p className="resume-contact"><Link to="mailto:brendan@brendanenglish.com" target="_blank">brendan@brendanenglish.com</Link> &ndash; <Link to="https://www.linkedin.com/in/brendan-english-a7230631" target="_blank">LinkedIn</Link></p>
                   </div>
                 </div>
               </div>
 
               <div className="resume-inner wrap-inner">
-
                 <div className="resume-exp">
                   <h3 className="sans">Relevant Experience</h3>
                   <div className="resume-content">
                     <ul>
-                      <li>
+                      <li className="resume-exp-item exp1"
+                        onClick={() => elementClass(document.querySelector('.resume-exp-item.exp1')).toggle('active') }>
                         <span className="exp exp1"></span>
                         <p>Product Design, UX, and Strategy</p>
                         <span className="duration">
                           <TimeAgo datetime={new Date('June 12, 2008')} />
                         </span>
+                        <ul className="exp-description">
+                          <li>I've worked on a variety of products and platforms as a creative lead, designer (frontend and UX), and developer.</li>
+                          <li>I've been responsible for user testing features and managing how to transition feedback into feature enhancements.</li>
+                          <li>I've worked with various team sizes where we have adhered to Scrum and the Agile Development process.</li>
+                        </ul>
                       </li>
-                      <li>
+                      <li className="resume-exp-item exp2"
+                        onClick={() => elementClass(document.querySelector('.resume-exp-item.exp2')).toggle('active') }>
                         <span className="exp exp2"></span>
                         <p>Frontend UI Design</p>
                         <span className="duration">
                           <TimeAgo datetime={new Date('June 1, 1999')} />
                         </span>
+                        <ul className="exp-description">
+                          <li>I've led the full creative life cycle for products, applications, and websites.</li>
+                          <li>I've owned all facets of the creative design process as well as selling visions to stakeholders and product owners.</li>
+                          <li>I've been responsible for user testing and the design evolution based on user feedback.</li>
+                        </ul>
                       </li>
-                      <li>
+                      <li className="resume-exp-item exp3"
+                        onClick={() => elementClass(document.querySelector('.resume-exp-item.exp3')).toggle('active') }>
                         <span className="exp exp3"></span>
                         <p>Frontend Development</p>
                         <span className="duration">
                           <TimeAgo datetime={new Date('June 1, 1999')} />
                         </span>
+                        <ul className="exp-description">
+                          <li>I've been the owner of end-to-end website and product development responsibilities.</li>
+                          <li>I've evolved my skillset over the years to include a variety of frontend development languages including HTML, Javascript, PHP, AJAX, Actionscript, Angular, React (to name a few).</li>
+                          <li>I've worked on large development teams to build robust products utilizing platforms like Jira, Github, Stash, and Trello to manage workloads.</li>
+                        </ul>
                       </li>
-                      <li>
+                      <li className="resume-exp-item exp4"
+                        onClick={() => elementClass(document.querySelector('.resume-exp-item.exp4')).toggle('active') }>
                         <span className="exp exp4"></span>
                         <p>Angular and React JS</p>
                         <span className="duration">
                           <TimeAgo datetime={new Date('May 12, 2013')} />
                         </span>
+                        <ul className="exp-description">
+                          <li>I've picked-up these languages to adapt to the latest and greatest libraries for modern and progressive web applications.</li>
+                          <li>I've owned the full development duties for creating and deploying web applications built around these technologies.</li>
+                          <li>I've also worked on development teams to share the roles and responsibilities of mature products and applicaitons.</li>
+                        </ul>
                       </li>
-                      <li>
+                      <li className="resume-exp-item exp5"
+                        onClick={() => elementClass(document.querySelector('.resume-exp-item.exp5')).toggle('active') }>
                         <span className="exp exp5"></span>
                         <p>Graphic Design and Branding</p>
                         <span className="duration">
                           <TimeAgo datetime={new Date('February 20, 2002')} />
                         </span>
+                        <ul className="exp-description">
+                          <li>I've been responsible for creating custom logos and managing client and stakeholder feedback and revisions.</li>
+                          <li>I've designed, implemented, and enforced organizational brand and style guides.</li>
+                          <li>I've authored design and product methodologies to aid in the development and creative direction of products and applications.</li>
+                        </ul>
                       </li>
-                      <li>
+                      <li className="resume-exp-item exp6"
+                        onClick={() => elementClass(document.querySelector('.resume-exp-item.exp6')).toggle('active') }>
                         <span className="exp exp6"></span>
                         <p>Wireframing, Prototyping, and Visioning</p>
                         <span className="duration">
                           <TimeAgo datetime={new Date('August 8, 2010')} />
                         </span>
+                        <ul className="exp-description">
+                          <li>I've been responsible for the creative vision and direction of an entire line of products and applications.</li>
+                          <li>I've used tools like Balsamiq, Sketch, Photoshop, to facilitate user testing and selling vision to stakeholders.</li>
+                          <li>I've created live prototypes (usually build in lightweight Angular or React) to more fully user test concepts and detailed interactions.</li>
+                        </ul>
                       </li>
                     </ul>
 
@@ -139,11 +173,8 @@ export default class About extends Component {
                         />
                       </div>
                     </div>
-
                   </div>
                 </div>
-
-                
 
                 <div className="resume-work">
                   <h3 className="sans">Work History</h3>

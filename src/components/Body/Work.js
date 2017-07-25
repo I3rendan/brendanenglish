@@ -24,7 +24,9 @@ export default class Work extends Component {
           name: "Brendan's World",
           description: "This is where it all began... my very first site. There's a space background. It has iframes. It has a spinning earth gif (the pinnacle of web technology at the time). It's riddled with embarrassing content and grammatical errors. It's truly special. I was 14 when I created this so go easy...",
           images: [
-            require('../../images/work/brendans-world.png')
+            require('../../images/work/brendans-world-1.png'),
+            require('../../images/work/brendans-world-2.png'),
+            require('../../images/work/brendans-world-3.png')
           ]
         },{
           id: "nebula",
@@ -32,7 +34,9 @@ export default class Work extends Component {
           name: "Nebula Web Designs",
           description: "Welcome to the wonderful age of Flash! I loved Flash... superfulious animations, bad graphics, and universal compatibility. This was the company name I designed under for almost 10 years. Lots of good times...",
           images: [
-            require('../../images/work/nebula-1.jpg')
+            require('../../images/work/nebula-v1-1.jpg'),
+            require('../../images/work/nebula-v1-2.jpg'),
+            require('../../images/work/nebula-v1-3.jpg')
           ]
         },{
           id: "milk",
@@ -41,7 +45,9 @@ export default class Work extends Component {
           description: "I loved this one... really minimal, interesting animations, and a new design approach for me (look, a <em>white</em> background!). This was for a small production company who were willing to take a chance on a young web designer.",
           images: [
             require('../../images/work/milk-1.png'),
-            require('../../images/work/mink-2.jpg')
+            require('../../images/work/milk-2.gif'),
+            require('../../images/work/milk-3.png'),
+            require('../../images/work/milk-4.png')
           ]
         },{
           id: "kourthouse",
@@ -49,7 +55,8 @@ export default class Work extends Component {
           name: "Kourthouse Media",
           description: "A Flash site I built for an aspiring film agency. I remember being proud of the avant garde design for this one (even though the proportions are not super helpful).",
           images: [
-            require('../../images/work/kourthouse.png')
+            require('../../images/work/kourthouse-1.png'),
+            require('../../images/work/kourthouse-2.jpg')
           ]
         },{
           id: "greene-street",
@@ -57,7 +64,13 @@ export default class Work extends Component {
           name: "Greene Street Club",
           description: "I worked here for a few years while in college. I designed their logo, built and maintained their site (featuring AJAX content and advanced Flash scripting). I also designed all their posters, flyers, and general marketing. This was a huge opportunity for me and I learned a great deal here.",
           images: [
-            require('../../images/work/greene-street.jpg')
+            require('../../images/work/greene-street-1.jpg'),
+            require('../../images/work/greene-street-2.png'),
+            require('../../images/work/greene-street-3.jpg'),
+            require('../../images/work/greene-street-4.jpg'),
+            require('../../images/work/greene-street-5.jpg'),
+            require('../../images/work/greene-street-6.jpg'),
+            require('../../images/work/greene-street-7.jpg')
           ]
         },{
           id: "nebula-v5",
@@ -65,7 +78,11 @@ export default class Work extends Component {
           name: "Nebula Web Designs - v5",
           description: "By the 5th iteration of Nebula, I was getting regular design work, learning object-oriented programming, and honing-in on user experience. &nbsp;<a href=''>Full archive here</a>",
           images: [
-            require('../../images/work/nebula-5.jpg')
+            require('../../images/work/nebula-v5-1.jpg'),
+            require('../../images/work/nebula-v5-2.png'),
+            require('../../images/work/nebula-v5-3.png'),
+            require('../../images/work/nebula-v5-4.png'),
+            require('../../images/work/nebula-v5-5.png')
           ]
         },{
           id: "ave-maria",
@@ -73,7 +90,11 @@ export default class Work extends Component {
           name: "Ave Maria University",
           description: "This was one of my first projects for <a href='/about#resume'>Blackbaud</a>. It was a really cool brick memorial locator. The user found their donation and the application zoomed-into a blue print of the church, then overlaid the memorial text on a brick texture. I won the Innovator of the Year award for this guy.",
           images: [
-            require('../../images/work/ave-maria.jpg')
+            require('../../images/work/ave-maria-1.jpg'),
+            require('../../images/work/ave-maria-2.gif'),
+            require('../../images/work/ave-maria-3.jpg'),
+            require('../../images/work/ave-maria-4.jpg'),
+            require('../../images/work/ave-maria-5.jpg')
           ]
         },{
           id: "kidney",
@@ -81,7 +102,8 @@ export default class Work extends Component {
           name: "Kidney Foundation of Canada",
           description: "Another Blackbaud project -- this was a full site redesign for the foundation. It featured some dynamic Flash content player, slideshows, and interesting 3D design.",
           images: [
-            require('../../images/work/kidney.jpg')
+            require('../../images/work/kidney-1.jpg'),
+            require('../../images/work/kidney-2.jpg')
           ]
         },{
           id: "spca",
@@ -89,7 +111,8 @@ export default class Work extends Component {
           name: "Louisiana SPCA",
           description: "Another Blackbaud project -- this was another full site redesign for the Louisiana SPCA. More dynaimc Flash content and slideshows.",
           images: [
-            require('../../images/work/spca.jpg')
+            require('../../images/work/spca-1.jpg'),
+            require('../../images/work/spca-2.jpg'),
           ]
         },{
           id: "aha",
@@ -106,7 +129,8 @@ export default class Work extends Component {
           name: "Worldwide Orphans Foundation",
           description: "Another Blackbaud project -- a full site redesign for the organization. It featured some dynamic Flash content player, slideshows, and one of my favorite designs of the Blackbaud days.",
           images: [
-            require('../../images/work/wwo.jpg')
+            require('../../images/work/wwo-1.jpg'),
+            require('../../images/work/wwo-2.jpg')
           ]
         },{
           id: "citadel",
@@ -114,7 +138,9 @@ export default class Work extends Component {
           name: "Citadel Foundation",
           description: "I had a great time working with the people here -- I spent time on the campus and with their leadership to understand the aesthetic and users of the site I redesigned. There's also some dynamic Flash news content (pulled from a CMS).",
           images: [
-            require('../../images/work/citadel.jpg')
+            require('../../images/work/citadel-1.jpg'),
+            require('../../images/work/citadel-2.jpg'),
+            require('../../images/work/citadel-3.jpg')
           ]
         },{
           id: "eig",
@@ -143,7 +169,9 @@ export default class Work extends Component {
           name: "BBCON",
           description: "This custom Wordpress site was built for the Blackbaud Conference that year. By this point, I was working with a few other Wordpress sites as freelance projects.",
           images: [
-            require('../../images/work/bbcon.jpg')
+            require('../../images/work/bbcon-1.jpg'),
+            require('../../images/work/bbcon-2.jpg'),
+            require('../../images/work/bbcon-3.jpg')
           ]
         },{
           id: "tom-carter",
@@ -151,7 +179,8 @@ export default class Work extends Component {
           name: "Tom Carter Photography",
           description: "A freelance project for a local photographer friend -- this site featured a custom Flash gallery built with SlideshowPro. We didn't know it yet, but Flash was about to die :( &nbsp; I was pretty bummed about that.",
           images: [
-            require('../../images/work/tom-carter.jpg')
+            require('../../images/work/tom-carter-1.jpg'),
+            require('../../images/work/tom-carter-2.jpg')
           ]
         },{
           id: "mink",
@@ -170,7 +199,10 @@ export default class Work extends Component {
           name: "BrendanEnglish.com",
           description: "This is my old portfolio site. I had moved away from the Nebula name and was looking for a new challenge for work. I built this using responsive styles, parallax scrolling, and all the new stuff I was learning at the time.",
           images: [
-            require('../../images/work/brendan-english.jpg')
+            require('../../images/work/brendan-english-1.jpg'),
+            require('../../images/work/brendan-english-2.jpg'),
+            require('../../images/work/brendan-english-3.jpg'),
+            require('../../images/work/brendan-english-4.jpg')
           ]
         },{
           id: "carnegie",
@@ -200,7 +232,9 @@ export default class Work extends Component {
           name: "Campus Pack",
           description: "This is the original Learning Objects product -- a blog, wiki, and journal tool marketed to institutions. I redesigned the system to bring it up-to-date and helped with the development effort.",
           images: [
-            require('../../images/work/campuspack.jpg')
+            require('../../images/work/campuspack-1.jpg'),
+            require('../../images/work/campuspack-2.jpg'),
+            require('../../images/work/campuspack-3.jpg')
           ]
         },{
           id: "difference-engine",
@@ -209,13 +243,14 @@ export default class Work extends Component {
           description: "The Learning Objects development platform -- I redesigned the marketing site for the new product marketed towards higher education institutions. DE was the backbone to building learning and teaching products.",
           images: [
             require('../../images/work/de-1.jpg'),
-            require('../../images/work/de-2.jpg')
+            require('../../images/work/de-2.jpg'),
+            require('../../images/work/de-3.jpg')
           ]
         },{
           id: "delivery",
           year: "2014",
           name: "LO Delivery",
-          description: "The Learning Objects student content delivery product. I designed, prototyped, tested, and help build the core delivery platform for students. The product has evolved over the course of my time at LO to include instructor and admin tools, along with various other learning features.",
+          description: "The Learning Objects student content delivery product. I designed, prototyped, tested, and helped build the core delivery platform for students. The product has evolved over the course of my time at LO to include instructor and admin tools, along with various other learning features.",
           images: [
             require('../../images/work/delivery-1.jpg'),
             require('../../images/work/delivery-2.jpg'),
@@ -225,18 +260,32 @@ export default class Work extends Component {
             require('../../images/work/delivery-6.jpg')
           ]
         },{
+          id: "crew",
+          year: "2015",
+          name: "Looking for Crew",
+          description: "This was an app I created to help match boat captains with potential crew members. I also designed the logo and branding. This never really got off the ground, but it was a great venture into app development and user testing. This is an Angular app and is designed to be responsive.",
+          images: [
+            require('../../images/work/crew-1.jpg'),
+            require('../../images/work/crew-2.jpg'),
+            require('../../images/work/crew-3.jpg'),
+            require('../../images/work/crew-4.jpg'),
+            require('../../images/work/crew-5.jpg')
+          ]
+        },{
           id: "learning-objects",
           year: "2015",
           name: "Learning Objects",
           description: "I started here in 2013 and have worked as a Product Designer and Creative Director. Along with working on the designs of all of LO's products, I also redesigned the marketing site for LO. The site was responsive and included updated branding that would live-on in the <a href='/work#lo-styleguide'>styleguide</a>. I also built some cool CSS effects + parallax.",
           images: [
             require('../../images/work/lo-1.jpg'),
-            require('../../images/work/lo-2.jpg'),
+            require('../../images/work/lo-2.gif'),
             require('../../images/work/lo-3.jpg'),
             require('../../images/work/lo-4.jpg'),
             require('../../images/work/lo-5.jpg'),
             require('../../images/work/lo-6.jpg'),
-            require('../../images/work/lo-7.jpg')
+            require('../../images/work/lo-7.gif'),
+            require('../../images/work/lo-8.jpg'),
+            require('../../images/work/lo-9.jpg')
           ]
         },{
           id: "lo-styleguide",
@@ -277,12 +326,10 @@ export default class Work extends Component {
           images: [
             require('../../images/work/ftpC-1.jpg'),
             require('../../images/work/ftpC-2.png'),
-            require('../../images/work/ftpC-3.png'),
-            require('../../images/work/ftpC-4.png'),
+            require('../../images/work/ftpC-3.jpg'),
+            require('../../images/work/ftpC-4.jpg'),
             require('../../images/work/ftpC-5.jpg'),
-            require('../../images/work/ftpC-6.png'),
-            require('../../images/work/ftpC-7.png'),
-            require('../../images/work/ftpC-8.jpg')
+            require('../../images/work/ftpC-6.jpg')
           ]
         }
       ]
