@@ -109,7 +109,7 @@ export default class Work extends Component {
           id: "spca",
           year: "2009",
           name: "Louisiana SPCA",
-          description: "Another Blackbaud project -- this was another full site redesign for the Louisiana SPCA. More dynaimc Flash content and slideshows.",
+          description: "Another Blackbaud project -- this was another full site redesign for the Louisiana SPCA. More dynamic Flash content and slideshows.",
           images: [
             require('../../images/work/spca-1.jpg'),
             require('../../images/work/spca-2.jpg'),
@@ -155,7 +155,7 @@ export default class Work extends Component {
           id: "blackbaud",
           year: "2011",
           name: "Blackbaud",
-          description: "By 2011, I had moved to the marketing division of Blackbaud and was working directly with the Creative Director. I lead designer responsible for the redesign of the corporate site. This was built in the Blackbaud CMS and had a hundred pages or so to consider. I also created a custom lead generation system using Eloqua.",
+          description: "By 2011, I had moved to the marketing division of Blackbaud and was working directly with the Creative Director. I was the lead designer responsible for the redesign and maintenance of the corporate site. This was built in the Blackbaud CMS and had a hundred pages or so to consider. I also created a custom lead generation system using Eloqua.",
           images: [
             require('../../images/work/blackbaud-1.jpg'),
             require('../../images/work/blackbaud-2.jpg'),
@@ -177,7 +177,7 @@ export default class Work extends Component {
           id: "tom-carter",
           year: "2012",
           name: "Tom Carter Photography",
-          description: "A freelance project for a local photographer friend -- this site featured a custom Flash gallery built with SlideshowPro. We didn't know it yet, but Flash was about to die :( &nbsp; I was pretty bummed about that.",
+          description: "A freelance project for a local photographer friend -- this site featured a custom Flash gallery built with SlideshowPro. This was one of the final Flash projects I worked on as the industry started to make way for new Javascript frameworks.",
           images: [
             require('../../images/work/tom-carter-1.jpg'),
             require('../../images/work/tom-carter-2.jpg')
@@ -186,7 +186,7 @@ export default class Work extends Component {
           id: "mink",
           year: "2012",
           name: "Mink Letterpress",
-          description: "Another freelance project I did for a friend with a letterpress design business in Asheville. She does amazing work and I really liked this site &mdash; it's built in Wordpress, had a Gallery, and I used a single page design.",
+          description: "Another freelance project I did for a friend with a letterpress design business in Asheville. She does amazing work and I really liked this site -- it's built in Wordpress, had a Gallery, and I used a single scrolling page design.",
           images: [
             require('../../images/work/mink-1.jpg'),
             require('../../images/work/mink-2.jpg'),
