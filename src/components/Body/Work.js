@@ -296,7 +296,8 @@ export default class Work extends Component {
             require('../../images/work/lo-style-1.jpg'),
             require('../../images/work/lo-style-2.jpg'),
             require('../../images/work/lo-style-3.jpg'),
-            require('../../images/work/lo-style-4.jpg')
+            require('../../images/work/lo-style-4.jpg'),
+            require('../../images/work/lo-style-5.jpg')
           ]
         },{
           id: "resume",
