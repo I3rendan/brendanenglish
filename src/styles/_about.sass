@@ -97,13 +97,13 @@
 .resume-head
   position: relative
   z-index: 1
-  padding: 7.5em 5em 5em
-  background-color: $color-primary
+  padding: 8.5em 5em 5em
+  background-color: $color-dark
   box-shadow: 0 0.75em 1.5em rgba(black, 0.33) inset, 0 0em 3em rgba(black, 0.25) inset
   text-shadow: 0 0.25em 0.5em rgba(black, 0.25)
 
   @media (max-width: $lgscreen)
-    padding: 7em 4em 4.5em
+    padding: 7.5em 4em 4.5em
     font-size: 0.925em
 
   @media (max-width: $mdscreen)
@@ -113,19 +113,23 @@
   @media (max-width: $mdscreen)
     font-size: 0.85em
 
-  &:before
+  &:before, &:after
     content: ""
     position: absolute
     top: 0
     left: 0
     height: 100%
     width: 100%
-    background-image: url(../images/bg-mountains.jpg)
-    background-position: center center
-    background-size: cover
-    filter: brightness(0.67) saturate(1.33)
     z-index: -1
-    opacity: 0.67
+
+  &:before
+    background-image: url(../images/bg-dc.jpg)
+    background-position: center 33%
+    background-size: cover
+    filter: brightness(0.5) saturate(1.5)
+
+  &:after
+    background: linear-gradient(transparent 5%, rgba(black, 0.5) 50%, rgba(black, 0.25) 100%)
 
   a
     color: white
@@ -180,6 +184,8 @@
 
 .resume-inner
   padding: 3em 1.5em
+  max-width: 68rem
+  margin: 0 auto
 
   @media (max-width: $mdscreen)
     padding: 3em 1em
@@ -246,7 +252,6 @@
     &.active
       .exp:after
         content: "-"
-
   .exp
     position: relative
 
@@ -259,6 +264,7 @@
       left: 0
       width: 100%
       text-align: center
+      font-family: 'Source Code Pro'
 
   .resume-content
     .resume-exp-item
@@ -272,22 +278,22 @@
         width: 0.5em
         height: calc(100% - 3em)
 
-      &:nth-child(1):before
+      &.exp1:before
         background: $color-exp1
 
-      &:nth-child(2):before
+      &.exp2:before
         background: $color-exp2
 
-      &:nth-child(3):before
+      &.exp3:before
         background: $color-exp3
 
-      &:nth-child(4):before
+      &.exp4:before
         background: $color-exp4
 
-      &:nth-child(5):before
+      &.exp5:before
         background: $color-exp5
 
-      &:nth-child(6):before
+      &.exp6:before
         background: $color-exp6
 
       &.active
@@ -304,7 +310,7 @@
         padding: 0
         overflow: hidden
         transition: padding ease $speed-trans
-        width: 100%
+        width: calc(100% - 3.6em)
 
         li
           background: none
@@ -315,7 +321,6 @@
           list-style-type: circle
           max-height: 0
           opacity: 0
-          transition: max-height ease $speed-trans, padding ease $speed-trans, opacity ease $speed-trans
   p
     float: left
     margin: 0.25em 1.5em

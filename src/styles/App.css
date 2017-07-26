@@ -1467,13 +1467,13 @@ header,
     background-position: 10% 0;
     transition: left ease 0.33s 0.33s, width ease 0.33s 0.33s; }
   .work-img.brendans-world:before {
-    background-image: url("../images/work/brendans-world-1.png"); }
+    background-image: url("../images/work/brendans-world-1.jpg"); }
   .work-img.nebula:before {
     background-image: url("../images/work/nebula-v1-1.jpg"); }
   .work-img.milk:before {
-    background-image: url("../images/work/milk-1.png"); }
+    background-image: url("../images/work/milk-1.jpg"); }
   .work-img.kourthouse:before {
-    background-image: url("../images/work/kourthouse-1.png"); }
+    background-image: url("../images/work/kourthouse-1.jpg"); }
   .work-img.greene-street:before {
     background-image: url("../images/work/greene-street-1.jpg"); }
   .work-img.nebula-v5:before {
@@ -1695,13 +1695,13 @@ header,
 .resume-head {
   position: relative;
   z-index: 1;
-  padding: 7.5em 5em 5em;
-  background-color: #0e417b;
+  padding: 8.5em 5em 5em;
+  background-color: #181b1e;
   box-shadow: 0 0.75em 1.5em rgba(0, 0, 0, 0.33) inset, 0 0em 3em rgba(0, 0, 0, 0.25) inset;
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25); }
   @media (max-width: 64em) {
     .resume-head {
-      padding: 7em 4em 4.5em;
+      padding: 7.5em 4em 4.5em;
       font-size: 0.925em; } }
   @media (max-width: 48em) {
     .resume-head {
@@ -1710,19 +1710,21 @@ header,
   @media (max-width: 48em) {
     .resume-head {
       font-size: 0.85em; } }
-  .resume-head:before {
+  .resume-head:before, .resume-head:after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../images/bg-mountains.jpg);
-    background-position: center center;
+    z-index: -1; }
+  .resume-head:before {
+    background-image: url(../images/bg-dc.jpg);
+    background-position: center 33%;
     background-size: cover;
-    filter: brightness(0.67) saturate(1.33);
-    z-index: -1;
-    opacity: 0.67; }
+    filter: brightness(0.5) saturate(1.5); }
+  .resume-head:after {
+    background: linear-gradient(transparent 5%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%); }
   .resume-head a {
     color: white;
     margin: 0 0.15em;
@@ -1769,7 +1771,9 @@ header,
       font-weight: 400; }
 
 .resume-inner {
-  padding: 3em 1.5em; }
+  padding: 3em 1.5em;
+  max-width: 68rem;
+  margin: 0 auto; }
   @media (max-width: 48em) {
     .resume-inner {
       padding: 3em 1em; } }
@@ -1835,7 +1839,8 @@ header,
     top: 0.075em;
     left: 0;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    font-family: 'Source Code Pro'; }
 
 .resume-exp .resume-content .resume-exp-item {
   cursor: pointer; }
@@ -1846,17 +1851,17 @@ header,
     left: 1.975em;
     width: 0.5em;
     height: calc(100% - 3em); }
-  .resume-exp .resume-content .resume-exp-item:nth-child(1):before {
+  .resume-exp .resume-content .resume-exp-item.exp1:before {
     background: #38CDD8; }
-  .resume-exp .resume-content .resume-exp-item:nth-child(2):before {
+  .resume-exp .resume-content .resume-exp-item.exp2:before {
     background: #8B60B4; }
-  .resume-exp .resume-content .resume-exp-item:nth-child(3):before {
+  .resume-exp .resume-content .resume-exp-item.exp3:before {
     background: #F39B1E; }
-  .resume-exp .resume-content .resume-exp-item:nth-child(4):before {
+  .resume-exp .resume-content .resume-exp-item.exp4:before {
     background: #85C226; }
-  .resume-exp .resume-content .resume-exp-item:nth-child(5):before {
+  .resume-exp .resume-content .resume-exp-item.exp5:before {
     background: #CE3B19; }
-  .resume-exp .resume-content .resume-exp-item:nth-child(6):before {
+  .resume-exp .resume-content .resume-exp-item.exp6:before {
     background: #5173E3; }
   .resume-exp .resume-content .resume-exp-item.active .exp-description {
     padding: 1.5em 0 0.5em; }
@@ -1869,7 +1874,7 @@ header,
     padding: 0;
     overflow: hidden;
     transition: padding ease 0.33s;
-    width: 100%; }
+    width: calc(100% - 3.6em); }
     .resume-exp .resume-content .resume-exp-item .exp-description li {
       background: none;
       padding: 0 0.5em;
@@ -1878,8 +1883,7 @@ header,
       display: list-item;
       list-style-type: circle;
       max-height: 0;
-      opacity: 0;
-      transition: max-height ease 0.33s, padding ease 0.33s, opacity ease 0.33s; }
+      opacity: 0; }
 
 .resume-exp p {
   float: left;

@@ -12,10 +12,10 @@ import NotFound from './Body/NotFound';
 import imgFTP from '../images/work/ftpC-1.jpg';
 import imgBYU from '../images/work/byu-1.jpg';
 import imgResume from '../images/work/resume-1.jpg';
-import imgBrendansWorld from '../images/work/brendans-world-1.png';
+import imgBrendansWorld from '../images/work/brendans-world-1.jpg';
 import imgNebula1 from '../images/work/nebula-v1-1.jpg';
-import imgMilk from '../images/work/milk-1.png';
-import imgKourthouse from '../images/work/kourthouse-1.png';
+import imgMilk from '../images/work/milk-1.jpg';
+import imgKourthouse from '../images/work/kourthouse-1.jpg';
 import imgStyle from '../images/work/lo-style-1.jpg';
 import imgLO from '../images/work/lo-1.jpg';
 import imgCrew from '../images/work/crew-1.jpg';
@@ -60,7 +60,7 @@ class App extends Component {
 
   render() {
 
-    const loadingIndicator = (<div className="loading">Loading...</div>);
+    const loadingIndicator = (<div className="loading"></div>);
 
     const images = [
       imgFTP,

@@ -24,15 +24,15 @@ export default class Work extends Component {
           name: "Brendan's World",
           description: "This is where it all began... my very first site. There's a space background. It has iframes. It has a spinning earth gif (the pinnacle of web technology at the time). It's riddled with embarrassing content and grammatical errors. It's truly special. I was 14 when I created this so go easy...",
           images: [
-            require('../../images/work/brendans-world-1.png'),
-            require('../../images/work/brendans-world-2.png'),
-            require('../../images/work/brendans-world-3.png')
+            require('../../images/work/brendans-world-1.jpg'),
+            require('../../images/work/brendans-world-2.jpg'),
+            require('../../images/work/brendans-world-3.jpg')
           ]
         },{
           id: "nebula",
           year: "2001",
           name: "Nebula Web Designs",
-          description: "Welcome to the wonderful age of Flash! I loved Flash... superfulious animations, bad graphics, and universal compatibility. This was the company name I designed under for almost 10 years. Lots of good times...",
+          description: "Welcome to the wonderful age of Flash! I loved Flash... superfluous animations, bad graphics, and universal compatibility. This was the company name I designed under for almost 10 years. Lots of good times...",
           images: [
             require('../../images/work/nebula-v1-1.jpg'),
             require('../../images/work/nebula-v1-2.jpg'),
@@ -44,18 +44,18 @@ export default class Work extends Component {
           name: "Milk Productions",
           description: "I loved this one... really minimal, interesting animations, and a new design approach for me (look, a <em>white</em> background!). This was for a small production company who were willing to take a chance on a young web designer.",
           images: [
-            require('../../images/work/milk-1.png'),
+            require('../../images/work/milk-1.jpg'),
             require('../../images/work/milk-2.gif'),
-            require('../../images/work/milk-3.png'),
-            require('../../images/work/milk-4.png')
+            require('../../images/work/milk-3.jpg'),
+            require('../../images/work/milk-4.jpg')
           ]
         },{
           id: "kourthouse",
           year: "2005",
           name: "Kourthouse Media",
-          description: "A Flash site I built for an aspiring film agency. I remember being proud of the avant garde design for this one (even though the proportions are not super helpful).",
+          description: "A Flash site I built for an aspiring film agency. I remember being proud of the avant-garde design for this one (even though the proportions are not super helpful).",
           images: [
-            require('../../images/work/kourthouse-1.png'),
+            require('../../images/work/kourthouse-1.jpg'),
             require('../../images/work/kourthouse-2.jpg')
           ]
         },{
@@ -65,7 +65,7 @@ export default class Work extends Component {
           description: "I worked here for a few years while in college. I designed their logo, built and maintained their site (featuring AJAX content and advanced Flash scripting). I also designed all their posters, flyers, and general marketing. This was a huge opportunity for me and I learned a great deal here.",
           images: [
             require('../../images/work/greene-street-1.jpg'),
-            require('../../images/work/greene-street-2.png'),
+            require('../../images/work/greene-street-2.jpg'),
             require('../../images/work/greene-street-3.jpg'),
             require('../../images/work/greene-street-4.jpg'),
             require('../../images/work/greene-street-5.jpg'),
@@ -79,10 +79,10 @@ export default class Work extends Component {
           description: "By the 5th iteration of Nebula, I was getting regular design work, learning object-oriented programming, and honing-in on user experience. &nbsp;<a href=''>Full archive here</a>",
           images: [
             require('../../images/work/nebula-v5-1.jpg'),
-            require('../../images/work/nebula-v5-2.png'),
-            require('../../images/work/nebula-v5-3.png'),
-            require('../../images/work/nebula-v5-4.png'),
-            require('../../images/work/nebula-v5-5.png')
+            require('../../images/work/nebula-v5-2.jpg'),
+            require('../../images/work/nebula-v5-3.jpg'),
+            require('../../images/work/nebula-v5-4.jpg'),
+            require('../../images/work/nebula-v5-5.jpg')
           ]
         },{
           id: "ave-maria",
@@ -146,7 +146,7 @@ export default class Work extends Component {
           id: "eig",
           year: "2011",
           name: "Michael J Eig & Assoc.",
-          description: "This was a freelance project for a lawfirm in Maryland specializing in education law for children. They have a great mission and I loved working with them. I built an admin area for this site in ExpressionEngine to help manage forms.",
+          description: "This was a freelance project for a law firm in Maryland specializing in education law for children. They have a great mission and I loved working with them. I built an admin area for this site in ExpressionEngine to help manage forms.",
           images: [
             require('../../images/work/eig-1.jpg'),
             require('../../images/work/eig-2.jpg')
@@ -155,7 +155,7 @@ export default class Work extends Component {
           id: "blackbaud",
           year: "2011",
           name: "Blackbaud",
-          description: "By 2011, I had moved to the marketing divison of Blackbaud and was working directly with the Creative Director. I lead designer responsible for the redesign of the corporate site. This was built in the Blackbaud CMS and had a hundred pages or so to consider. I also created a custom lead generation system using Eloqua.",
+          description: "By 2011, I had moved to the marketing division of Blackbaud and was working directly with the Creative Director. I lead designer responsible for the redesign of the corporate site. This was built in the Blackbaud CMS and had a hundred pages or so to consider. I also created a custom lead generation system using Eloqua.",
           images: [
             require('../../images/work/blackbaud-1.jpg'),
             require('../../images/work/blackbaud-2.jpg'),
@@ -291,7 +291,7 @@ export default class Work extends Component {
           id: "lo-styleguide",
           year: "2015",
           name: "LO StyleGuide",
-          description: "I developed the company StyleGuide and Application Design Guide to help standardize and inform the creative direction of the company and products. The StyleGuide featured brand and design guidelines and the Application Design Guide included the design methodoligies for products.",
+          description: "I developed the company StyleGuide and Application Design Guide to help standardize and inform the creative direction of the company and products. The StyleGuide featured brand and design guidelines and the Application Design Guide included the design methodologies for products.",
           images: [
             require('../../images/work/lo-style-1.jpg'),
             require('../../images/work/lo-style-2.jpg'),
@@ -305,8 +305,8 @@ export default class Work extends Component {
           description: "Pathbrite is a well known portfolio system we acquired. To best help students find careers, I designed and prototyped a résumé product to tie-in to competencies, portfolios, and a new way to imagine the résumé. You can find mine <a href='/about#resume'>here</a>.",
           images: [
             require('../../images/work/resume-1.jpg'),
-            require('../../images/work/resume-2.png'),
-            require('../../images/work/resume-3.png')
+            require('../../images/work/resume-2.jpg'),
+            require('../../images/work/resume-3.jpg')
           ]
         },{
           id: "byu",
@@ -325,7 +325,7 @@ export default class Work extends Component {
           description: "I created this site for a newly formed LLC that I own with my friend Joe. It's aimed at serving nonprofits and small businesses in the DC area. We partner to build applications, products, websites, and marketing materials. My most up-to-date work can be found here...",
           images: [
             require('../../images/work/ftpC-1.jpg'),
-            require('../../images/work/ftpC-2.png'),
+            require('../../images/work/ftpC-2.jpg'),
             require('../../images/work/ftpC-3.jpg'),
             require('../../images/work/ftpC-4.jpg'),
             require('../../images/work/ftpC-5.jpg'),

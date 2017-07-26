@@ -58,7 +58,7 @@ export default class About extends Component {
                 </div>
               </div>
 
-              <div className="resume-inner wrap-inner">
+              <div className="resume-inner">
                 <div className="resume-exp">
                   <h3 className="sans">Relevant Experience</h3>
                   <div className="resume-content">
@@ -71,9 +71,9 @@ export default class About extends Component {
                           <TimeAgo datetime={new Date('June 12, 2008')} />
                         </span>
                         <ul className="exp-description">
-                          <li>I've worked on a variety of products and platforms as a creative lead, designer (frontend and UX), and developer.</li>
+                          <li>I've worked on a variety of products and platforms as a creative director, designer (frontend and UX), and developer.</li>
                           <li>I've been responsible for user testing features and managing how to transition feedback into feature enhancements.</li>
-                          <li>I've worked with various team sizes where we have adhered to Scrum and the Agile Development process.</li>
+                          <li>I've worked with various team sizes where we have incorporated Scrum and the Agile Development process.</li>
                         </ul>
                       </li>
                       <li className="resume-exp-item exp2"
@@ -84,9 +84,9 @@ export default class About extends Component {
                           <TimeAgo datetime={new Date('June 1, 1999')} />
                         </span>
                         <ul className="exp-description">
-                          <li>I've led the full creative life cycle for products, applications, and websites.</li>
-                          <li>I've owned all facets of the creative design process as well as selling visions to stakeholders and product owners.</li>
-                          <li>I've been responsible for user testing and the design evolution based on user feedback.</li>
+                          <li>I've led the full design lifecycle for dozens of products, applications, and websites.</li>
+                          <li>I've owned all facets of the creative process as well as selling visions to stakeholders and product owners.</li>
+                          <li>I've been responsible for conducting user tests and the design evolution based on feedback.</li>
                         </ul>
                       </li>
                       <li className="resume-exp-item exp3"
@@ -97,9 +97,9 @@ export default class About extends Component {
                           <TimeAgo datetime={new Date('June 1, 1999')} />
                         </span>
                         <ul className="exp-description">
-                          <li>I've been the owner of end-to-end website and product development responsibilities.</li>
-                          <li>I've evolved my skillset over the years to include a variety of frontend development languages including HTML, Javascript, PHP, AJAX, Actionscript, Angular, React (to name a few).</li>
-                          <li>I've worked on large development teams to build robust products utilizing platforms like Jira, Github, Stash, and Trello to manage workloads.</li>
+                          <li>I've been the owner of end-to-end development responsibilities for dozens of websites, applications, and products.</li>
+                          <li>I've evolved my skillset over the years to include a variety of frontend development languages including HTML, Javascript, PHP, AJAX, jQuery, Actionscript, Angular, React (to name a few).</li>
+                          <li>I've worked on large development teams to build robust products while utilizing platforms like Jira, Github, Stash, and Trello to manage workloads.</li>
                         </ul>
                       </li>
                       <li className="resume-exp-item exp4"
@@ -110,9 +110,9 @@ export default class About extends Component {
                           <TimeAgo datetime={new Date('May 12, 2013')} />
                         </span>
                         <ul className="exp-description">
-                          <li>I've picked-up these languages to adapt to the latest and greatest libraries for modern and progressive web applications.</li>
+                          <li>I've picked-up these languages to better inform design decisions and to adapt to the latest frontend technology for progressive web applications.</li>
                           <li>I've owned the full development duties for creating and deploying web applications built around these technologies.</li>
-                          <li>I've also worked on development teams to share the roles and responsibilities of mature products and applicaitons.</li>
+                          <li>I've also worked on development teams to share the roles and responsibilities of mature products and applications.</li>
                         </ul>
                       </li>
                       <li className="resume-exp-item exp5"
@@ -123,9 +123,9 @@ export default class About extends Component {
                           <TimeAgo datetime={new Date('February 20, 2002')} />
                         </span>
                         <ul className="exp-description">
-                          <li>I've been responsible for creating custom logos and managing client and stakeholder feedback and revisions.</li>
-                          <li>I've designed, implemented, and enforced organizational brand and style guides.</li>
-                          <li>I've authored design and product methodologies to aid in the development and creative direction of products and applications.</li>
+                          <li>I've been responsible for creating custom logos and brands and managing all stakeholder feedback and revisions.</li>
+                          <li>I've designed, implemented, and enforced organizational brand and style guides for large companies.</li>
+                          <li>I've authored design and UX methodologies to aid in the development and creative direction of products and applications.</li>
                         </ul>
                       </li>
                       <li className="resume-exp-item exp6"
@@ -137,8 +137,8 @@ export default class About extends Component {
                         </span>
                         <ul className="exp-description">
                           <li>I've been responsible for the creative vision and direction of an entire line of products and applications.</li>
-                          <li>I've used tools like Balsamiq, Sketch, Photoshop, to facilitate user testing and selling vision to stakeholders.</li>
-                          <li>I've created live prototypes (usually build in lightweight Angular or React) to more fully user test concepts and detailed interactions.</li>
+                          <li>I've used tools like Sketch, Photoshop, Balsamiq, and Illustrator to facilitate user testing and selling vision to stakeholders.</li>
+                          <li>I've created live-code prototypes to more fully user test concepts and detailed interactions and for better hand-off to development teams.</li>
                         </ul>
                       </li>
                     </ul>
@@ -192,8 +192,8 @@ export default class About extends Component {
                       <h5 className="sans">Creative Director</h5>
                       <ul>
                         <li>Define and maintain brand with a consistent methodology, aesthetic, and user experience.</li>
-                        <li>Created the company StyleGuide and Application Design guide to define creative direction and design methology.</li>
-                        <li>Designed and built the company website (www.learningobjects.com) and marketing materials</li>
+                        <li>Created the company StyleGuide and Application Design guide to define creative vision and direction.</li>
+                        <li>Designed and built the company website (www.learningobjects.com) and marketing materials.</li>
                         <li>Sell vision and concepts to users, internal teams, and clients.</li>
                         <li>Establish creative direction for the entire line of products and services.</li>
                         <li>Enforce consistent design quality of products, custom solutions, and marketing materials.</li>
