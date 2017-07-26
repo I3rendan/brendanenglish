@@ -10,6 +10,7 @@ import imgUNCG from '../../images/uncg.png';
 import imgLO from '../../images/logo-lo.png';
 import imgBlackbaud from '../../images/logo-blackbaud.png';
 import imgNebula from '../../images/logo-nebula.png';
+import pdfResume from '../../docs/BrendanResume.pdf';
 export default class About extends Component {
 
   displayName: 'About';
@@ -292,6 +293,10 @@ export default class About extends Component {
                   </div>
                 </div>
 
+              </div>
+
+              <div className="resume-pdf">
+                <Link to={pdfResume} target="_blank" className="btn btn-accent">View as PDF</Link>
               </div>
 
             </div>
