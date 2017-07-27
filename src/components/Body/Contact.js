@@ -23,6 +23,7 @@ export default class Contact extends Component {
               <div className="wrap-contact-content">
 
                 <div className="contact-social">
+                  <Link to="mailto:brendan@brendanenglish.com" target="_blank"><i className="icon icon-email" /></Link>
                   <Link to="https://www.linkedin.com/in/brendan-english-a7230631" target="_blank"><i className="icon icon-linkedin" /></Link>
                   <Link to="https://github.com/I3rendan" target="_blank"><i className="icon icon-github" /></Link>
                   <Link to="https://www.facebook.com/I3rendan" target="_blank"><i className="icon icon-facebook" /></Link>
@@ -36,7 +37,6 @@ export default class Contact extends Component {
                     Send message
                   </button>
                 </form>
-
               </div>
             </div>
           </div>

@@ -76,7 +76,7 @@ export default class Work extends Component {
           id: "nebula-v5",
           year: "2007",
           name: "Nebula Web Designs - v5",
-          description: "By the 5th iteration of Nebula, I was getting regular design work, learning object-oriented programming, and honing-in on user experience. &nbsp;<a href=''>Full archive here</a>",
+          description: "By the 5th iteration of Nebula, I was getting regular design work, learning object-oriented programming, and honing-in on user experience. This site is still active (www.nebulawebdesigns.com -- though you'll need Flash to run it).",
           images: [
             require('../../images/work/nebula-v5-1.jpg'),
             require('../../images/work/nebula-v5-2.jpg'),
@@ -88,7 +88,7 @@ export default class Work extends Component {
           id: "ave-maria",
           year: "2008",
           name: "Ave Maria University",
-          description: "This was one of my first projects for <a href='/about#resume'>Blackbaud</a>. It was a really cool brick memorial locator. The user found their donation and the application zoomed-into a blue print of the church, then overlaid the memorial text on a brick texture. I won the Innovator of the Year award for this guy.",
+          description: "This was one of my first projects for Blackbaud. It was a really cool brick memorial locator. The user found their donation and the application zoomed-into a blue print of the church, then overlaid the memorial text on a brick texture. I won the Innovator of the Year award for this guy.",
           images: [
             require('../../images/work/ave-maria-1.jpg'),
             require('../../images/work/ave-maria-2.gif'),
@@ -109,7 +109,7 @@ export default class Work extends Component {
           id: "spca",
           year: "2009",
           name: "Louisiana SPCA",
-          description: "Another Blackbaud project -- this was another full site redesign for the Louisiana SPCA. More dynamic Flash content and slideshows.",
+          description: "Another Blackbaud project -- this was another full site redesign for the Louisiana SPCA. More dynamic Flash content and slideshows. I was also starting to explore more open and saturated layouts.",
           images: [
             require('../../images/work/spca-1.jpg'),
             require('../../images/work/spca-2.jpg'),
@@ -118,7 +118,7 @@ export default class Work extends Component {
           id: "aha",
           year: "2009",
           name: "American Heart Association",
-          description: "This one was cool -- another Blackbaud project that showed realtime donation amounts on an interactive Flash map of the country. Users could click on the map to see donations for the Heart Walk by state and contribute themselves.",
+          description: "This one was a lot of fun. It was another Blackbaud project that showed realtime donation amounts on an interactive Flash map of the country. Users could click on the map, zoom-in and see donations for the Heart Walk by city and state and contribute themselves.",
           images: [
             require('../../images/work/aha-1.jpg'),
             require('../../images/work/aha-2.jpg')
@@ -155,7 +155,7 @@ export default class Work extends Component {
           id: "blackbaud",
           year: "2011",
           name: "Blackbaud",
-          description: "By 2011, I had moved to the marketing division of Blackbaud and was working directly with the Creative Director. I was the lead designer responsible for the redesign and maintenance of the corporate site. This was built in the Blackbaud CMS and had a hundred pages or so to consider. I also created a custom lead generation system using Eloqua.",
+          description: "By 2011, I had moved to the marketing division of Blackbaud and was working directly with the Creative Director. I was the lead designer responsible for the redesign and maintenance of the corporate site. This was built in the Blackbaud CMS and had a hundred pages or so to consider. I also created a custom lead-generation system using Eloqua.",
           images: [
             require('../../images/work/blackbaud-1.jpg'),
             require('../../images/work/blackbaud-2.jpg'),
@@ -186,7 +186,7 @@ export default class Work extends Component {
           id: "mink",
           year: "2012",
           name: "Mink Letterpress",
-          description: "Another freelance project I did for a friend with a letterpress design business in Asheville. She does amazing work and I really liked this site -- it's built in Wordpress, had a Gallery, and I used a single scrolling page design.",
+          description: "Another freelance project I did for a friend with a letterpress design business in Asheville. She does amazing work and I really liked this site -- it's built in Wordpress, had a responsive gallery, and I used a single scrolling page design.",
           images: [
             require('../../images/work/mink-1.jpg'),
             require('../../images/work/mink-2.jpg'),
@@ -197,7 +197,7 @@ export default class Work extends Component {
           id: "brendan-english",
           year: "2013",
           name: "BrendanEnglish.com",
-          description: "This is my old portfolio site. I had moved away from the Nebula name and was looking for a new challenge for work. I built this using responsive styles, parallax scrolling, and all the new stuff I was learning at the time.",
+          description: "This is my old portfolio site. I had moved away from the Nebula name and was looking for a new challenge for work. I built this using responsive styles, parallax scrolling, and all the new stuff I was learning at the time. You can see the full site <a href='http://www.brendanenglish.com/archive/site-2013' target='_blank'>here</a>.",
           images: [
             require('../../images/work/brendan-english-1.jpg'),
             require('../../images/work/brendan-english-2.jpg'),
@@ -208,7 +208,7 @@ export default class Work extends Component {
           id: "carnegie",
           year: "2013",
           name: "Carnegie Learning",
-          description: "One of my first projects for Learning Objects. I worked on a variety of projects including instructional and learning applications, an eBook, and an Admin product.",
+          description: "One of my first projects for Learning Objects. I worked on a variety of projects including instructional and learning applications, an eBook, and an Admin product. I really delved into the world of product design and user experience for this client.",
           images: [
             require('../../images/work/carnegie-1.jpg'),
             require('../../images/work/carnegie-2.jpg'),
