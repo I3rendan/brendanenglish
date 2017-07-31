@@ -6,6 +6,61 @@ export default class Contact extends Component {
 
   displayName: 'Contact';
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      hasSent: false,
+      hasError: false
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const id = target.id;
+    this.setState({
+      [id]: value
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    if (!this.state.email || !this.state.name || !this.state.message){
+      this.setState({
+        hasError: true
+      });
+    } else {
+      fetch('sendEmail.php', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          to: 'brendan@brendanenglish.com', 
+          name: this.state.name, 
+          email: this.state.email, 
+          subject: 'BrendanEnglish.com Message', 
+          message: this.state.message
+        })
+      })
+      .then((response) => response.text())
+      .then((responseData) => {
+        this.setState({
+          hasSent: true
+        });
+      })
+      .catch((error) => {
+        console.warn(error);
+      });
+    }
+  }
+
   componentDidMount() {
     this.parallax = new Parallax(this.scene);
   }
@@ -29,10 +84,14 @@ export default class Contact extends Component {
                   <Link to="https://www.facebook.com/I3rendan" target="_blank"><i className="icon icon-facebook" /></Link>
                 </div>
 
-                <form id="contact-form">
-                  <input type="text" id="name" placeholder="Your name..." />
-                  <input type="text" id="email" placeholder="Your email..." />
-                  <textarea id="message" cols="4" placeholder="Your message..." />
+                <form id="contact-form" className={this.state.hasSent} onSubmit={this.handleSubmit}>
+                  <h2>Sent!</h2>
+                  <p className={this.state.hasError}>
+                    Please fill-out all inputs before sending!
+                  </p>
+                  <input type="text" id="name" value={this.state.name} onChange={this.handleChange} placeholder="Your name..." />
+                  <input type="text" id="email" value={this.state.email} onChange={this.handleChange} placeholder="Your email..." />
+                  <textarea id="message" cols="4" value={this.state.message}  onChange={this.handleChange} placeholder="Your message..." />
                   <button type="submit" id="submit" className="btn btn-accent">
                     Send message
                   </button>

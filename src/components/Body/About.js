@@ -31,7 +31,7 @@ export default class About extends Component {
             <div className="layer" data-depth="0.33">
               <div className="wrap-about-content">
                 <h1>I design and build websites, applications, and products.</h1>
-                <h2 className="sans">I'm currently the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project I can help with!</h2>
+                <h2 className="sans">I'm currently the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project with which I can help!</h2>
               </div>            
             </div>
             <div className="resume-link layer" data-depth="0.15">
@@ -194,6 +194,7 @@ export default class About extends Component {
                       <ul>
                         <li>Define and maintain brand with a consistent methodology, aesthetic, and user experience.</li>
                         <li>Created the company StyleGuide and Application Design guide to define creative vision and direction.</li>
+                        <li>Implemented accessibility standards and best practices throughout all product lines and applications.</li>
                         <li>Designed and built the company website (www.learningobjects.com) and marketing materials.</li>
                         <li>Sell vision and concepts to users, internal teams, and clients.</li>
                         <li>Establish creative direction for the entire line of products and services.</li>
