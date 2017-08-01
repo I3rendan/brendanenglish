@@ -1687,7 +1687,7 @@ header,
   display: block;
   padding: 0;
   background: #efefef;
-  box-shadow: 0 1.25em 1em -0.5em rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 -0.5em 1.5em rgba(0, 0, 0, 0.5); }
   @media (max-width: 48em) {
     #resume {
       font-size: 1.25em; } }
@@ -1728,7 +1728,7 @@ header,
     filter: brightness(0.5) saturate(1.5); }
   .resume-head:after {
     background: linear-gradient(transparent 15%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%);
-    box-shadow: 0 0.33em 0 rgba(254, 95, 85, 0.67) inset; }
+    box-shadow: 0 -0.25em 0 rgba(254, 95, 85, 0.67) inset; }
   .resume-head a {
     color: white;
     margin: 0 0.15em;
