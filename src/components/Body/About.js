@@ -5,7 +5,7 @@ import TimeAgo from 'timeago-react';
 import elementClass from 'element-class';
 import { Link } from 'react-router-dom';
 import { Chart } from 'react-google-charts';
-import imgProfile from '../../images/me.png';
+import imgProfile from '../../images/me.jpg';
 import imgUNCG from '../../images/uncg.png';
 import imgLO from '../../images/logo-lo.png';
 import imgBlackbaud from '../../images/logo-blackbaud.png';
