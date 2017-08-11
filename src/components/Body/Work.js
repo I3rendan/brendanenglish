@@ -328,9 +328,11 @@ export default class Work extends Component {
             require('../../images/work/ftpC-1.jpg'),
             require('../../images/work/ftpC-2.jpg'),
             require('../../images/work/ftpC-3.jpg'),
-            require('../../images/work/ftpC-4.jpg'),
-            require('../../images/work/ftpC-5.jpg'),
-            require('../../images/work/ftpC-6.jpg')
+            require('../../images/work/ftpC-4.gif'),
+            require('../../images/work/ftpC-5.gif'),
+            require('../../images/work/ftpC-6.jpg'),
+            require('../../images/work/ftpC-7.jpg'),
+            require('../../images/work/ftpC-8.jpg')
           ]
         }
       ]
