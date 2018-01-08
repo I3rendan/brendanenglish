@@ -1525,6 +1525,20 @@ header,
     background-image: url("../images/work/resume-1-min.jpg"); }
   .work-img.byu:before {
     background-image: url("../images/work/byu-1-min.jpg"); }
+  .work-img.tom-carter-v2:before {
+    background-image: url("../images/work/tom-carter-v2-1-min.jpg"); }
+  .work-img.moodfood:before {
+    background-image: url("../images/work/moodfood-1-min.jpg"); }
+  .work-img.socialbooth:before {
+    background-image: url("../images/work/socialbooth-1-min.jpg"); }
+  .work-img.lisc:before {
+    background-image: url("../images/work/lisc-1-min.jpg"); }
+  .work-img.quantum:before {
+    background-image: url("../images/work/quantum-1-min.jpg"); }
+  .work-img.dates:before {
+    background-image: url("../images/work/3dates-1-min.jpg"); }
+  .work-img.mink-v2:before {
+    background-image: url("../images/work/mink-v2-1-min.jpg"); }
   .work-img.ftpC:before {
     background-image: url("../images/work/ftpC-1-min.jpg"); }
 
@@ -1701,7 +1715,7 @@ header,
 .resume-head {
   position: relative;
   z-index: 1;
-  padding: 7.5em 5em 6.67em;
+  padding: 5.5em 5em;
   background-color: #181b1e;
   box-shadow: 0 0.75em 1.5em rgba(0, 0, 0, 0.33) inset, 0 0em 3em rgba(0, 0, 0, 0.25) inset;
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25); }
@@ -2023,7 +2037,7 @@ header,
       border: none; }
     .resume-work .resume-content h4 img {
       max-width: 12em;
-      max-height: 1.5em;
+      max-height: 1.75em;
       margin: 0.25em 0;
       height: auto;
       width: auto; }

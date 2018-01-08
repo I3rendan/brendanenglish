@@ -8,9 +8,10 @@ import { Chart } from 'react-google-charts';
 import imgProfile from '../../images/me.jpg';
 import imgUNCG from '../../images/uncg.png';
 import imgLO from '../../images/logo-lo.png';
+import imgCapOne from '../../images/logo-capone.png';
 import imgBlackbaud from '../../images/logo-blackbaud.png';
 import imgNebula from '../../images/logo-nebula.png';
-import pdfResume from '../../docs/BrendanResume.pdf';
+import pdfResume from '../../docs/BrendanEnglish.pdf';
 export default class About extends Component {
 
   displayName: 'About';
@@ -182,11 +183,42 @@ export default class About extends Component {
 
                   <div className="resume-content">
                     <h4 className="sans">
+                      <Link to="http://www.capitalone.com" target="_blank"><img src={imgCapOne} alt="Capital One" /></Link>
+                      <span>McLean, VA</span>
+                    </h4>
+                    <div className="resume-work-date">
+                      <p className="date today">Today</p>
+                      <p className="date"><span>Sep</span>2017</p>
+                    </div>
+                    <div className="resume-work-role">
+                      <h5 className="sans">Principal UI/UX Designer (contract)</h5>
+                      <ul>
+                        <li>Lead designs of features and applications around credit cards for small businesses.</li>
+                        <li>Conduct empathy research and user testing for banking products and features.</li>
+                        <li>I work closely with a full cross-disciplinary team to devise research, strategy, and designs that establish the future vision of customer experience.</li>
+                        <li>Drive projects from research and strategy through detailed wireframe and UI execution.</li>
+                        <li>Responsible for designing storyboards, user flows, process flows, and experience journey maps.</li>
+                        <li>I coordinate and conduct Design Jams and synthesize feedback into product design.</li>
+                      </ul>
+                    </div>
+                    <div className="resume-work-exp">
+                      <ul>
+                        <li><span className="exp exp1"></span>Product Design, UX, and Strategy</li>
+                        <li><span className="exp exp2"></span>Frontend UI Design</li>
+                        <li><span className="exp exp3"></span>Frontend Development</li>
+                        <li><span className="exp exp5"></span>Graphic Design and Branding</li>
+                        <li><span className="exp exp6"></span>Wireframing, Prototyping, &amp;  Visioning</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="resume-content">
+                    <h4 className="sans">
                       <Link to="http://www.learningobjects.com" target="_blank"><img src={imgLO} alt="Learning Objects" /></Link>
                       <span>Washington, DC</span>
                     </h4>
                     <div className="resume-work-date">
-                      <p className="date today">Today</p>
+                      <p className="date"><span>Sep</span>2017</p>
                       <p className="date"><span>May</span>2013</p>
                     </div>
                     <div className="resume-work-role">

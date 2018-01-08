@@ -49,16 +49,18 @@ export default class Work extends Component {
             require('../../images/work/milk-3.jpg'),
             require('../../images/work/milk-4.jpg')
           ]
-        },{
-          id: "kourthouse",
-          year: "2005",
-          name: "Kourthouse Media",
-          description: "A Flash site I built for an aspiring film agency. I remember being proud of the avant-garde design for this one (even though the proportions are not super helpful).",
-          images: [
-            require('../../images/work/kourthouse-1.jpg'),
-            require('../../images/work/kourthouse-2.jpg')
-          ]
-        },{
+        },
+        // {
+        //   id: "kourthouse",
+        //   year: "2005",
+        //   name: "Kourthouse Media",
+        //   description: "A Flash site I built for an aspiring film agency. I remember being proud of the avant-garde design for this one (even though the proportions are not super helpful).",
+        //   images: [
+        //     require('../../images/work/kourthouse-1.jpg'),
+        //     require('../../images/work/kourthouse-2.jpg')
+        //   ]
+        // },
+        {
           id: "greene-street",
           year: "2006",
           name: "Greene Street Club",
@@ -96,16 +98,18 @@ export default class Work extends Component {
             require('../../images/work/ave-maria-4.jpg'),
             require('../../images/work/ave-maria-5.jpg')
           ]
-        },{
-          id: "kidney",
-          year: "2008",
-          name: "Kidney Foundation of Canada",
-          description: "Another Blackbaud project -- this was a full site redesign for the foundation. It featured some dynamic Flash content player, slideshows, and interesting 3D design.",
-          images: [
-            require('../../images/work/kidney-1.jpg'),
-            require('../../images/work/kidney-2.jpg')
-          ]
-        },{
+        },
+        // {
+        //   id: "kidney",
+        //   year: "2008",
+        //   name: "Kidney Foundation of Canada",
+        //   description: "Another Blackbaud project -- this was a full site redesign for the foundation. It featured some dynamic Flash content player, slideshows, and interesting 3D design.",
+        //   images: [
+        //     require('../../images/work/kidney-1.jpg'),
+        //     require('../../images/work/kidney-2.jpg')
+        //   ]
+        // },
+        {
           id: "spca",
           year: "2009",
           name: "Louisiana SPCA",
@@ -163,37 +167,39 @@ export default class Work extends Component {
             require('../../images/work/blackbaud-4.jpg'),
             require('../../images/work/blackbaud-5.jpg')
           ]
-        },{
-          id: "bbcon",
-          year: "2012",
-          name: "BBCON",
-          description: "This custom Wordpress site was built for the Blackbaud Conference that year. By this point, I was working with a few other Wordpress sites as freelance projects.",
-          images: [
-            require('../../images/work/bbcon-1.jpg'),
-            require('../../images/work/bbcon-2.jpg'),
-            require('../../images/work/bbcon-3.jpg')
-          ]
-        },{
-          id: "tom-carter",
-          year: "2012",
-          name: "Tom Carter Photography",
-          description: "A freelance project for a local photographer friend -- this site featured a custom Flash gallery built with SlideshowPro. This was one of the final Flash projects I worked on as the industry started to make way for new Javascript frameworks.",
-          images: [
-            require('../../images/work/tom-carter-1.jpg'),
-            require('../../images/work/tom-carter-2.jpg')
-          ]
-        },{
-          id: "mink",
-          year: "2012",
-          name: "Mink Letterpress",
-          description: "Another freelance project I did for a friend with a letterpress design business in Asheville. She does amazing work and I really liked this site -- it's built in Wordpress, had a responsive gallery, and I used a single scrolling page design.",
-          images: [
-            require('../../images/work/mink-1.jpg'),
-            require('../../images/work/mink-2.jpg'),
-            require('../../images/work/mink-3.jpg'),
-            require('../../images/work/mink-4.jpg')
-          ]
-        },{
+        }
+        // ,{
+        //   id: "bbcon",
+        //   year: "2012",
+        //   name: "BBCON",
+        //   description: "This custom Wordpress site was built for the Blackbaud Conference that year. By this point, I was working with a few other Wordpress sites as freelance projects.",
+        //   images: [
+        //     require('../../images/work/bbcon-1.jpg'),
+        //     require('../../images/work/bbcon-2.jpg'),
+        //     require('../../images/work/bbcon-3.jpg')
+        //   ]
+        // },{
+        //   id: "tom-carter",
+        //   year: "2012",
+        //   name: "Tom Carter Photography",
+        //   description: "A freelance project for a local photographer friend -- this site featured a custom Flash gallery built with SlideshowPro. This was one of the final Flash projects I worked on as the industry started to make way for new Javascript frameworks.",
+        //   images: [
+        //     require('../../images/work/tom-carter-1.jpg'),
+        //     require('../../images/work/tom-carter-2.jpg')
+        //   ]
+        // },{
+        //   id: "mink",
+        //   year: "2012",
+        //   name: "Mink Letterpress",
+        //   description: "Another freelance project I did for a friend with a letterpress design business in Asheville. She does amazing work and I really liked this site -- it's built in Wordpress, had a responsive gallery, and I used a single scrolling page design.",
+        //   images: [
+        //     require('../../images/work/mink-1.jpg'),
+        //     require('../../images/work/mink-2.jpg'),
+        //     require('../../images/work/mink-3.jpg'),
+        //     require('../../images/work/mink-4.jpg')
+        //   ]
+        // }
+        ,{
           id: "brendan-english",
           year: "2013",
           name: "BrendanEnglish.com",
@@ -217,36 +223,40 @@ export default class Work extends Component {
             require('../../images/work/carnegie-5.jpg'),
             require('../../images/work/carnegie-6.jpg')
           ]
-        },{
-          id: "saylor",
-          year: "2013",
-          name: "Saylor Academy",
-          description: "This was a really cool organization I worked with at Learning Objects. They're dedicated to providing free competency-based education. I led the design initiative to build a learning platform and marketing site to capture student goals.",
-          images: [
-            require('../../images/work/saylor-1.jpg'),
-            require('../../images/work/saylor-2.jpg')
-          ]
-        },{
-          id: "campuspack",
-          year: "2013",
-          name: "Campus Pack",
-          description: "This is the original Learning Objects product -- a blog, wiki, and journal tool marketed to institutions. I redesigned the system to bring it up-to-date and helped with the development effort.",
-          images: [
-            require('../../images/work/campuspack-1.jpg'),
-            require('../../images/work/campuspack-2.jpg'),
-            require('../../images/work/campuspack-3.jpg')
-          ]
-        },{
-          id: "difference-engine",
-          year: "2014",
-          name: "Difference Engine",
-          description: "The Learning Objects development platform -- I redesigned the marketing site for the new product marketed towards higher education institutions. DE was the backbone to building learning and teaching products.",
-          images: [
-            require('../../images/work/de-1.jpg'),
-            require('../../images/work/de-2.jpg'),
-            require('../../images/work/de-3.jpg')
-          ]
-        },{
+        },
+        // {
+        //   id: "saylor",
+        //   year: "2013",
+        //   name: "Saylor Academy",
+        //   description: "This was a really cool organization I worked with at Learning Objects. They're dedicated to providing free competency-based education. I led the design initiative to build a learning platform and marketing site to capture student goals.",
+        //   images: [
+        //     require('../../images/work/saylor-1.jpg'),
+        //     require('../../images/work/saylor-2.jpg'),
+        //     require('../../images/work/saylor-3.jpg'),
+        //     require('../../images/work/saylor-4.gif')
+        //   ]
+        // },{
+        //   id: "campuspack",
+        //   year: "2013",
+        //   name: "Campus Pack",
+        //   description: "This is the original Learning Objects product -- a blog, wiki, and journal tool marketed to institutions. I redesigned the system to bring it up-to-date and helped with the development effort.",
+        //   images: [
+        //     require('../../images/work/campuspack-1.jpg'),
+        //     require('../../images/work/campuspack-2.jpg'),
+        //     require('../../images/work/campuspack-3.jpg')
+        //   ]
+        // },{
+        //   id: "difference-engine",
+        //   year: "2014",
+        //   name: "Difference Engine",
+        //   description: "The Learning Objects development platform -- I redesigned the marketing site for the new product marketed towards higher education institutions. DE was the backbone to building learning and teaching products.",
+        //   images: [
+        //     require('../../images/work/de-1.jpg'),
+        //     require('../../images/work/de-2.jpg'),
+        //     require('../../images/work/de-3.jpg')
+        //   ]
+        // },
+        {
           id: "delivery",
           year: "2014",
           name: "LO Delivery",
@@ -259,7 +269,8 @@ export default class Work extends Component {
             require('../../images/work/delivery-5.jpg'),
             require('../../images/work/delivery-6.jpg')
           ]
-        },{
+        }
+        ,{
           id: "crew",
           year: "2015",
           name: "Looking for Crew",
@@ -320,6 +331,91 @@ export default class Work extends Component {
             require('../../images/work/byu-3.jpg')
           ]
         },{
+          id: "tom-carter-v2",
+          year: "2017",
+          name: "Tom Carter Photography",
+          description: "I created a total brand and website redesign for professional photographer, Tom Carter. The new site features the updated branding, an interactive gallery, and mobile-first, responsive design.",
+          images: [
+            require('../../images/work/tom-carter-v2-1.jpg'),
+            require('../../images/work/tom-carter-v2-2.jpg'),
+            require('../../images/work/tom-carter-v2-3.jpg'),
+            require('../../images/work/tom-carter-v2-4.jpg')
+          ]
+        },{
+          id: "moodfood",
+          year: "2017",
+          name: "MoodFood",
+          description: "This is an app I built that serves up randomized quotes and beautiful imagery related to emotional states. We've always been amazed at the power of words and photography to connect to our shared human experience.",
+          images: [
+            require('../../images/work/moodfood-1.jpg'),
+            require('../../images/work/moodfood-2.jpg'),
+            require('../../images/work/moodfood-3.jpg'),
+            require('../../images/work/moodfood-4.jpg'),
+            require('../../images/work/moodfood-5.gif'),
+            require('../../images/work/moodfood-6.jpg'),
+            require('../../images/work/moodfood-7.jpg')
+          ]
+        },{
+          id: "socialbooth",
+          year: "2017",
+          name: "SocialBooth",
+          description: "This is an experiential media company I worked with to design and build interactive display for events like the Chicago Marathon, the Special Olympics World Games, and ESPN's Extra Yard for Teachers. These apps feature real-time social media feeds, photography sharing, and participant mapping.",
+          images: [
+            require('../../images/work/socialbooth-1.jpg'),
+            require('../../images/work/socialbooth-2.jpg'),
+            require('../../images/work/socialbooth-3.jpg'),
+            require('../../images/work/socialbooth-4.gif'),
+            require('../../images/work/socialbooth-5.jpg'),
+            require('../../images/work/socialbooth-6.gif'),
+            require('../../images/work/socialbooth-7.gif'),
+            require('../../images/work/socialbooth-8.jpg')
+          ]
+        },{
+          id: "lisc",
+          year: "2017",
+          name: "LISC DC",
+          description: "This was a custom website redesign for LISC DC, a nonprofit that helps with community development support in Washington DC. I designed and built this responsive site in Wordpress for easy content updates and integrated custom impact maps.",
+          images: [
+            require('../../images/work/lisc-1.jpg'),
+            require('../../images/work/lisc-2.jpg'),
+            require('../../images/work/lisc-3.jpg'),
+            require('../../images/work/lisc-4.jpg'),
+            require('../../images/work/lisc-5.jpg')
+          ]
+        },{
+          id: "quantum",
+          year: "2017",
+          name: "Quantum Thinking",
+          description: "This was another custom website redesign for a DC-based small business aimed at improving education through innovation. I helped refresh Quantum's brand and built a responsive website.",
+          images: [
+            require('../../images/work/quantum-1.jpg'),
+            require('../../images/work/quantum-2.jpg'),
+            require('../../images/work/quantum-3.jpg'),
+            require('../../images/work/quantum-4.jpg'),
+            require('../../images/work/quantum-5.jpg')
+          ]
+        },{
+          id: "dates",
+          year: "2017",
+          name: "3Dates",
+          description: "This is an app I designed and built that finds popular sports, theater, dining, and concert events happening near you and presents them in a delightful experience. You can set a date, location, and radius to find fun things to do near you.",
+          images: [
+            require('../../images/work/3dates-1.jpg'),
+            require('../../images/work/3dates-2.jpg'),
+            require('../../images/work/3dates-3.gif')
+          ]
+        },{
+          id: "mink-v2",
+          year: "2017",
+          name: "Mink Letterpress",
+          description: "I designed and built a Wordpress site for a custom letterpress design studio in Asheville, NC. Mink Letterpress delights in making products that look and feel beautiful. They design and print everything in their Asheville studio using antique printing presses.",
+          images: [
+            require('../../images/work/mink-v2-1.jpg'),
+            require('../../images/work/mink-v2-2.jpg'),
+            require('../../images/work/mink-v2-3.jpg'),
+            require('../../images/work/mink-v2-5.png')
+          ]
+        },{
           id: "ftpC",
           year: "2017",
           name: "For the People Creative",
@@ -328,11 +424,9 @@ export default class Work extends Component {
             require('../../images/work/ftpC-1.jpg'),
             require('../../images/work/ftpC-2.jpg'),
             require('../../images/work/ftpC-3.jpg'),
-            require('../../images/work/ftpC-4.gif'),
-            require('../../images/work/ftpC-5.gif'),
-            require('../../images/work/ftpC-6.jpg'),
-            require('../../images/work/ftpC-7.jpg'),
-            require('../../images/work/ftpC-8.jpg')
+            require('../../images/work/ftpC-4.jpg'),
+            require('../../images/work/ftpC-5.jpg'),
+            require('../../images/work/ftpC-6.jpg')
           ]
         }
       ]

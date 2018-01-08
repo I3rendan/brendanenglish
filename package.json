@@ -5,7 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "element-class": "^0.2.2",
-    "parallax-js": "git+https://github.com/wagerfield/parallax.git",
+    "parallax-js": "^3.1.0",
     "react": "^15.6.1",
     "react-body-classname": "^1.2.0",
     "react-dom": "^15.6.1",
