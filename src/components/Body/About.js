@@ -32,7 +32,7 @@ export default class About extends Component {
             <div className="layer" data-depth="0.33">
               <div className="wrap-about-content">
                 <h1>I design and build websites, applications, and products.</h1>
-                <h2 className="sans">I'm currently the Creative Director at an education-technology company in DC. I freelance too so <Link to="/contact">let me know</Link> if you have a project with which I can help!</h2>
+                <h2 className="sans">I'm currently a Principal UI/UX Designer at Capital One, working with their small business team. I freelance too so <Link to="/contact">let me know</Link> if you have a project with which I can help!</h2>
               </div>            
             </div>
             <div className="resume-link layer" data-depth="0.15">
@@ -54,7 +54,7 @@ export default class About extends Component {
                   </div>
                   <div className="resume-info">
                     <h3 className="sans">Brendan English</h3>
-                    <p className="resume-role">Creative Director at <Link to="http://www.learningobjects.com" target="_blank">Learning Objects</Link>, Washington DC</p>
+                    <p className="resume-role">Principal UI/UX Designer at <Link to="http://www.capitalone.com" target="_blank">Capital One</Link>, McLean VA</p>
                     <p className="resume-contact"><Link to="mailto:brendan@brendanenglish.com" target="_blank">brendan@brendanenglish.com</Link> &ndash; <Link to="https://www.linkedin.com/in/brendan-english-a7230631" target="_blank">LinkedIn</Link></p>
                   </div>
                 </div>
