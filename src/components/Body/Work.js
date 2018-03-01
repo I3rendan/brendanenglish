@@ -42,7 +42,7 @@ export default class Work extends Component {
           id: "milk",
           year: "2004",
           name: "Milk Productions",
-          description: "I loved this one... really minimal, interesting animations, and a new design approach for me (look, a <em>white</em> background!). This was for a small production company who were willing to take a chance on a young web designer.",
+          description: "I loved this one... really minimal, interesting animations, and a new aesthetic direction. This was for a small production company who were willing to take a chance on a young web designer.",
           images: [
             require('../../images/work/milk-1.jpg'),
             require('../../images/work/milk-2.gif'),
@@ -90,7 +90,7 @@ export default class Work extends Component {
           id: "ave-maria",
           year: "2008",
           name: "Ave Maria University",
-          description: "This was one of my first projects for Blackbaud. It was a really cool brick memorial locator. The user found their donation and the application zoomed-into a blue print of the church, then overlaid the memorial text on a brick texture. I won the Innovator of the Year award for this guy.",
+          description: "This was one of my first projects for Blackbaud. It was a really cool brick memorial locator. The user found their donation and the application zoomed-into a blue print of the church, then overlaid the memorial text on a brick texture. I won the 2008 Innovator of the Year award for this project.",
           images: [
             require('../../images/work/ave-maria-1.jpg'),
             require('../../images/work/ave-maria-2.gif'),
@@ -122,7 +122,7 @@ export default class Work extends Component {
           id: "aha",
           year: "2009",
           name: "American Heart Association",
-          description: "This one was a lot of fun. It was another Blackbaud project that showed realtime donation amounts on an interactive Flash map of the country. Users could click on the map, zoom-in and see donations for the Heart Walk by city and state and contribute themselves.",
+          description: "This was a Blackbaud project that showed realtime donation amounts on an interactive Flash map of the country. Users could click on the map, zoom-in and see donations for the Heart Walk by city and state and contribute themselves.",
           images: [
             require('../../images/work/aha-1.jpg'),
             require('../../images/work/aha-2.jpg')
@@ -286,7 +286,7 @@ export default class Work extends Component {
           id: "learning-objects",
           year: "2015",
           name: "Learning Objects",
-          description: "I started here in 2013 and have worked as a Product Designer and Creative Director. Along with working on the designs of all of LO's products, I also redesigned the marketing site for LO. The site was responsive and included updated branding that would live-on in the <a href='/work#lo-styleguide'>styleguide</a>. I also built some cool CSS effects + parallax.",
+          description: "I started at LO in 2013 and worked as a Product Designer and Creative Director. Along with working on the designs of all of LO's products, I also redesigned the marketing site for LO. The site was responsive and included updated branding that would live-on in the <a href='/work#lo-styleguide'>styleguide</a>. I also built some cool CSS effects + parallax.",
           images: [
             require('../../images/work/lo-1.jpg'),
             require('../../images/work/lo-2.gif'),
@@ -401,8 +401,10 @@ export default class Work extends Component {
           description: "This is an app I designed and built that finds popular sports, theater, dining, and concert events happening near you and presents them in a delightful experience. You can set a date, location, and radius to find fun things to do near you.",
           images: [
             require('../../images/work/3dates-1.jpg'),
+            require('../../images/work/3dates-6.jpg'),
             require('../../images/work/3dates-2.jpg'),
-            require('../../images/work/3dates-3.gif')
+            require('../../images/work/3dates-3.gif'),
+            require('../../images/work/3dates-4.jpg')
           ]
         },{
           id: "mink-v2",
