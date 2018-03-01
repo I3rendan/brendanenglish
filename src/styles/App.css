@@ -966,7 +966,8 @@ nav {
       background-position: center center;
       background-color: #181b1e;
       background-image: url("../images/bg-space.jpg");
-      filter: brightness(0.25); }
+      filter: brightness(0.25);
+      opacity: 0.85; }
       @media (max-width: 48em) {
         .bg-wrap .bg:after {
           min-height: 80em; } }
