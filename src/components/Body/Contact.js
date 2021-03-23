@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Parallax from 'parallax-js';
 import BodyClassName from 'react-body-classname';
-import { Link } from 'react-router-dom';
+import { firebase } from '../../firebase';
 export default class Contact extends Component {
-
-  displayName: 'Contact';
 
   constructor(props) {
     super(props);
@@ -12,8 +10,9 @@ export default class Contact extends Component {
       name: '',
       email: '',
       message: '',
-      hasSent: false,
-      hasError: false
+      hasError: false,
+      emailSent: false,
+      emailSending: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,33 +29,24 @@ export default class Contact extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    if (!this.state.email || !this.state.name || !this.state.message){
+    const { name, email, message } = this.state;
+    if (!email || !name || !message){
       this.setState({
         hasError: true
       });
     } else {
-      fetch('sendEmail.php', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          to: 'brendan@brendanenglish.com', 
-          name: this.state.name, 
-          email: this.state.email, 
-          subject: 'BrendanEnglish.com Message', 
-          message: this.state.message
-        })
-      })
-      .then((response) => response.text())
-      .then((responseData) => {
-        this.setState({
-          hasSent: true
+      this.setState({
+        emailSending: true
+      }, () => {
+        firebase.sendContactEmail({ to: 'brendan@brendanenglish.com', from: 'contact@brendanenglish.com', name: name, email: email, message: message }).then(() => {
+          this.setState({
+            name: '',
+            email: '',
+            message: '',
+            hasError: false,
+            emailSent: true
+          });
         });
-      })
-      .catch((error) => {
-        console.warn(error);
       });
     }
   }
@@ -78,22 +68,22 @@ export default class Contact extends Component {
               <div className="wrap-contact-content">
 
                 <div className="contact-social">
-                  <Link to="mailto:brendan@brendanenglish.com" target="_blank"><i className="icon icon-email" /></Link>
-                  <Link to="https://www.linkedin.com/in/brendan-english-a7230631" target="_blank"><i className="icon icon-linkedin" /></Link>
-                  <Link to="https://github.com/I3rendan" target="_blank"><i className="icon icon-github" /></Link>
-                  <Link to="https://www.facebook.com/I3rendan" target="_blank"><i className="icon icon-facebook" /></Link>
+                  <a href="mailto:brendan@brendanenglish.com" target="_blank" rel="noopener noreferrer"><i className="icon icon-email" /></a>
+                  <a href="https://www.linkedin.com/in/brendan-english-a7230631" target="_blank" rel="noopener noreferrer"><i className="icon icon-linkedin" /></a>
+                  <a href="https://github.com/I3rendan" target="_blank" rel="noopener noreferrer"><i className="icon icon-github" /></a>
                 </div>
 
-                <form id="contact-form" className={this.state.hasSent} onSubmit={this.handleSubmit}>
-                  <h2>Sent!</h2>
+                <form id="contact-form" className={`${this.state.emailSent ? 'sent' : ''} ${this.state.emailSending ? 'sending' : ''}`} onSubmit={this.handleSubmit}>
+                  <h2>Sent<span>I'll be in touch soon!</span></h2>
                   <p className={this.state.hasError}>
                     Please fill-out all inputs before sending!
                   </p>
-                  <input type="text" id="name" value={this.state.name} onChange={this.handleChange} placeholder="Your name..." />
-                  <input type="text" id="email" value={this.state.email} onChange={this.handleChange} placeholder="Your email..." />
+                  <input autoFocus type="text" id="name" value={this.state.name} onChange={this.handleChange} placeholder="Your name..." />
+                  <input type="email" id="email" value={this.state.email} onChange={this.handleChange} placeholder="Your email..." />
                   <textarea id="message" cols="4" value={this.state.message}  onChange={this.handleChange} placeholder="Your message..." />
                   <button type="submit" id="submit" className="btn btn-accent">
-                    Send message
+                    <span className="submit-text">Send message</span>
+                    <span className="submit-loading" />
                   </button>
                 </form>
               </div>

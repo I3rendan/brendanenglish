@@ -28,7 +28,7 @@ body
 a
   color: $color-accent
   text-decoration: none
-  transition: color ease $speed-trans
+  transition: color ease $speed-trans, border ease $speed-trans
 
   &:hover
     color: white
@@ -51,10 +51,10 @@ h1, h2, h3, h4, h5
     letter-spacing: 0
 
   a
-    border-bottom: 2px dashed fade-out($color-accent, 0.67)
+    border-bottom: 2px dashed fade-out($color-accent, 0.5)
 
     &:hover
-      border: none
+      border-bottom: 2px solid $color-accent
 
 h1
   font-size: 3.33em
@@ -66,16 +66,26 @@ h3
   font-size: 2.5em
 
 header
-  padding: 2.5em 0
+  padding: 2.5em 0 0
   width: 100%
   position: absolute
   top: 0
   left: 0
   z-index: 2
-  background: linear-gradient(rgba(black, 0.5), transparent)
 
   @media (max-width: $mdscreen)
     z-index: 3
+
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: calc(100% + 2.5em)
+    background: linear-gradient(rgba(black, 0.5), transparent)
+    z-index: -1
+    pointer-events: none
 
 .wrap-logo
   float: left
@@ -94,6 +104,19 @@ header
   h1
     margin: 0
     font-size: 2em
+    transition: text-shadow ease $speed-faster
+
+    &:hover
+      text-shadow: 0 0 0.5em $color-accent, 0 1px 2px black, 0 2px 4px black
+
+      span:first-child
+        color: $color-accent
+
+      span:last-child
+        color: $color-light
+
+  span
+    transition: color ease $speed-fast
 
   span:first-child
     margin-right: 0.25em
@@ -117,8 +140,8 @@ nav
     bottom: 0
     width: 100vw
     text-align: center
-    background: rgba($color-dark, 0.925)
-    box-shadow: 0 -0.15em 0.33em $color-accent
+    background: rgba($color-accent, 0.975)
+    box-shadow: 0 -0.15em 0.33em rgba(black, 0.25)
     z-index: 5
 
   a
@@ -133,9 +156,12 @@ nav
       margin-right: -1.5em
 
     @media (max-width: $smscreen)
-      padding: 1.75em 0 2em
+      padding: 1.25em 0 1.5em
       width: 33.33vw
       float: left
+      text-shadow: 0 1px 1px rgba(black, 0.25)
+      font-weight: 600
+      font-size: 1.15em
 
 .loading
   position: fixed
@@ -205,7 +231,7 @@ nav
         min-height: 80em
 
       @media (max-width: $smscreen)
-        min-height: 64em
+        min-height: 72em
 
 .anim-scroll
   display: block
@@ -275,6 +301,10 @@ nav
     color: $color-accent
     cursor: default
 
+    @media (max-width: $smscreen)
+      color: $color-primary-darker
+      text-shadow: 0 1px 0 rgba(white, 0.25)
+
   .bg-stars:after
     position: fixed
     animation: starsBgWork $speed-anim * 1.5 forwards ease
@@ -290,6 +320,10 @@ nav
     color: $color-accent
     cursor: default
 
+    @media (max-width: $smscreen)
+      color: $color-primary-darker
+      text-shadow: 0 1px 0 rgba(white, 0.25)
+
   .bg-stars:after
     animation: starsBgAbout $speed-anim * 1.5 forwards ease
 
@@ -303,6 +337,10 @@ nav
   .wrap-nav a:nth-child(3)
     color: $color-accent
     cursor: default
+
+    @media (max-width: $smscreen)
+      color: $color-primary-darker
+      text-shadow: 0 1px 0 rgba(white, 0.25)
 
   .bg-stars:after
     animation: starsBgContact $speed-anim * 1.5 forwards ease

@@ -52,15 +52,15 @@
 
     .work-name
       left: 0
-      transition: left ease $speed-trans $speed-anim
+      transition: left ease $speed-trans $speed-anim * 0.67
 
       h3 > span
         top: 0
-        transition: top ease $speed-trans $speed-anim * 1.33
+        transition: top ease $speed-trans $speed-anim * 0.75
 
       h4 > span
         right: 0
-        transition: right ease $speed-trans $speed-anim * 1.5
+        transition: right ease $speed-trans $speed-anim
 
     .work-img:before
       left: 0
@@ -71,16 +71,17 @@
   display: flex
   padding: 0
   margin: 0 auto
-  max-width: 72em
+  max-width: 75em
   background: linear-gradient(160deg, transparent 33%, fade-out($color-quaternary, 0.5))
   box-shadow: 0 0.5em 0.75em rgba(black, 0.33)
   cursor: pointer
   overflow: hidden
   position: relative
 
+  @media (max-width: $lgscreen)
+    max-width: 72rem
+
 .work-name, .work-img
-  width: 50%
-  flex: 1
   margin: 3em
 
 .work-name
@@ -88,7 +89,9 @@
   position: relative
   left: -50%
   transition: none
-
+  width: 40%
+  flex: 0.4
+  
   p
     margin: 0
     line-height: 1
@@ -98,7 +101,7 @@
   h3
     margin: 0
     padding: 0.15em 0 0.5em
-    font-size: 3em
+    font-size: 2.85em
     font-weight: 400
     line-height: 1.15
     border-bottom: 1px dashed rgba(white, 0.25)
@@ -111,9 +114,9 @@
 
   h4
     font-weight: 400
-    margin: 2.5em 0.25em
+    margin: 2.5em 0 2.5em 0.25em
     padding: 0.33em 0 0.33em 2em
-    font-size: 1.15em
+    font-size: 1.125em
     line-height: 1.67
     border-left: 2px solid $color-accent
     overflow: hidden
@@ -130,6 +133,8 @@
 
 .work-img
   position: relative
+  width: 60%
+  flex: 0.6
 
   &:before
     content: ""
@@ -251,16 +256,28 @@
   &.ftpC:before
     background-image: url('../images/work/ftpC-1-min.jpg')
 
+  &.alluvion:before
+    background-image: url('../images/work/alluvion-1-min.jpg')
+
+  &.fishbowl:before
+    background-image: url('../images/work/fishbowl-1-min.jpg')
+
+  &.pierinasanchez:before
+    background-image: url('../images/work/pi-1-min.jpg')
+
+  &.designgapp:before
+    background-image: url('../images/work/designgapp-1-min.jpg')
+
 .work-mobile
   position: relative
   top: 0
   left: 0
-  margin: 8.5em 0 10em
+  margin: 8.5em 0 6.67em
   height: 100%
   width: 100%
   overflow: auto
   color: $color-light
-  box-shadow: 0 -0.15em 0.67em $color-accent
+  box-shadow: 0 -0.15em 1.25em $color-accent, 0 -0.075em 0.15em rgba(black, 0.5)
 
   .work-item-wrap
     transform: none
@@ -277,8 +294,8 @@
       left: 0
       height: 100%
       width: 100%
-      box-shadow: 0 -0.1em 0 rgba($color-quaternary, 0.33) inset
-      background: linear-gradient(160deg, rgba(black, 0.33) 50%, fade-out($color-quaternary, 0.33))
+      box-shadow: 0 -0.225em 0 $color-accent inset
+      background: linear-gradient(160deg, rgba(black, 0.33) 50%, fade-out(darken($color-quaternary, 15%), 0.15))
 
   .work-name
     width: 100%

@@ -44,11 +44,12 @@
     color: white
 
   h1
-    font-size: 3.33em
+    font-size: 3.5em
+    max-width: 30em
 
     @media (max-width: $smscreen)
-      font-size: 2.5em
-      margin: 2em 0 0
+      font-size: 4em
+      margin: 6em 0 0
 
   h2
     font-size: 2em
@@ -58,7 +59,12 @@
     max-width: 27em
 
     @media (max-width: $smscreen)
-      font-size: 1.75em
+      text-align: left
+      font-size: 2.25em
+
+    a
+      @media (max-width: $smscreen)
+        margin: 0 0.25em
 
   .btn
     margin: 1em
@@ -75,7 +81,7 @@
   color: $color-accent
 
   @media (max-width: $mdscreen)
-    margin-top: 32em
+    margin-top: 40em
 
   .anim-scroll
     margin-top: 0.5em
@@ -110,7 +116,7 @@
     font-size: 0.925em
 
   @media (max-width: $mdscreen)
-    padding: 5em 3.33em 3.33em
+    padding: 5em 2.25em 3.33em
     text-align: center
 
   @media (max-width: $smscreen)
@@ -143,6 +149,11 @@
     color: white
     margin: 0 0.15em
     border-bottom: 1px dotted $color-accent
+    transition: color ease $speed-trans, border ease $speed-trans
+
+    &:hover
+      color: $color-accent
+      border: 0 none
 
   .resume-img
     height: 10em
@@ -247,14 +258,11 @@
   background: white
   border-radius: $radius-border
   margin: 1.5em 0 5em
-  overflow: hidden
   box-shadow: 0 2px 1px rgba(black, 0.125)
 
   @media (max-width: $mdscreen)
     margin: 1.5em 0 3.33em
-
-  @media-print
-    margin: 1.5em 3em
+    overflow: hidden
 
   a:hover
     color: $color-primary
@@ -331,7 +339,7 @@
 
           li
             max-height: 100em
-            padding: 0.75em 0.5em
+            padding: 0.75em 1.5em 0.75em 0.25em
             opacity: 1
 
       .exp-description
@@ -380,9 +388,6 @@
     line-height: 1.15
     overflow: hidden
 
-    time
-      margin-right: -1.67em
-
 .resume-timeline
   padding: 2em 2.5em
   background: $color-dark
@@ -409,7 +414,7 @@
 
   @media print
     height: 10em
-    margin-top: 0.75em
+    margin-top: 0.5em
 
   text
     fill: white
@@ -439,7 +444,7 @@
       padding: 1.5em 1.25em 0
 
     @media print
-      padding: 0.67em 1.5em
+      padding: 0.675em 1.5em
 
     &:last-child
       margin-bottom: 5em

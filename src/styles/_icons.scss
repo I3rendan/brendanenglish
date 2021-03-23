@@ -1,18 +1,19 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?kptbqv');
-  src:  url('fonts/icomoon.eot?kptbqv#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?kptbqv') format('truetype'),
-    url('fonts/icomoon.woff?kptbqv') format('woff'),
-    url('fonts/icomoon.svg?kptbqv#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?imgwca');
+  src:  url('fonts/icomoon.eot?imgwca#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?imgwca') format('truetype'),
+    url('fonts/icomoon.woff?imgwca') format('woff'),
+    url('fonts/icomoon.svg?imgwca#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -24,15 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-github:before {
-  content: "\f09b";
-}
-.icon-linkedin:before {
-  content: "\f0e1";
-}
 .icon-email:before {
-  content: "\f1fa";
+  content: "\e902";
 }
 .icon-facebook:before {
-  content: "\f230";
+  content: "\e903";
+}
+.icon-github:before {
+  content: "\e900";
+}
+.icon-linkedin:before {
+  content: "\e901";
 }

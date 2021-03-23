@@ -22,7 +22,7 @@
   .contact-social
     font-size: 3.33em
     padding: 0.5em
-    margin-bottom: 0.75em
+    margin-bottom: 0.15em
 
     @media (max-width: $smscreen)
       margin-top: -0.5em
@@ -30,9 +30,12 @@
       font-size: 3em
 
     .icon
-      margin: 0.75em 0.67em
+      margin: 0.75em
       color: $color-accent
       transition: color ease $speed-trans
+
+      &.icon-email, &.icon-github
+        font-size: 0.925em
 
       &:hover
         color: $color-light
@@ -64,7 +67,15 @@
       opacity: 1
       transition: top ease $speed-trans $speed-trans, opacity ease $speed-trans $speed-trans
 
-    &.true
+    &.sending
+      button
+        .submit-text
+          animation: hideFade $speed-trans ease forwards
+
+        .submit-loading
+          animation: showFade $speed-trans ease forwards
+
+    &.sent
       padding: 1.85em
 
       @media (max-width: $smscreen)
@@ -75,8 +86,9 @@
         opacity: 0
 
       h2
-        top: 28%
+        top: 22%
         opacity: 1
+        z-index: 1
 
       p, p.true
         font-size: 0
@@ -89,8 +101,17 @@
       width: 100%
       text-align: center
       color: $color-accent
+      text-shadow: 0 1px 0 white
       opacity: 0
+      pointer-events: none
+      z-index: -1
       transition: top ease $speed-trans $speed-trans, opacity ease $speed-trans $speed-trans
+
+      > span
+        display: block
+        font-size: 0.5em
+        font-weight: 500
+        margin: 0.5em 0 0
 
     p
       color: $color-accent
@@ -108,31 +129,54 @@
       display: block
       width: 100%
       font-size: 1em
-      padding: 0.75em
+      padding: 1em
       width: 21em
       margin: 1em 0
       background: rgba(white, 0.75)
-      border-style: solid
-      border-color: rgba($color-accent, 0.75)
-      border-width: 0 0 0.115em
-      box-shadow: 0 2px 1px rgba(black, 0.1)
+      border: none
+      box-shadow: 0 2px 1px rgba(black, 0.1), 0.15em 0 0 $color-accent inset
       font-family: 'Source Sans Pro'
       position: relative
       top: 0
-      transition: top ease $speed-trans $speed-trans, opacity ease $speed-trans $speed-trans
+      transition: top ease $speed-trans $speed-trans, opacity ease $speed-trans $speed-trans, box-shadow ease $speed-trans
 
       @media (max-width: $mdscreen)
         width: 20em
 
       @media (max-width: $smscreen)
         width: 18em
+        font-size: 16px
+
+      &:hover
+        box-shadow: 0 0.25em 0.5em rgba(black, 0.15), 0.15em 0 0 $color-accent inset
 
       &:focus
         border-color: $color-accent
         background: white
+        box-shadow: 0 2px 1px rgba(black, 0.1), 0.25em 0 0 $color-primary inset
 
     textarea
       height: 7.5em
+
+    button
+      .submit-text
+        position: relative
+        z-index: 1
+
+      .submit-loading
+        content: ""
+        position: absolute
+        height: 100%
+        width: 100%
+        top: 0
+        left: 0
+        background-image: url('../images/loading.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 10.5em
+        opacity: 0
+        pointer-events: none
+        z-index: 0
 
     #submit
       position: absolute

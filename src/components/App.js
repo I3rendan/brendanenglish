@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import config from 'react-global-configuration';
 import { Switch, Route } from 'react-router-dom';
 import Parallax from 'parallax-js';
+import Preload from 'react-preload';
 import Header from './Header/Header';
 import Home from './Body/Home';
 import Work from './Body/Work';
@@ -9,6 +10,10 @@ import About from './Body/About';
 import Contact from './Body/Contact';
 import NotFound from './Body/NotFound';
 
+import imgDesigngapp from '../images/work/designgapp-1-min.jpg';
+import imgFishbowl from '../images/work/fishbowl-1-min.jpg';
+import imgPi from '../images/work/pi-1-min.jpg';
+import imgAlluvion from '../images/work/alluvion-1-min.jpg';
 import imgFTP from '../images/work/ftpC-1-min.jpg';
 import imgMink2 from '../images/work/mink-v2-1-min.jpg';
 import img3dates from '../images/work/3dates-1-min.jpg';
@@ -45,12 +50,11 @@ import imgCarnegie from '../images/work/carnegie-1-min.jpg';
 //import imgCampusPack from '../images/work/campuspack-1-min.jpg';
 //import imgDE from '../images/work/de-1-min.jpg';
 
-import Preload from 'react-preload';
 class App extends Component {
 
   constructor(props) {
     super(props);
-    config.set({ workNum: 27 },{ freeze: false });
+    config.set({ workNum: 28 },{ freeze: false });
   }
 
   componentDidMount() {
@@ -70,6 +74,10 @@ class App extends Component {
     const loadingIndicator = (<div className="loading"></div>);
 
     const images = [
+      imgDesigngapp,
+      imgFishbowl,
+      imgPi,
+      imgAlluvion,
       imgFTP,
       imgMink2,
       img3dates,
@@ -111,102 +119,102 @@ class App extends Component {
       
       <div className="app">
 
-          <Header />
+        <Header />
 
-          <div className="app-inner" ref={el => this.scene = el}>
+        <div className="app-inner" ref={el => this.scene = el}>
 
-            {window.innerWidth > 920 ? 
-              <div id="star-bg" className="bg-stars-wrap bg-wrap layer" data-depth="0.05">
-                <div className="bg-stars bg"></div>
-              </div> :
-              <div id="star-bg" className="bg-stars-wrap bg-wrap">
-                <div className="bg-stars bg"></div>
-              </div>
+          { window.innerWidth > 920 ? 
+            <div id="star-bg" className="bg-stars-wrap bg-wrap layer" data-depth="0.05">
+              <div className="bg-stars bg"></div>
+            </div> :
+            <div id="star-bg" className="bg-stars-wrap bg-wrap">
+              <div className="bg-stars bg"></div>
+            </div>
+          }
+
+          { window.innerWidth > 920 ? 
+            <div className="star-field field-1 layer" data-depth="0.125">
+              <span className="star ring"></span>
+              <span className="star"></span>
+              <span className="star ring"></span>
+              <span className="star"></span>
+            </div> :
+            <div className="star-field field-1">
+              <span className="star ring"></span>
+              <span className="star"></span>
+              <span className="star ring"></span>
+              <span className="star"></span>
+            </div>
+          }
+
+          { window.innerWidth > 920 ? 
+            <div className="star-field field-2 layer" data-depth="0.15">
+              <span className="star ring"></span>
+              <span className="star"></span>
+              <span className="star"></span>
+              <span className="star"></span>
+            </div> :
+            <div className="star-field field-2">
+              <span className="star ring"></span>
+              <span className="star"></span>
+              <span className="star"></span>
+              <span className="star"></span>
+            </div>
+          }
+
+          <Preload
+            loadingIndicator={loadingIndicator}
+            images={images}
+            autoResolveDelay={1000}
+            onError={this._handleImageLoadError}
+            onSuccess={this._handleImageLoadSuccess}
+            resolveOnError={true}
+            mountChildren={true}
+            >
+            {
+              <Switch onUpdate={ window.scrollTo(0,0) }>
+                <Route exact path='/' component={Home} />
+                <Route path='/work' component={Work} />
+                <Route path='/about' component={About} />
+                <Route path='/contact' component={Contact} />
+                <Route path='*' component={NotFound} />
+              </Switch>
             }
+          </Preload>
 
-            {window.innerWidth > 920 ? 
-              <div className="star-field field-1 layer" data-depth="0.125">
-                <span className="star ring"></span>
-                <span className="star"></span>
-                <span className="star ring"></span>
-                <span className="star"></span>
-              </div> :
-              <div className="star-field field-1">
-                <span className="star ring"></span>
-                <span className="star"></span>
-                <span className="star ring"></span>
-                <span className="star"></span>
-              </div>
-            }
+          { window.innerWidth > 920 ? 
+            <div className="star-field field-3 layer" data-depth="0.33">
+              <span className="star"></span>
+              <span className="star"></span>
+              <span className="star ring"></span>
+              <span className="star ring"></span>
+            </div> :
+            <div className="star-field field-3">
+              <span className="star"></span>
+              <span className="star"></span>
+              <span className="star ring"></span>
+              <span className="star ring"></span>
+            </div>
+          }
 
-            {window.innerWidth > 920 ? 
-              <div className="star-field field-2 layer" data-depth="0.15">
-                <span className="star ring"></span>
-                <span className="star"></span>
-                <span className="star"></span>
-                <span className="star"></span>
-              </div> :
-              <div className="star-field field-2">
-                <span className="star ring"></span>
-                <span className="star"></span>
-                <span className="star"></span>
-                <span className="star"></span>
-              </div>
-            }
+          { window.innerWidth > 920 ? 
+            <div className="star-field field-4 layer" data-depth="0.75">
+              <span className="star"></span>
+              <span className="star ring"></span>
+              <span className="star ring"></span>
+              <span className="star"></span>
+              <span className="star ring"></span>
+            </div> :
+            <div className="star-field field-4">
+              <span className="star"></span>
+              <span className="star ring"></span>
+              <span className="star ring"></span>
+              <span className="star"></span>
+              <span className="star ring"></span>
+            </div>
+          }
 
-            <Preload
-              loadingIndicator={loadingIndicator}
-              images={images}
-              autoResolveDelay={1000}
-              onError={this._handleImageLoadError}
-              onSuccess={this._handleImageLoadSuccess}
-              resolveOnError={true}
-              mountChildren={true}
-              >
-              {
-                <Switch onUpdate={ window.scrollTo(0,0) }>
-                  <Route exact path='/' component={Home} />
-                  <Route path='/work' component={Work} />
-                  <Route path='/about' component={About} />
-                  <Route path='/contact' component={Contact} />
-                  <Route path='*' component={NotFound} />
-                </Switch>
-              }
-            </Preload>
-
-            {window.innerWidth > 920 ? 
-              <div className="star-field field-3 layer" data-depth="0.33">
-                <span className="star"></span>
-                <span className="star"></span>
-                <span className="star ring"></span>
-                <span className="star ring"></span>
-              </div> :
-              <div className="star-field field-3">
-                <span className="star"></span>
-                <span className="star"></span>
-                <span className="star ring"></span>
-                <span className="star ring"></span>
-              </div>
-            }
-
-            {window.innerWidth > 920 ? 
-              <div className="star-field field-4 layer" data-depth="0.75">
-                <span className="star"></span>
-                <span className="star ring"></span>
-                <span className="star ring"></span>
-                <span className="star"></span>
-                <span className="star ring"></span>
-              </div> :
-              <div className="star-field field-4">
-                <span className="star"></span>
-                <span className="star ring"></span>
-                <span className="star ring"></span>
-                <span className="star"></span>
-                <span className="star ring"></span>
-              </div>
-            }
-
-          </div>
+        </div>
 
       </div>
     );

@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import config from 'react-global-configuration';
 import Parallax from 'parallax-js';
-import classNames from 'classnames';
 import BodyClassName from 'react-body-classname';
 import Lightbox from 'react-image-lightbox';
 import { SectionsContainer, Section } from 'react-fullpage';
-export default class Work extends Component {
 
-  displayName: 'Work';
+export default class Work extends Component {
 
   constructor(props) {
     super(props);
@@ -32,7 +30,7 @@ export default class Work extends Component {
           id: "nebula",
           year: "2001",
           name: "Nebula Web Designs",
-          description: "Welcome to the wonderful age of Flash! I loved Flash... superfluous animations, bad graphics, and universal compatibility. This was the company name I designed under for almost 10 years. Lots of good times...",
+          description: "Welcome to the wonderful age of Flash! I loved Flash... superfluous animations, bad graphics, and universal compatibility. This was the company name I designed / developed under for almost 10 years.",
           images: [
             require('../../images/work/nebula-v1-1.jpg'),
             require('../../images/work/nebula-v1-2.jpg'),
@@ -45,7 +43,7 @@ export default class Work extends Component {
           description: "I loved this one... really minimal, interesting animations, and a new aesthetic direction. This was for a small production company who were willing to take a chance on a young web designer.",
           images: [
             require('../../images/work/milk-1.jpg'),
-            require('../../images/work/milk-2.gif'),
+            // require('../../images/work/milk-2.gif'),
             require('../../images/work/milk-3.jpg'),
             require('../../images/work/milk-4.jpg')
           ]
@@ -289,12 +287,12 @@ export default class Work extends Component {
           description: "I started at LO in 2013 and worked as a Product Designer and Creative Director. Along with working on the designs of all of LO's products, I also redesigned the marketing site for LO. The site was responsive and included updated branding that would live-on in the <a href='/work#lo-styleguide'>styleguide</a>. I also built some cool CSS effects + parallax.",
           images: [
             require('../../images/work/lo-1.jpg'),
-            require('../../images/work/lo-2.gif'),
+            // require('../../images/work/lo-2.gif'),
             require('../../images/work/lo-3.jpg'),
             require('../../images/work/lo-4.jpg'),
             require('../../images/work/lo-5.jpg'),
             require('../../images/work/lo-6.jpg'),
-            require('../../images/work/lo-7.gif'),
+            // require('../../images/work/lo-7.gif'),
             require('../../images/work/lo-8.jpg'),
             require('../../images/work/lo-9.jpg')
           ]
@@ -320,28 +318,31 @@ export default class Work extends Component {
             require('../../images/work/resume-2.jpg'),
             require('../../images/work/resume-3.jpg')
           ]
-        },{
-          id: "byu",
-          year: "2016",
-          name: "BYU",
-          description: "I designed a prototype for a goal capture product for BYU and The Church of LDS. This project was pitched to help understand student goals and how that ties-in to the competency-based learning products.",
-          images: [
-            require('../../images/work/byu-1.jpg'),
-            require('../../images/work/byu-2.jpg'),
-            require('../../images/work/byu-3.jpg')
-          ]
-        },{
-          id: "tom-carter-v2",
-          year: "2017",
-          name: "Tom Carter Photography",
-          description: "I created a total brand and website redesign for professional photographer, Tom Carter. The new site features the updated branding, an interactive gallery, and mobile-first, responsive design.",
-          images: [
-            require('../../images/work/tom-carter-v2-1.jpg'),
-            require('../../images/work/tom-carter-v2-2.jpg'),
-            require('../../images/work/tom-carter-v2-3.jpg'),
-            require('../../images/work/tom-carter-v2-4.jpg')
-          ]
-        },{
+        },
+        // {
+        //   id: "byu",
+        //   year: "2016",
+        //   name: "BYU",
+        //   description: "I designed a prototype for a goal capture product for BYU and The Church of LDS. This project was pitched to help understand student goals and how that ties-in to the competency-based learning products.",
+        //   images: [
+        //     require('../../images/work/byu-1.jpg'),
+        //     require('../../images/work/byu-2.jpg'),
+        //     require('../../images/work/byu-3.jpg')
+        //   ]
+        // },
+        // {
+        //   id: "tom-carter-v2",
+        //   year: "2017",
+        //   name: "Tom Carter Photography",
+        //   description: "I created a total brand and website redesign for professional photographer, Tom Carter. The new site features the updated branding, an interactive gallery, and mobile-first, responsive design.",
+        //   images: [
+        //     require('../../images/work/tom-carter-v2-1.jpg'),
+        //     require('../../images/work/tom-carter-v2-2.jpg'),
+        //     require('../../images/work/tom-carter-v2-3.jpg'),
+        //     require('../../images/work/tom-carter-v2-4.jpg')
+        //   ]
+        // },
+        {
           id: "moodfood",
           year: "2017",
           name: "MoodFood",
@@ -351,7 +352,7 @@ export default class Work extends Component {
             require('../../images/work/moodfood-2.jpg'),
             require('../../images/work/moodfood-3.jpg'),
             require('../../images/work/moodfood-4.jpg'),
-            require('../../images/work/moodfood-5.gif'),
+            // require('../../images/work/moodfood-5.gif'),
             require('../../images/work/moodfood-6.jpg'),
             require('../../images/work/moodfood-7.jpg')
           ]
@@ -364,25 +365,27 @@ export default class Work extends Component {
             require('../../images/work/socialbooth-1.jpg'),
             require('../../images/work/socialbooth-2.jpg'),
             require('../../images/work/socialbooth-3.jpg'),
-            require('../../images/work/socialbooth-4.gif'),
+            // require('../../images/work/socialbooth-4.gif'),
             require('../../images/work/socialbooth-5.jpg'),
-            require('../../images/work/socialbooth-6.gif'),
-            require('../../images/work/socialbooth-7.gif'),
+            // require('../../images/work/socialbooth-6.gif'),
+            // require('../../images/work/socialbooth-7.gif'),
             require('../../images/work/socialbooth-8.jpg')
           ]
-        },{
-          id: "lisc",
-          year: "2017",
-          name: "LISC DC",
-          description: "This was a custom website redesign for LISC DC, a nonprofit that helps with community development support in Washington DC. I designed and built this responsive site in Wordpress for easy content updates and integrated custom impact maps.",
-          images: [
-            require('../../images/work/lisc-1.jpg'),
-            require('../../images/work/lisc-2.jpg'),
-            require('../../images/work/lisc-3.jpg'),
-            require('../../images/work/lisc-4.jpg'),
-            require('../../images/work/lisc-5.jpg')
-          ]
-        },{
+        },
+        // {
+        //   id: "lisc",
+        //   year: "2017",
+        //   name: "LISC DC",
+        //   description: "This was a custom website redesign for LISC DC, a nonprofit that helps with community development support in Washington DC. I designed and built this responsive site in Wordpress for easy content updates and integrated custom impact maps.",
+        //   images: [
+        //     require('../../images/work/lisc-1.jpg'),
+        //     require('../../images/work/lisc-2.jpg'),
+        //     require('../../images/work/lisc-3.jpg'),
+        //     require('../../images/work/lisc-4.jpg'),
+        //     require('../../images/work/lisc-5.jpg')
+        //   ]
+        // },
+        {
           id: "quantum",
           year: "2017",
           name: "Quantum Thinking",
@@ -403,7 +406,7 @@ export default class Work extends Component {
             require('../../images/work/3dates-1.jpg'),
             require('../../images/work/3dates-6.jpg'),
             require('../../images/work/3dates-2.jpg'),
-            require('../../images/work/3dates-3.gif'),
+            // require('../../images/work/3dates-3.gif'),
             require('../../images/work/3dates-4.jpg')
           ]
         },{
@@ -421,7 +424,7 @@ export default class Work extends Component {
           id: "ftpC",
           year: "2017",
           name: "For the People Creative",
-          description: "I created this site for a newly formed LLC that I own with my friend Joe. It's aimed at serving nonprofits and small businesses in the DC area. We partner to build applications, products, websites, and marketing materials. My most up-to-date work can be found here...",
+          description: "I created this site for a newly formed LLC that I own with my brother, Joe. It's aimed at serving nonprofits and small businesses in the DC area. We partner to build applications, products, websites, and marketing materials.",
           images: [
             require('../../images/work/ftpC-1.jpg'),
             require('../../images/work/ftpC-2.jpg'),
@@ -429,6 +432,58 @@ export default class Work extends Component {
             require('../../images/work/ftpC-4.jpg'),
             require('../../images/work/ftpC-5.jpg'),
             require('../../images/work/ftpC-6.jpg')
+          ]
+        },{
+          id: "alluvion",
+          year: "2018",
+          name: "Alluvion",
+          description: "I launched a total redesign this telecommunications company. They serve their area with fiber, voice, and data solutions. I created the site in React with a custom CMS solution as well as blog functionality and cloud functions and hosting from Firebase.",
+          images: [
+            require('../../images/work/alluvion-1.jpg'),
+            require('../../images/work/alluvion-2.jpg'),
+            require('../../images/work/alluvion-3.jpg'),
+            require('../../images/work/alluvion-4.jpg'),
+            require('../../images/work/alluvion-5.jpg'),
+            require('../../images/work/alluvion-6.jpg')
+          ]
+        },{
+          id: "pierinasanchez",
+          year: "2020",
+          name: "Sanchez for Council",
+          description: "I created a site for a city council member in the Bronx, NYC. I built a custom site with CMS capabilities and an integration with Action Network to manage forms and constituent management. The site is built in React / Gatsby and supported by Firebase.",
+          images: [
+            require('../../images/work/pi-1.jpg'),
+            require('../../images/work/pi-2.jpg'),
+            require('../../images/work/pi-3.jpg'),
+            require('../../images/work/pi-4.jpg')
+          ]
+        },{
+          id: "fishbowl",
+          year: "2020",
+          name: "Fishbowl",
+          description: "I redesigned the core product responsible for email, member management, promotions, and reporting for this major industry leader in the restaurant space. I also helped develop the core platform, built in React with a MaterialUI framework.",
+          images: [
+            require('../../images/work/fishbowl-1.jpg'),
+            require('../../images/work/fishbowl-2.jpg'),
+            require('../../images/work/fishbowl-3.jpg'),
+            require('../../images/work/fishbowl-4.jpg'),
+            require('../../images/work/fishbowl-5.jpg'),
+            require('../../images/work/fishbowl-6.jpg')
+          ]
+        },{
+          id: "designgapp",
+          year: "2020",
+          name: "DesignGapp",
+          description: "DesignGapp is a tool to easily and intuitively create design documentation. It's something born out of my experience as a designer and users can create design project documentation and styleguides. It's built in React on top of Firebase with Stripe payment processing.",
+          images: [
+            require('../../images/work/designgapp-1.jpg'),
+            require('../../images/work/designgapp-2.jpg'),
+            require('../../images/work/designgapp-3.jpg'),
+            require('../../images/work/designgapp-4.jpg'),
+            require('../../images/work/designgapp-5.jpg'),
+            require('../../images/work/designgapp-6.jpg'),
+            require('../../images/work/designgapp-7.jpg'),
+            require('../../images/work/designgapp-8.jpg')
           ]
         }
       ]
@@ -471,38 +526,37 @@ export default class Work extends Component {
       verticalAlign: true,
       delay: 500,
       anchors: anchorList,
+      arrowNavigation: true,
       scrollCallback: (states) => {
         this.setState({ current: states.activeSection });
         config.set({ workNum: states.activeSection });      
       }
     };
 
-    const projectList = this.state.projects.map((project, index) => {
-      return (
-        <Section className={classNames('work-item-wrap', {'active': current === index})} key={project.id}>
-          <div className="work-item"
-            onClick={() => {
-              this.setState({
-                photoIndex: 0,
-                isOpen: true,
-                images: this.state.projects[index].images
-              });
-            }}>
-            <div className="work-name">
-              <p className="work-year">{project.year}</p>
-              <h3 className="sans"><span>{project.name}</span></h3>
-              <h4 className="sans">
-                <span dangerouslySetInnerHTML={{ __html: project.description }}></span>
-              </h4>
-              <button className="btn btn-accent">
-                Take a look
-              </button>
-            </div>
-            <div className={classNames("work-img", project.id)}></div>
+    const projectList = this.state.projects.map((project, index) =>
+      <Section className={`work-item-wrap ${current === index ? 'active' : ''}`} key={project.id}>
+        <div className="work-item"
+          onClick={() => {
+            this.setState({
+              photoIndex: 0,
+              isOpen: true,
+              images: this.state.projects[index].images
+            });
+          }}>
+          <div className="work-name">
+            <p className="work-year">{project.year}</p>
+            <h3 className="sans"><span>{project.name}</span></h3>
+            <h4 className="sans">
+              <span dangerouslySetInnerHTML={{ __html: project.description }}></span>
+            </h4>
+            <button className="btn btn-accent">
+              Take a look
+            </button>
           </div>
-        </Section>
-      );
-    });
+          <div className={`work-img ${project.id}`}></div>
+        </div>
+      </Section>
+    );
 
     const projectListSlim = this.state.projects.map((project, index) => {
       return (
@@ -520,7 +574,7 @@ export default class Work extends Component {
               <p className="work-year">{project.year}</p>
               <h3 className="sans">{project.name}</h3>
             </div>
-            <div className={classNames("work-img", project.id)}></div>
+            <div className={`work-img ${project.id}`}></div>
           </div>
         </div>
       );

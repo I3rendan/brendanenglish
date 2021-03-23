@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<work>
+
+	<project>
+	
+		<id>Tom</id>
+		<name>Tom Carter Photos</name>
+		<desc>A custom design and build created for a local photographer. Uses Slideshowpro with mobile options for the Gallery.</desc>
+		<thumb>images/port/Tom_tn.jpg</thumb>
+		<images>images/port/Tom.jpg,images/port/Tom2.jpg,images/port/Tom4.jpg,images/port/Tom3.jpg</images>
+		<link>http://www.tomcarterphotos.com</link>
+		<tags>HTML/CSS,Javascript,Flash,Branding,UI/UX</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Mink</id>
+		<name>Mink Letterpress</name>
+		<desc>A custom design and build on a Wordpress engine. Created this for a friend of mine who does amazing letterpress in Asheville, NC.</desc>
+		<thumb>images/port/Mink_tn.jpg</thumb>
+		<images>images/port/Mink.jpg,images/port/Mink1.jpg,images/port/Mink2.jpg,images/port/Mink3.jpg</images>
+		<link>http://www.minkletterpress.com</link>
+		<tags>HTML/CSS,Javascript,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Ave</id>
+		<name>Ave Maria Memorial Locator</name>
+		<desc>A custom Flash application integrated with a database to visually show a brick fundraiser. This is an old one.</desc>
+		<thumb>images/port/Ave_tn.jpg</thumb>
+		<images>images/port/Ave.jpg,images/port/Ave2.jpg,images/port/Ave3.jpg,images/port/Ave4.jpg</images>
+		<link>http://universityrelations.insideavemaria.org/memoriallocator/index.html</link>
+		<tags>Flash,UI/UX</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Blackbaud</id>
+		<name>Blackbaud</name>
+		<desc>The corporate web presense for Blackbaud, a software and interactive company serving nonprofits.</desc>
+		<thumb>images/port/Blackbaud_tn.jpg</thumb>
+		<images>images/port/Blackbaud.jpg,images/port/Blackbaud2.jpg,images/port/Blackbaud3.jpg,images/port/Blackbaud4jpg,images/port/Blackbaud5.jpg</images>
+		<link>http://www.blackbaud.com</link>
+		<tags>HTML/CSS,Javascript,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Eig</id>
+		<name>Michael J. Eig &amp; Associates</name>
+		<desc>A custom design built in ExpressionEngine for a special education law firm based in Washington D.C.</desc>
+		<thumb>images/port/Eig_tn.jpg</thumb>
+		<images>images/port/Eig.jpg,images/port/Eig2.jpg</images>
+		<link>http://www.lawforchildren.com</link>
+		<tags>HTML/CSS,Javascript,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Learn</id>
+		<name>Learn the Practice</name>
+		<desc>A custom design built in ExpressionEngine with information on Baltimore City Real Estate Investing.</desc>
+		<thumb>images/port/Practice_tn.jpg</thumb>
+		<images>images/port/Practice.jpg</images>
+		<link></link>
+		<tags>HTML/CSS,Javascript,UI/UX,CMS,Branding</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Citadel</id>
+		<name>The Citadel Foundation</name>
+		<desc>A custom design and build for a Charleston nonprofit. The site is integrated with a proprietary CMS (BBNC).</desc>
+		<thumb>images/port/Citadel_tn.jpg</thumb>
+		<images>images/port/Citadel.jpg</images>
+		<link>http://foundation.citadel.edu</link>
+		<tags>HTML/CSS,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>AI</id>
+		<name>Asheville Institute</name>
+		<desc>A custom design for a health organization located in Asheville, NC. This design never made it to production, but still looks neat.</desc>
+		<thumb>images/port/AI_tn.jpg</thumb>
+		<images>images/port/AI.jpg</images>
+		<link></link>
+		<tags>UI/UX</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>WWO</id>
+		<name>Wordwide Orphans Foundation</name>
+		<desc>A custom design and build for a Blackbaud client. Built on the proprietary CMS (NetCommunity).</desc>
+		<thumb>images/port/WWO_tn.jpg</thumb>
+		<images>images/port/WWO.jpg</images>
+		<link>http://www.wwo.org</link>
+		<tags>HTML/CSS,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Milk</id>
+		<name>Milk Productions</name>
+		<desc>A custom design and build on a Wordpress engine for a media production company based in Greensboro, NC.</desc>
+		<thumb>images/port/Milk_tn.jpg</thumb>
+		<images>images/port/Milk.jpg,images/port/Milk2.jpg</images>
+		<link>http://www.milkproductions.tv</link>
+		<tags>HTML/CSS,Javascript,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>AHA</id>
+		<name>AHA Heart Walk</name>
+		<desc>A custom site for the American Heart Association. This includes a sweet, database-driven interactive map showing events in the US and current goals/funds raised.</desc>
+		<thumb>images/port/AHA_tn.jpg</thumb>
+		<images>images/port/AHA.jpg,images/port/AHA2.jpg</images>
+		<link>http://www.heartwalk.org/</link>
+		<tags>HTML/CSS,Javascript,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>EICES</id>
+		<name>EICES Research</name>
+		<desc>A custom design and build for a privately held think tank engaged in developing innovations for broadband wireless communications.</desc>
+		<thumb>images/port/EICES_tn.jpg</thumb>
+		<images>images/port/EICES.jpg</images>
+		<link>http://www.eicesresearch.com</link>
+		<tags>HTML/CSS,Flash,UI/UX,Branding</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>SPCA</id>
+		<name>Louisianna SPCA</name>
+		<desc>A custom design and build. The site is integrated with a proprietary CMS (BBNC).</desc>
+		<thumb>images/port/SPCA_tn.jpg</thumb>
+		<images>images/port/SPCA.jpg</images>
+		<link>http://www.la-spca.org</link>
+		<tags>HTML/CSS,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>BBCON</id>
+		<name>Blackbaud Conference</name>
+		<desc>The largest nonprofit conference in the world. Wordpress template with custom design and interactive elements added.</desc>
+		<thumb>images/port/BBCON_tn.jpg</thumb>
+		<images>images/port/BBCON.jpg,images/port/BBCON2.jpg</images>
+		<link>http://www.bbconference.com</link>
+		<tags>HTML/CSS,Javascript,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>BlueRidge</id>
+		<name>Blue Ridge Computer Solutions</name>
+		<desc>A custom design and build for a freelance computer repair and design company in Greenville, SC.</desc>
+		<thumb>images/port/BlueRidge_tn.jpg</thumb>
+		<images>images/port/BlueRidge.jpg</images>
+		<link>http://www.blueridgecomputersolutions.com</link>
+		<tags>HTML/CSS,UI/UX,Branding</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Kidney</id>
+		<name>The Kidney Foundation of Canada</name>
+		<desc>A custom design and build. The site is integrated with a proprietary CMS (BBNC).</desc>
+		<thumb>images/port/Kidney_tn.jpg</thumb>
+		<images>images/port/Kidney.jpg</images>
+		<link>http://www.kidney.ca</link>
+		<tags>HTML/CSS,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>YWCA</id>
+		<name>YWCA of Rochester</name>
+		<desc>A custom design and build. The site is integrated with a proprietary CMS (BBNC).</desc>
+		<thumb>images/port/YWCA_tn.jpg</thumb>
+		<images>images/port/YWCA.jpg</images>
+		<link>http://www.ywcarochester.org</link>
+		<tags>HTML/CSS,Flash,UI/UX,CMS</tags>
+	
+	</project>
+	
+	<project>
+	
+		<id>Alyn</id>
+		<name>Friends of Alyn</name>
+		<desc>A custom, database-driven Flash application to visually display tributees and their messages.</desc>
+		<thumb>images/port/Alyn_tn.jpg</thumb>
+		<images>images/port/Alyn.jpg,images/port/Alyn2.jpg,images/port/Alyn3.jpg</images>
+		<link>http://www.alynus.org/iwish</link>
+		<tags>Flash,UI/UX</tags>
+	
+	</project>
+	
+</work>
