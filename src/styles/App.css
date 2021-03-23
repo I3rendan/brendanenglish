@@ -890,7 +890,8 @@ ul, li {
 h1, h2, h3, h4, h5 {
   font-family: 'Source Code Pro';
   font-weight: 300;
-  letter-spacing: -0.026em; }
+  letter-spacing: -0.026em;
+  color: #FE5F55; }
   h1.sans, h2.sans, h3.sans, h4.sans, h5.sans {
     font-family: 'Source Sans Pro';
     letter-spacing: 0; }
@@ -1168,6 +1169,17 @@ nav {
 
 .contact .star-field.field-3, .contact .star-field.field-4 {
   animation: starMotionContact2 0.5s forwards ease; }
+
+.not-found {
+  padding: 10em;
+  text-align: center; }
+  .not-found h1 span {
+    display: block;
+    font-size: 3.33em; }
+
+.sandbox {
+  padding: 8.5em;
+  text-align: center; }
 
 .bg-wrap.layer {
   position: absolute !important; }

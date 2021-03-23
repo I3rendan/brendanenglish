@@ -8,6 +8,7 @@ import Home from './Body/Home';
 import Work from './Body/Work';
 import About from './Body/About';
 import Contact from './Body/Contact';
+import Sandbox from './Body/Sandbox';
 import NotFound from './Body/NotFound';
 
 import imgDesigngapp from '../images/work/designgapp-1-min.jpg';
@@ -177,6 +178,7 @@ class App extends Component {
                 <Route path='/work' component={Work} />
                 <Route path='/about' component={About} />
                 <Route path='/contact' component={Contact} />
+                <Route path='/sandbox' component={Sandbox} />
                 <Route path='*' component={NotFound} />
               </Switch>
             }
