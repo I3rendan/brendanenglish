@@ -5,7 +5,7 @@ import Moment from "react-moment";
 import elementClass from "element-class";
 import { Link } from "react-router-dom";
 import { Chart } from "react-google-charts";
-import imgProfile from "../../images/me.jpg";
+import imgProfile from "../../images/headshot.png";
 import imgUNCG from "../../images/uncg.png";
 import imgLO from "../../images/logo-lo.png";
 import imgCapOne from "../../images/logo-capone.png";
@@ -402,42 +402,43 @@ export default class About extends Component {
                       </p>
                       <ul>
                         <li>
-                          I manage a team of designers and act as an individual
-                          contributor for all features and workstreams of our
-                          learning product.
+                          Manage a team of designers and act as an individual
+                          contributor for all features of our learning product.
                         </li>
                         <li>
-                          Design and prototype all product features to establish
-                          overall design direction and UX.
+                          Collaborate with stakeholders, product managers, and
+                          executives, to align design strategies with overall
+                          business goals.
                         </li>
                         <li>
-                          Continuously contribute to the frontend development of
-                          products through our core platform and framework.
+                          Led the effort to establish personas, user testing
+                          strategy, and UXR functions to help validate product
+                          direction.
                         </li>
                         <li>
-                          Collaborate with our development and support teams to
-                          help inform the technical direction of our products.
+                          Oversee the entire design process, from concept to
+                          implementation. Ensure that design solutions meet user
+                          needs, business requirements, and industry standards.
                         </li>
                         <li>
-                          Conduct empathy research and user testing for all
-                          products and features.
+                          Mentor and develop the skills of team members. Foster
+                          a culture of continuous learning and professional
+                          growth within the design team.
                         </li>
                         <li>
-                          Helped implement a product framework by establishing
-                          design patterns, styling, and design documentation.
+                          Manage the allocation of resources, including budget
+                          and personnel, to ensure the team can meet project
+                          deadlines and objectives.
                         </li>
                         <li>
-                          Collaborate with product owners to manage product
-                          releases and development efforts.
+                          Stay informed about UX design trends and best
+                          practices. Ensure that the team is creating
+                          user-friendly and intuitive product designs.
                         </li>
                         <li>
-                          Continuously gather feedback from clients and
-                          stakeholders to aid in the evolution of product
-                          features.
-                        </li>
-                        <li>
-                          Communicate product vision and concepts to users,
-                          internal teams, and clients.
+                          Ensure that design deliverables meet quality
+                          standards. Conduct design reviews and assessments to
+                          identify areas for improvement.
                         </li>
                       </ul>
                     </div>
@@ -886,13 +887,13 @@ export default class About extends Component {
               </div>
 
               <div className="resume-pdf">
-                <Link
-                  to="/BrendanEnglish.pdf"
+                <a
+                  href="/BrendanEnglish.pdf"
                   target="_blank"
                   className="btn btn-accent"
                 >
                   View as PDF
-                </Link>
+                </a>
               </div>
             </div>
           </div>

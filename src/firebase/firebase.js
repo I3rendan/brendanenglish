@@ -1,8 +1,8 @@
-import * as firebase from 'firebase/app';
-import 'firebase/database';
-import 'firebase/auth';
-import 'firebase/storage';
-import 'firebase/functions';
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { getFunctions, httpsCallable } from "firebase/functions";
 
 const config = {
   apiKey: "AIzaSyDLJ3iAdClkR8msqyIil4ED99EXheO2AvI",
@@ -12,21 +12,15 @@ const config = {
   storageBucket: "brendan-english.appspot.com",
   messagingSenderId: "629757935861",
   appId: "1:629757935861:web:a6c8282e84f0aff941c5bc",
-  measurementId: "G-ZQ6EL13GW0"
+  measurementId: "G-ZQ6EL13GW0",
 };
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(config);
-}
+const appEnv = process.env.REACT_APP_ENV;
 
-const db = firebase.database();
-const auth = firebase.auth();
-const storage = firebase.storage();
-const sendContactEmail = firebase.functions().httpsCallable('sendContactEmail');
-
-export {
-  db,
-  auth,
-  storage,
-  sendContactEmail
-};
+export const app = initializeApp(config);
+export const adminApp = initializeApp(config, "secondary");
+export const db = getDatabase(app);
+export const auth = getAuth(app);
+export const storage = getStorage(app);
+export const functions = getFunctions(app);
+export const sendContactEmail = httpsCallable(functions, "sendContactEmail");

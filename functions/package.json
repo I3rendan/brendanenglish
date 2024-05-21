@@ -10,10 +10,10 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
-    "firebase-admin": "^8.9.2",
-    "firebase-functions": "^3.3.0",
-    "node-fetch": "^2.3.0",
-    "nodemailer": "^4.6.8",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "node-fetch": "^3.3.0",
+    "nodemailer": "^6.4.16",
     "nodemailer-sendgrid": "^1.0.3",
     "nodemailer-smtp-transport": "^2.7.4"
   },
@@ -22,7 +22,7 @@
     "eslint-plugin-promise": "^3.6.0"
   },
   "engines": {
-    "node": "10"
+    "node": "16"
   },
   "private": true
 }

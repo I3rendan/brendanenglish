@@ -745,13 +745,15 @@
   transition: background ease 0.33s, box-shadow ease 0.33s, color ease 0.33s;
   cursor: pointer;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  font-weight: 400; }
+  font-weight: 400;
+  cursor: pointer; }
   @media (max-width: 35.5em) {
     .btn {
       min-width: 50%; } }
   .btn:hover {
     background: transparent;
-    box-shadow: 0 10px 0 -6px rgba(14, 65, 123, 0.175); }
+    box-shadow: 0 10px 0 -6px rgba(14, 65, 123, 0.175);
+    cursor: pointer; }
   .btn:active {
     box-shadow: none; }
   .btn.btn-primary {
@@ -1192,6 +1194,12 @@ header,
 #wrap-contact-top {
   pointer-events: visible !important; }
 
+._3eJOp {
+  height: 100% !important;
+  width: 100% !important;
+  top: 0% !important;
+  left: 0% !important; }
+
 .star-field {
   position: absolute !important;
   height: 100vh;
@@ -1387,7 +1395,8 @@ header,
         margin: 12em auto 5em; } }
     #wrap-home-top .home-intro h1 {
       font-size: 5em;
-      margin: 0.5em; }
+      margin: 0.5em;
+      color: white; }
       @media (max-width: 64em) {
         #wrap-home-top .home-intro h1 {
           font-size: 4.5em; } }
@@ -1467,7 +1476,8 @@ header,
       font-size: 1.75em;
       font-weight: 100;
       margin: 0.75em 0 1em;
-      text-shadow: 0 1px 0 white; }
+      text-shadow: 0 1px 0 white;
+      color: #444444; }
       @media (max-width: 48em) {
         #wrap-home-bottom .wrap-inner h3 {
           font-size: 1.5em; } }
@@ -1531,6 +1541,9 @@ header,
   z-index: -1;
   position: fixed;
   opacity: 0; }
+
+.work.lightbox .app-inner {
+  z-index: 10; }
 
 #wrap-work-top {
   overflow: hidden;
@@ -1945,7 +1958,7 @@ header,
   @media print {
     .resume-head {
       text-align: left;
-      padding: 3em 4em; } }
+      padding: 3em 2.5em; } }
   .resume-head:before, .resume-head:after {
     content: "";
     position: absolute;
@@ -1958,7 +1971,7 @@ header,
     background-image: url(../images/bg-dc.jpg);
     background-position: center 33%;
     background-size: cover;
-    filter: brightness(0.5) saturate(1.5); }
+    filter: brightness(0.375) saturate(0.75) contrast(1.15); }
   .resume-head:after {
     background: linear-gradient(transparent 15%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%);
     box-shadow: 0 -0.25em 0 rgba(254, 95, 85, 0.67) inset; }
@@ -1988,10 +2001,8 @@ header,
       .resume-head .resume-img {
         display: inline-block; } }
     .resume-head .resume-img img {
-      width: 115%;
-      height: auto;
-      position: relative;
-      top: -0.15em; }
+      width: 100%;
+      height: auto; }
   .resume-head .resume-info {
     padding: 0.5em 0 0 3em;
     color: white;
@@ -2017,6 +2028,9 @@ header,
     .resume-head .resume-info .resume-role {
       font-size: 1.25em;
       font-weight: 400; }
+      @media print {
+        .resume-head .resume-info .resume-role {
+          font-size: 1em; } }
 
 .resume-inner {
   padding: 3em 1.5em 1.5em;
@@ -2208,6 +2222,11 @@ header,
       transform: scale(0.695);
       transform-origin: top left; } }
 
+@media print {
+  .resume-work {
+    margin-top: 12rem;
+    padding-top: 2rem; } }
+
 .resume-work .resume-content {
   padding: 1.67em 2em 0;
   display: flex;
@@ -2244,7 +2263,8 @@ header,
         border-color: #cfcfd0;
         font-size: 1.25em; } }
     .resume-work .resume-content h4 a {
-      border: none; }
+      border: none;
+      display: inline-block; }
     .resume-work .resume-content h4 img {
       max-width: 12em;
       max-height: 1.75em;
@@ -2406,6 +2426,10 @@ header,
   .resume-work .resume-work-exp .exp {
     margin: 0.425em 0.67em -0.425em 0; }
 
+@media print {
+  .resume-education {
+    margin-top: 2.5rem; } }
+
 .resume-education .resume-content {
   padding: 2em;
   display: flex;
@@ -2415,6 +2439,9 @@ header,
       padding: 1.5em;
       text-align: center;
       flex-flow: row wrap; } }
+  @media print {
+    .resume-education .resume-content {
+      font-size: 0.925rem; } }
 
 .resume-education .education-logo {
   margin-right: 2em; }
@@ -2442,7 +2469,8 @@ header,
     margin: 0.5em 0;
     font-weight: 400; }
   .resume-education .education-info h5 {
-    margin: 0.5em 0; }
+    margin: 0.5em 0;
+    color: #444444; }
 
 .resume-pdf {
   padding: 0 0 6.67em;
