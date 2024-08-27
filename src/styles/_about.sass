@@ -124,7 +124,7 @@
 
   @media print
     text-align: left
-    padding: 3em 2.5em
+    padding: 2.5em
 
   &:before, &:after
     content: ""
@@ -172,6 +172,8 @@
 
     @media print
       display: inline-block
+      height: 8em
+      width: 8em
 
     img
       width: 100%
@@ -255,6 +257,9 @@
   &.exp6
     background: $color-exp6
 
+  &.exp7
+    background: $color-exp7
+
 .resume-content
   background: white
   border-radius: $radius-border
@@ -334,6 +339,9 @@
       &.exp6:before
         background: $color-exp6
 
+      &.exp7:before
+        background: $color-exp7
+
       &.active
         .exp-description
           padding: 1.5em 0 0.5em
@@ -353,6 +361,7 @@
         @media print
           padding: 0.85em 0 0.5em
           width: calc(100% - 4em)
+          font-size: 0.925em
 
         li
           background: none
@@ -401,6 +410,7 @@
 
   @media print
     padding: 1em 2em 2em
+    margin-top: 1.5em
 
   h3
     font-size: 1.25em
@@ -411,7 +421,7 @@
   height: 15em
 
   @media (max-width: $mdscreen)
-    height: 18em
+    height: 20em
 
   @media print
     height: 10em
@@ -522,7 +532,7 @@
       top: 0
       left: 1.85em
       width: 0.25em
-      background: linear-gradient($color-secondary, rgba($color-secondary, 0.5))
+      background: linear-gradient($color-red 10%, $color-secondary 50%)
       transform: 
       height: 100%
       z-index: 0
@@ -532,14 +542,23 @@
         top: 1.33em
         width: 100%
         height: 0.25em
-        background: linear-gradient(-90deg, $color-secondary, rgba($color-secondary, 0.25))
+        background: linear-gradient(-90deg, $color-red, $color-secondary 50%)
 
       @media print
         top: 0
         left: 1.5em
         width: 0.25em
         height: 100%
-        background: linear-gradient($color-secondary, rgba($color-secondary, 0.5))
+        background: linear-gradient($color-red, $color-secondary 50%)
+
+    &.today
+      &:before
+        background: $color-secondary
+
+      .date:first-child
+        background: $color-green
+        color: white
+        padding: 1em 0.25em
 
     .date
       background: white
@@ -562,6 +581,8 @@
       @media print
         position: absolute
         font-size: 0.75em
+        box-shadow: none
+        filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15))
 
       &:nth-child(1)
         top: 0
@@ -579,11 +600,6 @@
         @media (max-width: $mdscreen)
           float: left
 
-      &.today
-        background: $color-green
-        color: white
-        padding: 1em 0.25em
-
       > span
         display: block
         background: $color-green
@@ -592,6 +608,9 @@
         padding: 0.25em
         margin: -0.75em -0.5em 0.5em
         color: white
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-weight: 600
 
   .resume-work-role
     width: calc(100% - 7.5em)
@@ -610,10 +629,12 @@
 
       @media print
         font-size: 1em
-        margin: 0.5em 0 0.67em
 
     p
       font-size: 0.875em
+
+      @media print
+        font-size: 0.75em
 
     > ul
       margin: 0.5em 0.5em 0.5em 1.5em

@@ -278,21 +278,21 @@ export default class Work extends Component {
         //     require('../../images/work/de-3.jpg')
         //   ]
         // },
-        {
-          id: "delivery",
-          year: "2014",
-          name: "LO Delivery",
-          description:
-            "The Learning Objects student content delivery product. I designed, prototyped, tested, and helped build the core delivery platform for students. The product has evolved over the course of my time at LO to include instructor and admin tools, along with various other learning features.",
-          images: [
-            require("../../images/work/delivery-1.jpg"),
-            require("../../images/work/delivery-2.jpg"),
-            require("../../images/work/delivery-3.jpg"),
-            require("../../images/work/delivery-4.jpg"),
-            require("../../images/work/delivery-5.jpg"),
-            require("../../images/work/delivery-6.jpg"),
-          ],
-        },
+        // {
+        //   id: "delivery",
+        //   year: "2014",
+        //   name: "LO Delivery",
+        //   description:
+        //     "The Learning Objects student content delivery product. I designed, prototyped, tested, and helped build the core delivery platform for students. The product has evolved over the course of my time at LO to include instructor and admin tools, along with various other learning features.",
+        //   images: [
+        //     require("../../images/work/delivery-1.jpg"),
+        //     require("../../images/work/delivery-2.jpg"),
+        //     require("../../images/work/delivery-3.jpg"),
+        //     require("../../images/work/delivery-4.jpg"),
+        //     require("../../images/work/delivery-5.jpg"),
+        //     require("../../images/work/delivery-6.jpg"),
+        //   ],
+        // },
         // ,{
         //   id: "crew",
         //   year: "2015",
@@ -316,28 +316,33 @@ export default class Work extends Component {
             require("../../images/work/lo-1.jpg"),
             // require('../../images/work/lo-2.gif'),
             require("../../images/work/lo-3.jpg"),
-            require("../../images/work/lo-4.jpg"),
+            require("../../images/work/delivery-2.jpg"),
+            require("../../images/work/delivery-3.jpg"),
+            require("../../images/work/delivery-4.jpg"),
+            // require("../../images/work/lo-4.jpg"),
             require("../../images/work/lo-5.jpg"),
-            require("../../images/work/lo-6.jpg"),
+            // require("../../images/work/lo-6.jpg"),
             // require('../../images/work/lo-7.gif'),
-            require("../../images/work/lo-8.jpg"),
-            require("../../images/work/lo-9.jpg"),
-          ],
-        },
-        {
-          id: "lo-styleguide",
-          year: "2015",
-          name: "LO StyleGuide",
-          description:
-            "I developed the company StyleGuide and Application Design Guide to help standardize and inform the creative direction of the company and products. The StyleGuide featured brand and design guidelines and the Application Design Guide included the design methodologies for products.",
-          images: [
+            // require("../../images/work/lo-8.jpg"),
+            // require("../../images/work/lo-9.jpg"),
             require("../../images/work/lo-style-1.jpg"),
             require("../../images/work/lo-style-2.jpg"),
-            require("../../images/work/lo-style-3.jpg"),
-            require("../../images/work/lo-style-4.jpg"),
-            require("../../images/work/lo-style-5.jpg"),
           ],
         },
+        // {
+        //   id: "lo-styleguide",
+        //   year: "2015",
+        //   name: "LO StyleGuide",
+        //   description:
+        //     "I developed the company StyleGuide and Application Design Guide to help standardize and inform the creative direction of the company and products. The StyleGuide featured brand and design guidelines and the Application Design Guide included the design methodologies for products.",
+        //   images: [
+        //     require("../../images/work/lo-style-1.jpg"),
+        //     require("../../images/work/lo-style-2.jpg"),
+        //     require("../../images/work/lo-style-3.jpg"),
+        //     require("../../images/work/lo-style-4.jpg"),
+        //     require("../../images/work/lo-style-5.jpg"),
+        //   ],
+        // },
         {
           id: "resume",
           year: "2016",
@@ -419,20 +424,20 @@ export default class Work extends Component {
         //     require('../../images/work/lisc-5.jpg')
         //   ]
         // },
-        {
-          id: "quantum",
-          year: "2017",
-          name: "Quantum Thinking",
-          description:
-            "This was another custom website redesign for a DC-based small business aimed at improving education through innovation. I helped refresh Quantum's brand and built a responsive website.",
-          images: [
-            require("../../images/work/quantum-1.jpg"),
-            require("../../images/work/quantum-2.jpg"),
-            require("../../images/work/quantum-3.jpg"),
-            require("../../images/work/quantum-4.jpg"),
-            require("../../images/work/quantum-5.jpg"),
-          ],
-        },
+        // {
+        //   id: "quantum",
+        //   year: "2017",
+        //   name: "Quantum Thinking",
+        //   description:
+        //     "This was another custom website redesign for a DC-based small business aimed at improving education through innovation. I helped refresh Quantum's brand and built a responsive website.",
+        //   images: [
+        //     require("../../images/work/quantum-1.jpg"),
+        //     require("../../images/work/quantum-2.jpg"),
+        //     require("../../images/work/quantum-3.jpg"),
+        //     require("../../images/work/quantum-4.jpg"),
+        //     require("../../images/work/quantum-5.jpg"),
+        //   ],
+        // },
         {
           id: "dates",
           year: "2017",
@@ -533,6 +538,51 @@ export default class Work extends Component {
             require("../../images/work/designgapp-6.jpg"),
             require("../../images/work/designgapp-7.jpg"),
             require("../../images/work/designgapp-8.jpg"),
+          ],
+        },
+        {
+          id: "ilc",
+          year: "2022",
+          name: "IL Classroom",
+          description:
+            "I led the design team that has redesigned the K-12 learning platform as well as working on the UIX and development for all new product features. The app is built using Vue and Tailwind CSS. This product is used by millions of students across the country and hosts popular digital curricula.",
+          images: [
+            require("../../images/work/ilc-1.png"),
+            require("../../images/work/ilc-2.png"),
+            require("../../images/work/ilc-3.png"),
+            require("../../images/work/ilc-4.png"),
+            require("../../images/work/ilc-5.png"),
+            require("../../images/work/ilc-6.png"),
+          ],
+        },
+        {
+          id: "cadd",
+          year: "2023",
+          name: "CADD Microsystems",
+          description:
+            "I redesigned and built the CADD corporate site, a Community microsite, and designed an app for leveraging their support, training, and eLearning. The site utilizes NextJS and Strapi CMS, hosted on Vercel.",
+          images: [
+            require("../../images/work/cadd-1.png"),
+            require("../../images/work/cadd-2.png"),
+            require("../../images/work/cadd-3.png"),
+            require("../../images/work/cadd-4.png"),
+            require("../../images/work/cadd-5.png"),
+            require("../../images/work/cadd-6.png"),
+            require("../../images/work/cadd-7.png"),
+          ],
+        },
+        {
+          id: "acg",
+          year: "2024",
+          name: "ACG",
+          description:
+            "A site I built for a rural ISP along with their logo and marketing materials. The site it built using NextJS and hosted on Firebase with custom CMS functionality.",
+          images: [
+            require("../../images/work/acg-1.png"),
+            require("../../images/work/acg-2.png"),
+            require("../../images/work/acg-3.png"),
+            require("../../images/work/acg-4.png"),
+            require("../../images/work/acg-5.png"),
           ],
         },
       ],

@@ -1,13 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
 import { getAuth } from "firebase/auth";
-import { getStorage } from "firebase/storage";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 const config = {
   apiKey: "AIzaSyDLJ3iAdClkR8msqyIil4ED99EXheO2AvI",
   authDomain: "brendan-english.firebaseapp.com",
-  databaseURL: "https://brendan-english.firebaseio.com",
   projectId: "brendan-english",
   storageBucket: "brendan-english.appspot.com",
   messagingSenderId: "629757935861",
@@ -19,8 +16,6 @@ const appEnv = process.env.REACT_APP_ENV;
 
 export const app = initializeApp(config);
 export const adminApp = initializeApp(config, "secondary");
-export const db = getDatabase(app);
 export const auth = getAuth(app);
-export const storage = getStorage(app);
 export const functions = getFunctions(app);
 export const sendContactEmail = httpsCallable(functions, "sendContactEmail");

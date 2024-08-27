@@ -298,6 +298,36 @@ export default class About extends Component {
                           </li>
                         </ul>
                       </li>
+                      <li
+                        className="resume-exp-item exp7"
+                        onClick={() =>
+                          elementClass(
+                            document.querySelector(".resume-exp-item.exp7")
+                          ).toggle("active")
+                        }
+                      >
+                        <span className="exp exp7"></span>
+                        <p>Artificial Intelligence</p>
+                        <span className="duration">
+                          <Moment fromNow ago>
+                            {new Date("August 1, 2023")}
+                          </Moment>
+                        </span>
+                        <ul className="exp-description">
+                          <li>
+                            Leveraging Midjourney and Stable Diffusion for
+                            custom, AI-driven imagery and design assets.
+                          </li>
+                          <li>
+                            Experimenting with Gemini AI models + API for in-app
+                            dynamic content.
+                          </li>
+                          <li>
+                            Utilizing OpenAI solutions for content + asset
+                            generation, efficiency, and troubleshooting.
+                          </li>
+                        </ul>
+                      </li>
                     </ul>
 
                     <div className="resume-timeline">
@@ -343,6 +373,7 @@ export default class About extends Component {
                               new Date("August 8, 2010"),
                               new Date(),
                             ],
+                            ["7", "AI", new Date("August 1, 2023"), new Date()],
                           ]}
                           options={{
                             legend: "none",
@@ -354,6 +385,7 @@ export default class About extends Component {
                               "#85C226",
                               "#CE3B19",
                               "#5173E3",
+                              "#df279c",
                             ],
                             timeline: {
                               showRowLabels: false,
@@ -366,7 +398,7 @@ export default class About extends Component {
                           }}
                           graph_id="ExpTimeline"
                           width="100%"
-                          height="20em"
+                          height="24em"
                         />
                       </div>
                     </div>
@@ -387,8 +419,8 @@ export default class About extends Component {
                       </a>
                       <span>Washington, DC</span>
                     </h4>
-                    <div className="resume-work-date">
-                      <p className="date today">Today</p>
+                    <div className="resume-work-date today">
+                      <p className="date">Today</p>
                       <p className="date">
                         <span>Nov</span>2021
                       </p>
@@ -464,6 +496,10 @@ export default class About extends Component {
                         <li>
                           <span className="exp exp6"></span>Wireframing,
                           Prototyping, &amp; Visioning
+                        </li>
+                        <li>
+                          <span className="exp exp7"></span>Artificial
+                          Intelligence
                         </li>
                       </ul>
                     </div>
@@ -887,13 +923,12 @@ export default class About extends Component {
               </div>
 
               <div className="resume-pdf">
-                <a
-                  href="/BrendanEnglish.pdf"
-                  target="_blank"
+                <span
                   className="btn btn-accent"
+                  onClick={() => window.open("/BrendanEnglish.pdf", "_blank")}
                 >
                   View as PDF
-                </a>
+                </span>
               </div>
             </div>
           </div>
