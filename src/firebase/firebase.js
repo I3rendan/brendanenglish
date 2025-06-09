@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 const config = {
-  apiKey: "AIzaSyDLJ3iAdClkR8msqyIil4ED99EXheO2AvI",
-  authDomain: "brendan-english.firebaseapp.com",
-  projectId: "brendan-english",
-  storageBucket: "brendan-english.appspot.com",
-  messagingSenderId: "629757935861",
-  appId: "1:629757935861:web:a6c8282e84f0aff941c5bc",
-  measurementId: "G-ZQ6EL13GW0",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 const appEnv = process.env.REACT_APP_ENV;
