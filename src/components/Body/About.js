@@ -30,7 +30,7 @@ export default class About extends Component {
             <div className="layer" data-depth="0.33">
               <div className="wrap-about-content">
                 <h1>
-                  I design and build products, websites, and applications.
+                  I design &amp; build products, websites, &amp; applications.
                 </h1>
                 <h2 className="sans">
                   I'm currently a Senior Product Design Manager at&nbsp;
@@ -47,7 +47,14 @@ export default class About extends Component {
               </div>
             </div>
             <div className="resume-link layer" data-depth="0.15">
-              My résumé
+              My
+              <a
+                href="/BrendanEnglish.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                résumé
+              </a>
               <span className="anim-scroll">
                 <span></span>
                 <span></span>
@@ -287,7 +294,7 @@ export default class About extends Component {
                             an entire line of products and applications.
                           </li>
                           <li>
-                            Utilized tools like Sketch, Photoshop, Balsamiq, and
+                            Utilized tools like Figma, Sketch, Photoshop, and
                             Illustrator to facilitate user testing and selling
                             vision to stakeholders.
                           </li>
@@ -422,7 +429,7 @@ export default class About extends Component {
                     <div className="resume-work-date today">
                       <p className="date">Today</p>
                       <p className="date">
-                        <span>Nov</span>2021
+                        <span>Nov</span>2020
                       </p>
                     </div>
                     <div className="resume-work-role">
@@ -518,7 +525,7 @@ export default class About extends Component {
                     </h4>
                     <div className="resume-work-date">
                       <p className="date">
-                        <span>Nov</span>2021
+                        <span>Nov</span>2020
                       </p>
                       <p className="date">
                         <span>Feb</span>2018
@@ -923,12 +930,14 @@ export default class About extends Component {
               </div>
 
               <div className="resume-pdf">
-                <span
+                <a
+                  href="/BrendanEnglish.pdf"
                   className="btn btn-accent"
-                  onClick={() => window.open("/BrendanEnglish.pdf", "_blank")}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   View as PDF
-                </span>
+                </a>
               </div>
             </div>
           </div>

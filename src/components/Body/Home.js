@@ -37,7 +37,7 @@ export default class Home extends Component {
             <div className="wrap-inner">
               <h2>Hello!</h2>
               <h3 className="sans">
-                I'm a design manager, UI/UX designer, and developer.
+                I'm a design manager, UIX designer, and developer.
               </h3>
               <Link to="/work" className="btn btn-accent-dark">
                 View my work

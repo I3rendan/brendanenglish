@@ -60,7 +60,7 @@
 
   .wrap-inner
     padding: 2em 4em 3.33em
-    background: linear-gradient(white 25%, $color-lighter)
+    background: linear-gradient(white 50%, lighten($color-accent, 28.5%))
     position: relative
     font-size: 2.15em
     text-align: center
@@ -69,7 +69,7 @@
     width: calc(100% - 3em)
     margin: 0 auto
     border-radius: $radius-border * 3.33
-    filter: drop-shadow(0 0 1.5em rgba($color-accent, 0.15)) drop-shadow(0 -1em 1.5em rgba($color-accent, 0.15)) drop-shadow(0 1.5em 2em rgba($color-accent, 0.15))
+    filter: drop-shadow(0 0 1.5em rgba($color-accent, 0.15)) drop-shadow(0 0 3em rgba($color-accent, 0.15)) drop-shadow(0 1.5em 2em rgba($color-accent, 0.15))
     box-shadow: 0 0 0.25em rgba(black, 0.5)
       
     @media (max-width: $mdscreen)
@@ -91,7 +91,7 @@
       left: 0
       right: 0
       margin: auto
-      border-color: $color-lighter transparent transparent
+      border-color: lighten($color-accent, 28.5%) transparent transparent
 
     h2
       color: $color-accent

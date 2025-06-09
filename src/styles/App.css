@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Source+Code+Pro:300,400");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Source+Code+Pro:300,400,500");
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?imgwca");
@@ -928,13 +928,14 @@ h1.sans, h2.sans, h3.sans, h4.sans, h5.sans {
   letter-spacing: 0; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a {
-  border-bottom: 2px dashed rgba(254, 95, 85, 0.5); }
+  border-bottom: 3px dashed rgba(254, 95, 85, 0.67); }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
-  border-bottom: 2px solid #FE5F55; }
+  border-bottom: 3px solid #FE5F55; }
 
 h1 {
-  font-size: 3.33em; }
+  font-size: 3.33em;
+  font-weight: 500; }
 
 h2 {
   font-size: 3em; }
@@ -984,6 +985,7 @@ header:before {
 .wrap-logo h1 {
   margin: 0;
   font-size: 2em;
+  font-weight: 400;
   transition: text-shadow ease 0.15s; }
 
 .wrap-logo h1:hover {
@@ -1028,8 +1030,11 @@ nav {
 
 nav a {
   padding: 1.25em 1.5em;
-  color: #DCDCDD;
-  text-transform: uppercase; }
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro';
+  letter-spacing: 1.5px;
+  font-weight: 500; }
 
 nav a:hover {
   color: #FE5F55; }
@@ -1546,7 +1551,7 @@ header,
 
 #wrap-home-bottom .wrap-inner {
   padding: 2em 4em 3.33em;
-  background: linear-gradient(white 25%, #efefef);
+  background: linear-gradient(white 50%, #ffe7e6);
   position: relative;
   font-size: 2.15em;
   text-align: center;
@@ -1555,7 +1560,7 @@ header,
   width: calc(100% - 3em);
   margin: 0 auto;
   border-radius: 0.8658em;
-  filter: drop-shadow(0 0 1.5em rgba(254, 95, 85, 0.15)) drop-shadow(0 -1em 1.5em rgba(254, 95, 85, 0.15)) drop-shadow(0 1.5em 2em rgba(254, 95, 85, 0.15));
+  filter: drop-shadow(0 0 1.5em rgba(254, 95, 85, 0.15)) drop-shadow(0 0 3em rgba(254, 95, 85, 0.15)) drop-shadow(0 1.5em 2em rgba(254, 95, 85, 0.15));
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.5); }
 
 @media (max-width: 48em) {
@@ -1579,7 +1584,7 @@ header,
   left: 0;
   right: 0;
   margin: auto;
-  border-color: #efefef transparent transparent; }
+  border-color: #ffe7e6 transparent transparent; }
 
 #wrap-home-bottom .wrap-inner h2 {
   color: #FE5F55;
@@ -1783,7 +1788,9 @@ header,
   margin: 0;
   line-height: 1;
   color: #FE5F55;
-  font-size: 1.5em; }
+  font-size: 1.25em;
+  font-weight: 500;
+  font-family: "Source Code Pro"; }
 
 .work-name h3, .work-name h4 {
   color: white; }
@@ -2107,7 +2114,7 @@ header,
   color: white; }
 
 .wrap-about-content h1 {
-  font-size: 3.5em;
+  font-size: 4em;
   max-width: 30em; }
 
 @media (max-width: 35.5em) {
@@ -2115,12 +2122,16 @@ header,
     font-size: 4em;
     margin: 6em 0 0; } }
 
+.wrap-about-content h1 > span {
+  color: #FE5F55; }
+
 .wrap-about-content h2 {
-  font-size: 2em;
+  font-size: 1.875em;
   margin: 2.5em auto 3.33em;
   line-height: 1.5;
   text-align: justify;
-  max-width: 27em; }
+  max-width: 27em;
+  padding: 0 1.5em; }
 
 @media (max-width: 35.5em) {
   .wrap-about-content h2 {
@@ -2148,6 +2159,13 @@ header,
 @media (max-width: 48em) {
   .resume-link {
     margin-top: 40em; } }
+
+.resume-link > a {
+  margin-left: 0.33em;
+  border-bottom: 1px dashed rgba(254, 95, 85, 0.75); }
+
+.resume-link > a:hover {
+  border-bottom: 1px solid #FE5F55; }
 
 .resume-link .anim-scroll {
   margin-top: 0.5em; }
@@ -2320,6 +2338,10 @@ header,
   background: #DCDCDD;
   display: inline-block; }
 
+@media print {
+  .exp {
+    visibility: hidden; } }
+
 .exp.exp1 {
   background: #38CDD8; }
 
@@ -2400,6 +2422,10 @@ header,
   width: 0.5em;
   height: calc(100% - 3em); }
 
+@media print {
+  .resume-exp .resume-content .resume-exp-item:before {
+    width: 0.33em; } }
+
 .resume-exp .resume-content .resume-exp-item.exp1:before {
   background: #38CDD8; }
 
@@ -2423,6 +2449,10 @@ header,
 
 .resume-exp .resume-content .resume-exp-item.active .exp-description {
   padding: 1.5em 0 0.5em; }
+
+@media print {
+  .resume-exp .resume-content .resume-exp-item.active .exp-description {
+    padding-top: 0.5em; } }
 
 .resume-exp .resume-content .resume-exp-item.active .exp-description li {
   max-height: 100em;
@@ -2455,7 +2485,7 @@ header,
 @media print {
   .resume-exp .resume-content .resume-exp-item .exp-description li {
     max-height: 100em;
-    padding: 0.33em;
+    padding: 0.25em 0.33em;
     opacity: 1;
     font-size: 0.825em;
     line-height: 1.425; } }
@@ -2468,6 +2498,10 @@ header,
   .resume-exp p {
     margin: 0.25em 1em; } }
 
+@media print {
+  .resume-exp p {
+    font-size: 1.075em; } }
+
 .resume-exp .exp {
   margin: 0.05em 0.15em;
   float: left;
@@ -2476,7 +2510,7 @@ header,
 .resume-exp .duration {
   float: right;
   margin: 0.3em;
-  font-size: 0.925em;
+  font-size: 0.875em;
   line-height: 1.15;
   overflow: hidden; }
 
@@ -2494,7 +2528,7 @@ header,
 
 @media print {
   .resume-timeline {
-    padding: 1em 2em 2em;
+    padding: 1.25em 2em 2em;
     margin-top: 1.5em; } }
 
 .resume-timeline h3 {
@@ -2511,7 +2545,7 @@ header,
 
 @media print {
   .experience-graph {
-    height: 10em;
+    height: 11em;
     margin-top: 0.5em; } }
 
 .experience-graph text {
@@ -2630,7 +2664,7 @@ header,
   top: 0;
   left: 1.85em;
   width: 0.25em;
-  background: linear-gradient(#9F1D2D 10%, #84A98C 50%);
+  background: linear-gradient(#9F1D2D 20%, #84A98C 50%);
   height: 100%;
   z-index: 0; }
 

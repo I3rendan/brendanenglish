@@ -566,7 +566,7 @@ export default class Work extends Component {
             require("../../images/work/cadd-2.png"),
             require("../../images/work/cadd-3.png"),
             require("../../images/work/cadd-4.png"),
-            require("../../images/work/cadd-5.png"),
+            // require("../../images/work/cadd-5.png"),
             require("../../images/work/cadd-6.png"),
             require("../../images/work/cadd-7.png"),
           ],
@@ -576,7 +576,7 @@ export default class Work extends Component {
           year: "2024",
           name: "ACG",
           description:
-            "A site I built for a rural ISP along with their logo and marketing materials. The site it built using NextJS and hosted on Firebase with custom CMS functionality.",
+            "A site I built for a consulting group specializing in rural telecommunications. I also designed their logo and marketing materials. The site it built using NextJS and hosted on Firebase with custom CMS functionality.",
           images: [
             require("../../images/work/acg-1.png"),
             require("../../images/work/acg-2.png"),

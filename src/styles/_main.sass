@@ -52,13 +52,14 @@ h1, h2, h3, h4, h5
     letter-spacing: 0
 
   a
-    border-bottom: 2px dashed fade-out($color-accent, 0.5)
+    border-bottom: 3px dashed fade-out($color-accent, 0.33)
 
     &:hover
-      border-bottom: 2px solid $color-accent
+      border-bottom: 3px solid $color-accent
 
 h1
   font-size: 3.33em
+  font-weight: 500
 
 h2
   font-size: 3em
@@ -105,6 +106,7 @@ header
   h1
     margin: 0
     font-size: 2em
+    font-weight: 400
     transition: text-shadow ease $speed-faster
 
     &:hover
@@ -147,8 +149,11 @@ nav
 
   a
     padding: 1.25em 1.5em
-    color: $color-light
+    color: white
     text-transform: uppercase
+    font-family: 'Source Code Pro'
+    letter-spacing: 1.5px
+    font-weight: 500
 
     &:hover
       color: $color-accent
